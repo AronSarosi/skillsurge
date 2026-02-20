@@ -251,6 +251,12 @@
         .modal-note { text-align: center; margin-top: 12px; font-size: 12px; color: var(--gray); }
         .step-indicator { text-align: center; margin-bottom: 20px; font-size: 13px; color: var(--gray); letter-spacing: 1px; }
 
+        .lead-magnet { background: rgba(76,175,80,0.06); border: 1px solid rgba(76,175,80,0.2); border-radius: 14px; padding: 22px 24px; margin-bottom: 28px; }
+        .lm-title { font-size: 16px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+        .lm-desc { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 18px; }
+        .btn-lead-magnet { display: inline-block; padding: 11px 24px; background: var(--green); color: var(--white); border: none; border-radius: 9px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+        .btn-lead-magnet:hover { background: #45a049; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(76,175,80,0.3); }
+
         /* ==========================================
            FOOTER
            ========================================== */
@@ -322,15 +328,12 @@
                     <div class="track-label">Build with AI</div>
                     <div class="track-title">AI&nbsp;Tools</div>
                     <p class="track-desc">Learn how to use Claude, ChatGPT, and AI coding assistants to build real games, web apps, and automations. No coding experience needed - just curiosity and a laptop.</p>
-                    <div class="track-sub">Start for Free</div>
-                    <ul class="resource-list">
-                        <li onclick="toggleRes(this)"><span class="res-icon">⚡</span><span class="res-name">10 Powerful Prompts You're Not Using</span><span class="res-tag">Free</span></li>
-                        <div class="res-expand"><p>10 copy-paste prompts for Claude and ChatGPT that actually get useful results - from writing emails in seconds to building mini apps with zero code. You'll wonder how you ever lived without them.</p><button class="btn-res-get" onclick="event.stopPropagation(); openOnboarding()">Get it for Free</button></div>
-                        <li onclick="toggleRes(this)"><span class="res-icon">🧰</span><span class="res-name">AI Starter Kit: Tools & Setup Guide</span><span class="res-tag">Free</span></li>
-                        <div class="res-expand"><p>A straight-to-the-point guide to which AI tools are worth your time, how to set them up, and what's actually free vs paid. Skip the overwhelm - this gets you up and running in 15 minutes.</p><button class="btn-res-get" onclick="event.stopPropagation(); openOnboarding()">Get it for Free</button></div>
-                        <li onclick="toggleRes(this)"><span class="res-icon">🚀</span><span class="res-name">Build Your First App with AI</span><span class="res-tag">Free</span></li>
-                        <div class="res-expand"><p>A step-by-step walkthrough where you build an actual working app using AI - no coding experience required. By the end, you'll have something you can show people (and they'll think you're a genius).</p><button class="btn-res-get" onclick="event.stopPropagation(); openOnboarding()">Get it for Free</button></div>
-                    </ul>
+                    <div class="track-sub">Free Resource</div>
+                    <div class="lead-magnet">
+                        <div class="lm-title">⚡ 10 Powerful AI Prompts</div>
+                        <div class="lm-desc">Copy-paste prompts for ChatGPT and Claude that will change how you use AI. From productivity to business analysis.</div>
+                        <button class="btn-lead-magnet" onclick="openOnboarding()">Get it for Free</button>
+                    </div>
                     <div class="track-sub">Courses & More</div>
                     <ul class="resource-list">
                         <li><span class="res-icon">🎓</span><span class="res-name">AI Tools Masterclass</span><span class="soon-tag">Soon</span></li>
@@ -345,15 +348,12 @@
                     <div class="track-label">Learn to code</div>
                     <div class="track-title">Python</div>
                     <p class="track-desc">Not quite ready for AI? Start with the fundamentals. Go from "what is a variable?" to building real projects with data science and machine learning - all in plain English.</p>
-                    <div class="track-sub">Start for Free</div>
-                    <ul class="resource-list">
-                        <li onclick="toggleRes(this)"><span class="res-icon">📋</span><span class="res-name">8-Week Python Roadmap</span><span class="res-tag">Free</span></li>
-                        <div class="res-expand"><p>A week-by-week plan that takes you from "what is Python?" to building real data science projects. Each week has clear goals and code examples - so you always know what to learn next.</p><button class="btn-res-get" onclick="event.stopPropagation(); openOnboarding()">Get it for Free</button></div>
-                        <li onclick="toggleRes(this)"><span class="res-icon">📄</span><span class="res-name">Python Cheatsheet for Beginners</span><span class="res-tag">Free</span></li>
-                        <div class="res-expand"><p>Every essential Python concept on one page - variables, loops, functions, lists, and more. Keep it open while you code and never forget the syntax again. Your new best friend.</p><button class="btn-res-get" onclick="event.stopPropagation(); openOnboarding()">Get it for Free</button></div>
-                        <li onclick="toggleRes(this)"><span class="res-icon">🛠</span><span class="res-name">5 Beginner Projects to Build Today</span><span class="res-tag">Free</span></li>
-                        <div class="res-expand"><p>Five fun, practical projects you can actually finish in an afternoon - from a password generator to a web scraper. Each one teaches you real skills, not just theory.</p><button class="btn-res-get" onclick="event.stopPropagation(); window.open('/python-projects', '_blank')">Get it for Free</button></div>
-                    </ul>
+                    <div class="track-sub">Free Resource</div>
+                    <div class="lead-magnet">
+                        <div class="lm-title">📋 8-Week Python Roadmap</div>
+                        <div class="lm-desc">A week-by-week plan from zero to building real projects. Covers basics through data science and machine learning.</div>
+                        <button class="btn-lead-magnet" onclick="openOnboarding()">Get it for Free</button>
+                    </div>
                     <div class="track-sub">Courses & More</div>
                     <ul class="resource-list">
                         <li onclick="window.open('https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F','_blank')"><span class="res-icon">🎓</span><span class="res-name">Python Masterclass - 40+ video lessons</span></li>
@@ -450,7 +450,7 @@
             <button class="modal-close" onclick="closeModal()">×</button>
 
             <div class="modal-step active" id="ob-step1">
-                <div class="step-indicator">Step 1 of 3</div>
+                <div class="step-indicator">Step 1 of 2</div>
                 <h3>Get Your Free Resources</h3>
                 <p class="modal-sub">Tell us a little about yourself and we'll send the right stuff straight to your inbox.</p>
                 <div class="form-group"><label>First name</label><input type="text" id="obName" placeholder="Your first name"></div>
@@ -459,9 +459,9 @@
             </div>
 
             <div class="modal-step" id="ob-step2">
-                <div class="step-indicator">Step 2 of 3</div>
+                <div class="step-indicator">Step 2 of 2</div>
                 <h3>What are you most interested in?</h3>
-                <p class="modal-sub">Pick one - we'll tailor your free resources to match.</p>
+                <p class="modal-sub">Pick one and we'll send the right free resource straight to your inbox.</p>
                 <div class="interest-pills">
                     <div class="interest-pill" onclick="selectInterest(this, 'ai')">
                         <div class="pill-emoji">🤖</div>
@@ -472,38 +472,12 @@
                         <div class="pill-label">Python</div>
                     </div>
                 </div>
-                <button class="btn-modal" id="obStep2Btn" onclick="obStep3()" disabled>Next</button>
-            </div>
-
-            <div class="modal-step" id="ob-step3">
-                <div class="step-indicator">Step 3 of 3</div>
-                <h3>Pick your free resources</h3>
-                <p class="modal-sub">Select as many as you'd like - they're all free.</p>
-
-                <div id="aiResources" style="display:none;">
-                    <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px;">AI Tools</div>
-                    <div class="check-group">
-                        <div class="check-item selected" onclick="toggleCheck(this)"><input type="checkbox" value="ai-prompts" checked><div class="check-box"></div><div class="check-label">10 Powerful Prompts You're Not Using</div></div>
-                        <div class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="ai-starter-kit"><div class="check-box"></div><div class="check-label">AI Starter Kit: Tools & Setup Guide</div></div>
-                        <div class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="ai-first-app"><div class="check-box"></div><div class="check-label">Build Your First App with AI</div></div>
-                    </div>
-                </div>
-
-                <div id="pythonResources" style="display:none;">
-                    <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px;">Python</div>
-                    <div class="check-group">
-                        <div class="check-item selected" onclick="toggleCheck(this)"><input type="checkbox" value="python-roadmap" checked><div class="check-box"></div><div class="check-label">8-Week Python Roadmap</div></div>
-                        <div class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="python-cheatsheet"><div class="check-box"></div><div class="check-label">Python Cheatsheet for Beginners</div></div>
-                        <div class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="python-projects"><div class="check-box"></div><div class="check-label">5 Beginner Projects to Build Today</div></div>
-                    </div>
-                </div>
-
-                <button class="btn-modal" onclick="obSubmit()">Send Me Free Resources</button>
+                <button class="btn-modal" id="obStep2Btn" onclick="obSubmit()" disabled>Get Free Resources</button>
             </div>
 
             <div class="modal-step" id="ob-step4">
                 <h3>You're in! 🎉</h3>
-                <p class="modal-sub">Check your inbox - your resources are on the way. Some are still being created and we'll email you the moment they're ready.</p>
+                <p class="modal-sub">Check your email for your free resources.</p>
                 <button class="btn-modal" onclick="closeModal()">Back to Site</button>
             </div>
         </div>
@@ -516,26 +490,14 @@
 
         let selectedInterest = null;
 
-        function toggleRes(li) {
-            const expand = li.nextElementSibling;
-            if (!expand || !expand.classList.contains('res-expand')) return;
-            const isOpen = expand.classList.contains('open');
-            // Close all others first
-            document.querySelectorAll('.res-expand.open').forEach(el => {
-                el.classList.remove('open');
-                el.previousElementSibling.classList.remove('expanded');
-            });
-            if (!isOpen) {
-                expand.classList.add('open');
-                li.classList.add('expanded');
-            }
-        }
-
         function openOnboarding() {
             selectedInterest = null;
             document.querySelectorAll('.interest-pill').forEach(p => p.classList.remove('selected'));
-            document.querySelectorAll('#ob-step3 .check-item').forEach(c => { c.classList.remove('selected'); c.querySelector('input').checked = false; });
-            document.getElementById('obStep2Btn').disabled = true;
+            const btn = document.getElementById('obStep2Btn');
+            btn.disabled = true;
+            btn.textContent = 'Get Free Resources';
+            const prevErr = document.getElementById('ob-submit-error');
+            if (prevErr) prevErr.remove();
             showStep('ob-step1');
             document.getElementById('modalOverlay').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -548,7 +510,9 @@
         function obStep2() {
             const n = document.getElementById('obName').value.trim();
             const e = document.getElementById('obEmail').value.trim();
-            if (!n || !e) { alert('Please enter your name and email.'); return; }
+            if (!n) { alert('Please enter your name.'); return; }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!e || !emailRegex.test(e)) { alert('Please enter a valid email address.'); return; }
             showStep('ob-step2');
         }
 
@@ -559,31 +523,39 @@
             document.getElementById('obStep2Btn').disabled = false;
         }
 
-        function obStep3() {
-            const showAi = selectedInterest === 'ai';
-            const showPy = selectedInterest === 'python';
-            document.getElementById('aiResources').style.display = showAi ? 'block' : 'none';
-            document.getElementById('pythonResources').style.display = showPy ? 'block' : 'none';
+        const KIT_API_KEY = 'U-0B6YZOem0yuvBzMaKDgQ';
+        const KIT_FORM_IDS = { python: '9068573', ai: '9110856' };
 
-            // Pre-select first item
-            const container = showAi ? document.getElementById('aiResources') : document.getElementById('pythonResources');
-            const firstItem = container.querySelector('.check-item');
-            if (firstItem) { firstItem.classList.add('selected'); firstItem.querySelector('input').checked = true; }
+        async function obSubmit() {
+            const name = document.getElementById('obName').value.trim();
+            const email = document.getElementById('obEmail').value.trim();
+            const btn = document.getElementById('obStep2Btn');
 
-            showStep('ob-step3');
-        }
+            btn.textContent = 'Working on it...';
+            btn.disabled = true;
 
-        function toggleCheck(el) { el.classList.toggle('selected'); const cb = el.querySelector('input'); cb.checked = !cb.checked; }
+            const prevErr = document.getElementById('ob-submit-error');
+            if (prevErr) prevErr.remove();
 
-        function obSubmit() {
-            const data = {
-                name: document.getElementById('obName').value,
-                email: document.getElementById('obEmail').value,
-                interest: selectedInterest,
-                resources: Array.from(document.querySelectorAll('#ob-step3 .check-item.selected input')).map(i => i.value)
-            };
-            console.log('Onboarding submission:', data);
-            showStep('ob-step4');
+            try {
+                const formId = KIT_FORM_IDS[selectedInterest];
+                const res = await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                    body: JSON.stringify({ api_key: KIT_API_KEY, email, first_name: name })
+                });
+                if (!res.ok) throw new Error('Subscription failed');
+
+                showStep('ob-step4');
+            } catch (err) {
+                btn.textContent = 'Get Free Resources';
+                btn.disabled = false;
+                const errEl = document.createElement('p');
+                errEl.id = 'ob-submit-error';
+                errEl.style.cssText = 'color:#ff6b6b;font-size:13px;text-align:center;margin-top:10px;';
+                errEl.textContent = 'Something went wrong. Please try again.';
+                btn.insertAdjacentElement('afterend', errEl);
+            }
         }
     </script>
 </body>
