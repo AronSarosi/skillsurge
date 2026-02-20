@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Python Projects to Build Today | SkillSurge</title>
+    <link rel="icon" type="image/png" href="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/sWPk2Vx98aQhRt8ccgHZVP">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1A1A2E; --navy-card: #1E1E38; --green: #4CAF50; --green-bright: #5CDB5C;
+            --gold: #E5A839; --white: #FFFFFF; --text: #E0E0F0; --text-light: #9999BB;
+            --border: #2A2A50; --code-bg: #13132A;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: #222240; color: var(--text); line-height: 1.7; min-height: 100vh; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(76,175,80,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(76,175,80,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
+        .bg-glow { position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(ellipse, rgba(76,175,80,0.06) 0%, rgba(76,175,80,0.02) 40%, transparent 70%); pointer-events: none; z-index: 0; }
+        .container { max-width: 820px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+        header { padding: 30px 0 30px; text-align: center; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+        .header-logo { display: inline-block; margin-bottom: 24px; }
+        .header-logo img { height: 32px; width: auto; }
+        h1 { font-size: 36px; font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 12px; }
+        h1 span { color: var(--green); }
+        .subtitle { font-size: 16px; color: var(--text-light); max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        .meta-bar { display: flex; justify-content: center; gap: 24px; margin-top: 20px; flex-wrap: wrap; }
+        .meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-light); }
+        .meta-item .icon { font-size: 16px; }
+        .project-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 20px; overflow: hidden; transition: border-color 0.3s; }
+        .project-card:hover { border-color: rgba(76,175,80,0.3); }
+        .project-header { display: flex; align-items: center; gap: 16px; padding: 24px 28px; cursor: pointer; user-select: none; transition: background 0.2s; }
+        .project-header:hover { background: rgba(76,175,80,0.04); }
+        .project-number { width: 44px; height: 44px; border-radius: 12px; background: var(--green); color: var(--white); font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .project-meta { flex: 1; }
+        .project-name { font-size: 18px; font-weight: 700; color: var(--white); line-height: 1.3; }
+        .project-tagline { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+        .difficulty { display: flex; gap: 3px; flex-shrink: 0; }
+        .difficulty .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+        .difficulty .dot.active { background: var(--green); }
+        .toggle-icon { font-size: 20px; color: var(--text-light); transition: transform 0.3s; flex-shrink: 0; }
+        .project-card.open .toggle-icon { transform: rotate(180deg); }
+        .project-body { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+        .project-body-inner { padding: 0 28px 28px; }
+        .section-label { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 2px; margin: 20px 0 10px; }
+        .section-label:first-child { margin-top: 0; }
+        .project-desc { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 4px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+        .skill-tag { padding: 4px 12px; background: rgba(76,175,80,0.12); color: var(--green-bright); border-radius: 6px; font-size: 12px; font-weight: 600; }
+        .code-block { position: relative; background: var(--code-bg); border-radius: 10px; padding: 18px 20px; margin: 12px 0; border-left: 3px solid var(--green); overflow-x: auto; }
+        .code-block pre { font-family: 'Fira Code', monospace; font-size: 13px; line-height: 1.7; color: #EEFFFF; white-space: pre; margin: 0; }
+        .kw { color: #C792EA; } .bi { color: #82AAFF; } .st { color: #C3E88D; } .nu { color: #FFCB6B; } .cm { color: #546E7A; font-style: italic; } .op { color: #89DDFF; } .fn { color: #82AAFF; }
+        .code-block .copy-btn { position: absolute; top: 10px; right: 10px; background: rgba(76,175,80,0.2); color: var(--green); border: none; padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.2s; }
+        .code-block .copy-btn:hover { background: var(--green); color: var(--white); }
+        .hint-toggle { display: inline-flex; align-items: center; gap: 6px; background: rgba(229,168,57,0.12); color: var(--gold); border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; margin: 12px 0; transition: all 0.2s; }
+        .hint-toggle:hover { background: rgba(229,168,57,0.2); }
+        .hint-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s; opacity: 0; }
+        .hint-content.show { max-height: 500px; opacity: 1; }
+        .hint-content p { font-size: 14px; color: var(--gold); background: rgba(229,168,57,0.06); padding: 14px 18px; border-radius: 8px; border-left: 3px solid var(--gold); line-height: 1.6; }
+        .challenge { background: rgba(76,175,80,0.06); border: 1px solid rgba(76,175,80,0.15); border-radius: 10px; padding: 16px 20px; margin-top: 12px; }
+        .challenge-title { font-size: 13px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+        .challenge p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+        .page-footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); margin-top: 40px; }
+        .footer-cta { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+        .footer-cta span { color: var(--green); }
+        .footer-sub { font-size: 14px; color: var(--text-light); margin-bottom: 20px; }
+        .btn-cta { display: inline-block; padding: 14px 36px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 15px; transition: all 0.3s; }
+        .btn-cta:hover { background: var(--green-bright); transform: translateY(-2px); }
+        @media (max-width: 600px) { h1 { font-size: 26px; } .project-header { padding: 18px 20px; gap: 12px; } .project-body-inner { padding: 0 20px 20px; } .project-name { font-size: 16px; } .code-block pre { font-size: 12px; } .meta-bar { gap: 14px; } }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <header>
+            <a href="https://skillsurge.co" class="header-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></a>
+            <h1>5 Python Projects<br>to Build <span>Today</span></h1>
+            <p class="subtitle">Stop watching, start building. Each project takes 1-3 hours, teaches real skills, and gives you something you can actually show off.</p>
+            <div class="meta-bar">
+                <div class="meta-item"><span class="icon">⏱</span> 1-3 hours each</div>
+                <div class="meta-item"><span class="icon">📊</span> Beginner friendly</div>
+                <div class="meta-item"><span class="icon">🧠</span> Real skills, real output</div>
+            </div>
+        </header>
+
+        <!-- PROJECT 1 -->
+        <div class="project-card" id="p1">
+            <div class="project-header" onclick="toggleProject('p1')">
+                <div class="project-number">1</div>
+                <div class="project-meta"><div class="project-name">Password Generator</div><div class="project-tagline">Build a tool you'll actually use every week</div></div>
+                <div class="difficulty"><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                <div class="toggle-icon">▾</div>
+            </div>
+            <div class="project-body"><div class="project-body-inner">
+                <p class="project-desc">Create a program that generates secure, random passwords. The user picks a length and which character types to include (letters, numbers, symbols) — then gets a strong password instantly. Simple to build, genuinely useful, and a great intro to working with randomness in Python.</p>
+                <div class="section-label">What you'll learn</div>
+                <div class="skills"><span class="skill-tag">random module</span><span class="skill-tag">string manipulation</span><span class="skill-tag">user input</span><span class="skill-tag">functions</span></div>
+                <div class="section-label">Starter code</div>
+                <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre><span class="kw">import</span> random
+<span class="kw">import</span> string
+
+<span class="kw">def</span> <span class="fn">generate_password</span>(length, use_symbols=<span class="kw">True</span>):
+    characters = string.ascii_letters + string.digits
+    <span class="kw">if</span> use_symbols:
+        characters += string.punctuation
+
+    password = <span class="st">""</span>
+    <span class="kw">for</span> i <span class="kw">in</span> <span class="bi">range</span>(length):
+        password += random.choice(characters)
+    <span class="kw">return</span> password
+
+<span class="cm"># Ask the user</span>
+length = <span class="bi">int</span>(<span class="bi">input</span>(<span class="st">"Password length: "</span>))
+symbols = <span class="bi">input</span>(<span class="st">"Include symbols? (y/n): "</span>)
+
+result = generate_password(length, symbols == <span class="st">"y"</span>)
+<span class="bi">print</span>(<span class="st">f"Your password: {result}"</span>)</pre></div>
+                <button class="hint-toggle" onclick="toggleHint(this)">💡 Stuck? Get a hint</button>
+                <div class="hint-content"><p>Try using <code>random.shuffle()</code> on a list of characters to make the password even more random. You can also add a check that ensures at least one uppercase letter, one digit, and one symbol are always included.</p></div>
+                <div class="challenge"><div class="challenge-title">Stretch challenge</div><p>Add a "password strength" checker that rates the generated password as Weak, Medium, or Strong based on its length and character variety. Then generate multiple passwords and let the user pick their favourite.</p></div>
+            </div></div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card" id="p2">
+            <div class="project-header" onclick="toggleProject('p2')">
+                <div class="project-number">2</div>
+                <div class="project-meta"><div class="project-name">Quiz Game</div><div class="project-tagline">Test your friends (or yourself) with a custom quiz</div></div>
+                <div class="difficulty"><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                <div class="toggle-icon">▾</div>
+            </div>
+            <div class="project-body"><div class="project-body-inner">
+                <p class="project-desc">Build a multiple-choice quiz game that asks questions, tracks your score, and tells you how you did at the end. You'll store the questions as a list of dictionaries — one of the most common data structures you'll use in real Python work.</p>
+                <div class="section-label">What you'll learn</div>
+                <div class="skills"><span class="skill-tag">lists & dictionaries</span><span class="skill-tag">for loops</span><span class="skill-tag">if/else logic</span><span class="skill-tag">score tracking</span></div>
+                <div class="section-label">Starter code</div>
+                <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>questions = [
+    {
+        <span class="st">"question"</span>: <span class="st">"What does HTML stand for?"</span>,
+        <span class="st">"options"</span>: [<span class="st">"A) Hyper Text Markup Language"</span>,
+                    <span class="st">"B) Hot Mail"</span>,
+                    <span class="st">"C) How To Make Lasagna"</span>],
+        <span class="st">"answer"</span>: <span class="st">"A"</span>
+    },
+    {
+        <span class="st">"question"</span>: <span class="st">"Which planet is closest to the Sun?"</span>,
+        <span class="st">"options"</span>: [<span class="st">"A) Earth"</span>, <span class="st">"B) Mercury"</span>, <span class="st">"C) Venus"</span>],
+        <span class="st">"answer"</span>: <span class="st">"B"</span>
+    }
+]
+
+score = <span class="nu">0</span>
+
+<span class="kw">for</span> q <span class="kw">in</span> questions:
+    <span class="bi">print</span>(q[<span class="st">"question"</span>])
+    <span class="kw">for</span> option <span class="kw">in</span> q[<span class="st">"options"</span>]:
+        <span class="bi">print</span>(<span class="st">f"  {option}"</span>)
+    user_answer = <span class="bi">input</span>(<span class="st">"Your answer: "</span>).upper()
+
+    <span class="kw">if</span> user_answer == q[<span class="st">"answer"</span>]:
+        <span class="bi">print</span>(<span class="st">"Correct!\n"</span>)
+        score += <span class="nu">1</span>
+    <span class="kw">else</span>:
+        <span class="bi">print</span>(<span class="st">f"Wrong! The answer was {q['answer']}\n"</span>)
+
+<span class="bi">print</span>(<span class="st">f"You scored {score}/{len(questions)}"</span>)</pre></div>
+                <button class="hint-toggle" onclick="toggleHint(this)">💡 Stuck? Get a hint</button>
+                <div class="hint-content"><p>Add more questions to the list — the loop handles any number automatically. Try using <code>random.shuffle(questions)</code> at the start to randomise the order each time.</p></div>
+                <div class="challenge"><div class="challenge-title">Stretch challenge</div><p>Add a timer using the <code>time</code> module to track how long the quiz takes. Show the final time alongside the score. Bonus: add difficulty levels that change how many options each question has.</p></div>
+            </div></div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card" id="p3">
+            <div class="project-header" onclick="toggleProject('p3')">
+                <div class="project-number">3</div>
+                <div class="project-meta"><div class="project-name">Expense Tracker</div><div class="project-tagline">Where does your money actually go?</div></div>
+                <div class="difficulty"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div>
+                <div class="toggle-icon">▾</div>
+            </div>
+            <div class="project-body"><div class="project-body-inner">
+                <p class="project-desc">Build a command-line app that logs expenses, categorises them, and shows you a summary. You'll save everything to a CSV file so nothing gets lost — and you'll learn how real applications store and retrieve data. This is the kind of project that makes a portfolio look serious.</p>
+                <div class="section-label">What you'll learn</div>
+                <div class="skills"><span class="skill-tag">file I/O (CSV)</span><span class="skill-tag">dictionaries</span><span class="skill-tag">data analysis</span><span class="skill-tag">while loops</span></div>
+                <div class="section-label">Starter code</div>
+                <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre><span class="kw">import</span> csv
+<span class="kw">from</span> datetime <span class="kw">import</span> datetime
+
+<span class="kw">def</span> <span class="fn">add_expense</span>(expenses):
+    amount = <span class="bi">float</span>(<span class="bi">input</span>(<span class="st">"Amount: £"</span>))
+    category = <span class="bi">input</span>(<span class="st">"Category (food/transport/other): "</span>)
+    note = <span class="bi">input</span>(<span class="st">"Note: "</span>)
+    expenses.append({
+        <span class="st">"date"</span>: datetime.now().strftime(<span class="st">"%Y-%m-%d"</span>),
+        <span class="st">"amount"</span>: amount,
+        <span class="st">"category"</span>: category,
+        <span class="st">"note"</span>: note
+    })
+    <span class="bi">print</span>(<span class="st">"Expense added!\n"</span>)
+
+<span class="kw">def</span> <span class="fn">show_summary</span>(expenses):
+    total = <span class="bi">sum</span>(e[<span class="st">"amount"</span>] <span class="kw">for</span> e <span class="kw">in</span> expenses)
+    <span class="bi">print</span>(<span class="st">f"\nTotal spent: £{total:.2f}"</span>)
+    categories = <span class="bi">set</span>(e[<span class="st">"category"</span>] <span class="kw">for</span> e <span class="kw">in</span> expenses)
+    <span class="kw">for</span> cat <span class="kw">in</span> categories:
+        cat_total = <span class="bi">sum</span>(e[<span class="st">"amount"</span>] <span class="kw">for</span> e <span class="kw">in</span> expenses
+                       <span class="kw">if</span> e[<span class="st">"category"</span>] == cat)
+        <span class="bi">print</span>(<span class="st">f"  {cat}: £{cat_total:.2f}"</span>)
+
+expenses = []
+
+<span class="kw">while</span> <span class="kw">True</span>:
+    action = <span class="bi">input</span>(<span class="st">"(a)dd / (s)ummary / (q)uit: "</span>)
+    <span class="kw">if</span> action == <span class="st">"a"</span>:
+        add_expense(expenses)
+    <span class="kw">elif</span> action == <span class="st">"s"</span>:
+        show_summary(expenses)
+    <span class="kw">elif</span> action == <span class="st">"q"</span>:
+        <span class="kw">break</span></pre></div>
+                <button class="hint-toggle" onclick="toggleHint(this)">💡 Stuck? Get a hint</button>
+                <div class="hint-content"><p>To save expenses permanently, write them to a CSV file using <code>csv.DictWriter</code>. Load them back in when the program starts with <code>csv.DictReader</code>. This way your data survives between sessions.</p></div>
+                <div class="challenge"><div class="challenge-title">Stretch challenge</div><p>Use <code>pandas</code> to read the CSV and create a monthly spending breakdown. Which category do you spend the most on? Can you spot any patterns?</p></div>
+            </div></div>
+        </div>
+
+        <!-- PROJECT 4: Web Scraper -->
+        <div class="project-card" id="p4">
+            <div class="project-header" onclick="toggleProject('p4')">
+                <div class="project-number">4</div>
+                <div class="project-meta"><div class="project-name">Web Scraper</div><div class="project-tagline">Pull real data from the internet automatically</div></div>
+                <div class="difficulty"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div></div>
+                <div class="toggle-icon">▾</div>
+            </div>
+            <div class="project-body"><div class="project-body-inner">
+                <p class="project-desc">Write a script that visits a website and extracts useful data automatically. You'll use the <code>requests</code> library to fetch pages and <code>BeautifulSoup</code> to parse the HTML. Then you'll scrape multiple pages, clean up the data, and save it all to a CSV file. This is one of the most in-demand Python skills — every data role mentions it.</p>
+                <div class="section-label">What you'll learn</div>
+                <div class="skills"><span class="skill-tag">requests library</span><span class="skill-tag">BeautifulSoup</span><span class="skill-tag">HTML parsing</span><span class="skill-tag">pagination</span><span class="skill-tag">saving to CSV</span></div>
+                <div class="section-label">Starter code</div>
+                <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre><span class="cm"># First, install: pip install requests beautifulsoup4 pandas</span>
+
+<span class="kw">import</span> requests
+<span class="kw">from</span> bs4 <span class="kw">import</span> BeautifulSoup
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+
+<span class="cm"># Step 1: Scrape 5 pages of quotes</span>
+all_data = []
+
+<span class="kw">for</span> page <span class="kw">in</span> <span class="bi">range</span>(<span class="nu">1</span>, <span class="nu">6</span>):
+    url = <span class="st">f"https://quotes.toscrape.com/page/{page}/"</span>
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, <span class="st">"html.parser"</span>)
+
+    <span class="kw">for</span> quote <span class="kw">in</span> soup.find_all(<span class="st">"div"</span>, class_=<span class="st">"quote"</span>):
+        text = quote.find(<span class="st">"span"</span>, class_=<span class="st">"text"</span>).text
+        author = quote.find(<span class="st">"small"</span>, class_=<span class="st">"author"</span>).text
+        all_data.append({<span class="st">"quote"</span>: text, <span class="st">"author"</span>: author})
+
+    <span class="bi">print</span>(<span class="st">f"Page {page} done — {len(all_data)} quotes so far"</span>)
+
+<span class="cm"># Step 2: Save to CSV</span>
+df = pd.DataFrame(all_data)
+df.to_csv(<span class="st">"quotes.csv"</span>, index=<span class="kw">False</span>)
+<span class="bi">print</span>(<span class="st">f"\nSaved {len(df)} quotes to quotes.csv"</span>)
+
+<span class="cm"># Step 3: Quick analysis</span>
+<span class="bi">print</span>(<span class="st">f"\nTop 5 most quoted authors:"</span>)
+<span class="bi">print</span>(df[<span class="st">"author"</span>].value_counts().head(<span class="nu">5</span>))</pre></div>
+                <button class="hint-toggle" onclick="toggleHint(this)">💡 Stuck? Get a hint</button>
+                <div class="hint-content"><p>Install the libraries first: <code>pip install requests beautifulsoup4 pandas</code>. The site used here is built specifically for scraping practice, so you won't get blocked. Use your browser's "Inspect Element" to understand the HTML structure before writing your selectors.</p></div>
+                <div class="challenge"><div class="challenge-title">Stretch challenge</div><p>Find which tags appear most often across all quotes. Create a bar chart of the top 10 tags using <code>matplotlib</code>. Then try scraping a different website — like a news homepage or a product listing page.</p></div>
+            </div></div>
+        </div>
+
+        <!-- PROJECT 5: Data Explorer -->
+        <div class="project-card" id="p5">
+            <div class="project-header" onclick="toggleProject('p5')">
+                <div class="project-number">5</div>
+                <div class="project-meta"><div class="project-name">Data Explorer</div><div class="project-tagline">Analyse a real dataset and find the story in the numbers</div></div>
+                <div class="difficulty"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div></div>
+                <div class="toggle-icon">▾</div>
+            </div>
+            <div class="project-body"><div class="project-body-inner">
+                <p class="project-desc">Load a real CSV dataset with <code>pandas</code>, explore it, clean it up, and answer questions about it. You'll calculate averages, group data, find patterns, and create visualisations. This is what data scientists do every single day — and it's more satisfying than you'd think.</p>
+                <div class="section-label">What you'll learn</div>
+                <div class="skills"><span class="skill-tag">pandas</span><span class="skill-tag">data cleaning</span><span class="skill-tag">groupby & aggregation</span><span class="skill-tag">matplotlib charts</span><span class="skill-tag">real-world analysis</span></div>
+                <div class="section-label">Starter code</div>
+                <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre><span class="cm"># First, install: pip install pandas matplotlib</span>
+
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt
+
+<span class="cm"># Step 1: Load a real dataset (restaurant tips)</span>
+url = (<span class="st">"https://raw.githubusercontent.com/mwaskom/"</span>
+       <span class="st">"seaborn-data/master/tips.csv"</span>)
+df = pd.read_csv(url)
+
+<span class="cm"># Step 2: Explore the data</span>
+<span class="bi">print</span>(<span class="st">"First 5 rows:"</span>)
+<span class="bi">print</span>(df.head())
+<span class="bi">print</span>(<span class="st">f"\nShape: {df.shape[0]} rows, {df.shape[1]} columns"</span>)
+<span class="bi">print</span>(<span class="st">f"\nColumn names: {list(df.columns)}"</span>)
+
+<span class="cm"># Step 3: Basic statistics</span>
+<span class="bi">print</span>(<span class="st">f"\nAverage bill: ${df['total_bill'].mean():.2f}"</span>)
+<span class="bi">print</span>(<span class="st">f"Average tip:  ${df['tip'].mean():.2f}"</span>)
+<span class="bi">print</span>(<span class="st">f"Highest tip:  ${df['tip'].max():.2f}"</span>)
+
+<span class="cm"># Step 4: Create a new column — tip percentage</span>
+df[<span class="st">"tip_pct"</span>] = df[<span class="st">"tip"</span>] / df[<span class="st">"total_bill"</span>] * <span class="nu">100</span>
+<span class="bi">print</span>(<span class="st">f"\nAverage tip percentage: {df['tip_pct'].mean():.1f}%"</span>)
+
+<span class="cm"># Step 5: Group by day — which day gets the best tips?</span>
+by_day = df.groupby(<span class="st">"day"</span>)[<span class="st">"tip_pct"</span>].mean().sort_values()
+<span class="bi">print</span>(<span class="st">f"\nAverage tip % by day:"</span>)
+<span class="bi">print</span>(by_day)
+
+<span class="cm"># Step 6: Do smokers tip differently?</span>
+by_smoker = df.groupby(<span class="st">"smoker"</span>)[<span class="st">"tip_pct"</span>].mean()
+<span class="bi">print</span>(<span class="st">f"\nAverage tip % by smoker status:"</span>)
+<span class="bi">print</span>(by_smoker)
+
+<span class="cm"># Step 7: Visualise — bar chart of tips by day</span>
+fig, axes = plt.subplots(<span class="nu">1</span>, <span class="nu">2</span>, figsize=(<span class="nu">12</span>, <span class="nu">5</span>))
+
+by_day.plot(kind=<span class="st">"bar"</span>, color=<span class="st">"#4CAF50"</span>, ax=axes[<span class="nu">0</span>])
+axes[<span class="nu">0</span>].set_title(<span class="st">"Average Tip % by Day"</span>)
+axes[<span class="nu">0</span>].set_ylabel(<span class="st">"Tip %"</span>)
+
+<span class="cm"># Scatter plot — bill vs tip</span>
+axes[<span class="nu">1</span>].scatter(df[<span class="st">"total_bill"</span>], df[<span class="st">"tip"</span>],
+               alpha=<span class="nu">0.6</span>, color=<span class="st">"#4CAF50"</span>)
+axes[<span class="nu">1</span>].set_title(<span class="st">"Bill Amount vs Tip"</span>)
+axes[<span class="nu">1</span>].set_xlabel(<span class="st">"Total Bill ($)"</span>)
+axes[<span class="nu">1</span>].set_ylabel(<span class="st">"Tip ($)"</span>)
+
+plt.tight_layout()
+plt.savefig(<span class="st">"tips_analysis.png"</span>)
+<span class="bi">print</span>(<span class="st">"\nCharts saved as tips_analysis.png"</span>)</pre></div>
+                <button class="hint-toggle" onclick="toggleHint(this)">💡 Stuck? Get a hint</button>
+                <div class="hint-content"><p>Install pandas and matplotlib first: <code>pip install pandas matplotlib</code>. The dataset loads directly from a URL — no file downloads needed. Use <code>df.describe()</code> to get a quick statistical overview of every numeric column. If you want to use your own data, just replace the URL with a path to your Excel or CSV file.</p></div>
+                <div class="challenge"><div class="challenge-title">Stretch challenge</div><p>Does table size affect tip percentage? Group by <code>size</code> and find out. Then create a third chart — a histogram showing the distribution of tip percentages. What's the most common tip range?</p></div>
+            </div></div>
+        </div>
+
+        <!-- Footer -->
+        <div class="page-footer">
+            <div class="footer-cta">Ready to go <span>deeper?</span></div>
+            <p class="footer-sub">These projects are just the start. Get the full Python Masterclass with 40+ video lessons, real projects, and a community of learners.</p>
+            <a href="https://skillsurge.co" class="btn-cta">Visit SkillSurge</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleProject(id) {
+            const card = document.getElementById(id);
+            const body = card.querySelector('.project-body');
+            const inner = card.querySelector('.project-body-inner');
+            if (card.classList.contains('open')) {
+                body.style.maxHeight = '0';
+                card.classList.remove('open');
+            } else {
+                document.querySelectorAll('.project-card.open').forEach(c => {
+                    c.querySelector('.project-body').style.maxHeight = '0';
+                    c.classList.remove('open');
+                });
+                body.style.maxHeight = inner.scrollHeight + 40 + 'px';
+                card.classList.add('open');
+            }
+        }
+        function toggleHint(btn) {
+            const hint = btn.nextElementSibling;
+            hint.classList.toggle('show');
+            btn.textContent = hint.classList.contains('show') ? '💡 Hide hint' : '💡 Stuck? Get a hint';
+        }
+        function copyCode(btn) {
+            const pre = btn.parentElement.querySelector('pre');
+            navigator.clipboard.writeText(pre.textContent).then(() => {
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy', 2000);
+            });
+        }
+    </script>
+</body>
+</html>
