@@ -297,12 +297,64 @@
 
         .offering-item {
             display: flex;
-            align-items: center;
-            gap: 16px;
+            flex-direction: column;
             padding: 18px 22px;
             background: rgba(255, 255, 255, 0.025);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 12px;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .offering-item:hover {
+            border-color: rgba(76, 175, 80, 0.3);
+            background: rgba(76, 175, 80, 0.04);
+        }
+
+        .offering-item.open {
+            border-color: rgba(76, 175, 80, 0.35);
+        }
+
+        .offering-item-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .offering-chevron {
+            width: 16px;
+            height: 16px;
+            stroke: var(--text-muted);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-left: auto;
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .offering-item.open .offering-chevron {
+            transform: rotate(180deg);
+        }
+
+        .offering-desc {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding-top 0.25s ease;
+            padding-top: 0;
+            padding-left: 68px;
+        }
+
+        .offering-item.open .offering-desc {
+            max-height: 120px;
+            padding-top: 12px;
+        }
+
+        .offering-desc p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.65;
         }
 
         .offering-icon {
@@ -476,6 +528,100 @@
             font-size: 12px;
             font-weight: 600;
             color: var(--green);
+        }
+
+        /* BOTTOM CTA */
+        .bottom-cta {
+            padding: 90px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .bottom-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 100%;
+            background: radial-gradient(ellipse at 50% 30%, rgba(76, 175, 80, 0.06) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .bottom-cta .container {
+            position: relative;
+        }
+
+        .bottom-cta h2 {
+            font-size: clamp(26px, 4vw, 40px);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.18;
+            letter-spacing: -0.8px;
+            margin-bottom: 24px;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bottom-cta h2 em {
+            font-style: normal;
+            color: var(--green);
+        }
+
+        .bottom-cta-body {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            max-width: 540px;
+            margin: 0 auto 36px;
+            font-weight: 300;
+        }
+
+        .cta-pills {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .cta-pill {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 6px 16px;
+            letter-spacing: 0.3px;
+        }
+
+        .cta-pill-dot {
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+
+        .bottom-cta .cta-btn {
+            font-size: 17px;
+            padding: 18px 52px;
+        }
+
+        .bottom-cta-sub {
+            margin-top: 18px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .bottom-cta-sign {
+            margin-top: 40px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
         }
 
         /* MODAL */
@@ -721,7 +867,7 @@
     <a href="https://skillsurge.co" class="nav-logo">
         <img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge" class="nav-logo-img">
     </a>
-    <button class="nav-cta" onclick="openModal()">Book a Free Call</button>
+    <button class="nav-cta" onclick="openModal()">Book Your Free Call</button>
 </nav>
 
 <!-- HERO -->
@@ -730,7 +876,7 @@
         <h1>Your next employee<br>doesn't need a salary.<br><em>It needs a setup.</em></h1>
         <p class="hero-sub">
             We build AI systems that handle your marketing, admin, research, and customer support.
-            Running 24/7. No sick days. No salary. Just results.
+            Running 24/7. No sick days. Just results.
         </p>
         <div class="video-wrapper">
             <div class="video-placeholder">
@@ -741,34 +887,58 @@
             </div>
         </div>
         <div class="hero-cta-wrap">
-            <button class="cta-btn" onclick="openModal()">Book a Free Discovery Call</button>
+            <button class="cta-btn" onclick="openModal()">Book Your Free AI Strategy Call</button>
             <p class="cta-sub">Free 30-minute call. No commitment. Let's see how we can help.</p>
         </div>
 
         <div class="offering-strip">
-            <div class="offering-item">
-                <div class="offering-icon">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            <div class="offering-item" onclick="toggleOffering(this)">
+                <div class="offering-item-header">
+                    <div class="offering-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    </div>
+                    <span class="offering-text">24/7 AI Assistants</span>
+                    <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
                 </div>
-                <span class="offering-text">24/7 AI Assistants</span>
+                <div class="offering-desc">
+                    <p>A custom AI built around your communication style and business context. It drafts emails, manages scheduling, formats documents, and triages your inbox — around the clock, without a salary or annual leave. One-time setup. Runs indefinitely.</p>
+                </div>
             </div>
-            <div class="offering-item">
-                <div class="offering-icon">
-                    <svg viewBox="0 0 24 24"><polyline points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/></svg>
+            <div class="offering-item" onclick="toggleOffering(this)">
+                <div class="offering-item-header">
+                    <div class="offering-icon">
+                        <svg viewBox="0 0 24 24"><polyline points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/></svg>
+                    </div>
+                    <span class="offering-text">Automated Workflows</span>
+                    <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
                 </div>
-                <span class="offering-text">Automated Workflows</span>
+                <div class="offering-desc">
+                    <p>We map your existing processes and automate them end-to-end. A new lead arrives → CRM updated → personalised follow-up sent → task created → team notified. Every step runs automatically, zero manual input, no dropped balls.</p>
+                </div>
             </div>
-            <div class="offering-item">
-                <div class="offering-icon">
-                    <svg viewBox="0 0 24 24"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+            <div class="offering-item" onclick="toggleOffering(this)">
+                <div class="offering-item-header">
+                    <div class="offering-icon">
+                        <svg viewBox="0 0 24 24"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+                    </div>
+                    <span class="offering-text">Custom AI Agents</span>
+                    <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
                 </div>
-                <span class="offering-text">Custom AI Agents</span>
+                <div class="offering-desc">
+                    <p>Production-grade AI systems built for your specific use case — custom agents, retrieval pipelines, and bespoke prompt architectures that produce output indistinguishable from your best employee. Not a ChatGPT wrapper.</p>
+                </div>
             </div>
-            <div class="offering-item">
-                <div class="offering-icon">
-                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            <div class="offering-item" onclick="toggleOffering(this)">
+                <div class="offering-item-header">
+                    <div class="offering-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                    </div>
+                    <span class="offering-text">AI Operations Stack</span>
+                    <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
                 </div>
-                <span class="offering-text">Deployed in Weeks</span>
+                <div class="offering-desc">
+                    <p>We assess your entire workflow, identify the highest-leverage automation opportunities, and build your full AI stack — marketing, operations, customer support, research — all running on custom pipelines. Deployed in weeks, not months.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -842,8 +1012,8 @@
                 <div class="card-icon">
                     <svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/><circle cx="8.5" cy="14" r="1.5"/><circle cx="15.5" cy="14" r="1.5"/><path d="M8.5 18h7"/></svg>
                 </div>
-                <h3>AI Executive Assistant</h3>
-                <p>A custom AI built around your communication style and business context. It drafts emails, manages scheduling, formats documents, and triages your inbox — around the clock, without a salary, NI contributions, or annual leave. One-time setup. Runs indefinitely.</p>
+                <h3>24/7 AI Assistant</h3>
+                <p>A custom AI built around your communication style and business context. It drafts emails, manages scheduling, formats documents, and triages your inbox — around the clock, without a salary or annual leave. One-time setup. Runs indefinitely.</p>
                 <div class="sol-result">&#10003; Runs 24/7. Replaces up to £50k/year in labour cost.</div>
             </div>
 
@@ -875,6 +1045,31 @@
             </div>
 
         </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+    <div class="container">
+        <h2>Book Your Free Call.</h2>
+        <p class="bottom-cta-body">
+            Stay ahead of the curve with AI. Book your free 30-minute AI Strategy Session and let's see exactly how we can help — no pitch, no pressure, and you have absolutely nothing to lose.
+        </p>
+        <div class="cta-pills">
+            <span class="cta-pill">Free</span>
+            <div class="cta-pill-dot"></div>
+            <span class="cta-pill">30 minutes</span>
+            <div class="cta-pill-dot"></div>
+            <span class="cta-pill">No obligation</span>
+            <div class="cta-pill-dot"></div>
+            <span class="cta-pill">Honest advice</span>
+            <div class="cta-pill-dot"></div>
+            <span class="cta-pill">Nothing to lose</span>
+        </div>
+        <button class="cta-btn" onclick="openModal()">Book Your Free AI Strategy Call</button>
+        <p class="bottom-cta-sub">We personally review every application and respond within 24 hours.</p>
     </div>
 </section>
 
@@ -948,8 +1143,8 @@
             <div class="check-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </div>
-            <h3>Application received.</h3>
-            <p>I'll review your details and get back to you within 24 hours with next steps. Talk soon.</p>
+            <h3>Your request has been sent.</h3>
+            <p>You'll hear back within 24 hours with next steps. Looking forward to speaking with you.</p>
         </div>
     </div>
 </div>
@@ -987,6 +1182,15 @@
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeModal();
     });
+
+    // Offering strip accordion
+    function toggleOffering(el) {
+        var isOpen = el.classList.contains('open');
+        document.querySelectorAll('.offering-item').forEach(function(item) {
+            item.classList.remove('open');
+        });
+        if (!isOpen) el.classList.add('open');
+    }
 
     // Form submission with qualification
     document.getElementById('qualifyForm').addEventListener('submit', function(e) {
