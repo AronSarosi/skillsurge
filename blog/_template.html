@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--
+    ============================================================
+    SKILLSURGE BLOG POST TEMPLATE
+    ============================================================
+    HOW TO USE:
+    1. Copy this file to:  blog/[post-slug]/index.html
+    2. Replace every [PLACEHOLDER] with real content
+    3. Add a card to blog/index.html (copy a .blog-card block)
+    4. Add a <url> entry to sitemap.xml
+    5. Push to main — GitHub Pages deploys automatically
+
+    PLACEHOLDERS TO REPLACE:
+    [POST_TITLE]           Full article title
+    [POST_SLUG]            URL-friendly slug  (e.g. my-post-title)
+    [POST_DESCRIPTION]     1-2 sentence meta description (150-160 chars)
+    [POST_DATE_ISO]        e.g. 2026-03-15
+    [POST_DATE_DISPLAY]    e.g. March 15, 2026
+    [POST_READING_TIME]    e.g. 10 min read
+    [POST_CATEGORY]        e.g. Python  |  AI Tools  |  Career
+    [POST_WORD_COUNT]      Approximate word count as a number
+    [POST_KEYWORDS]        Comma-separated quoted keywords for JSON-LD
+    ============================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[POST_TITLE] | SkillSurge Blog</title>
+    <meta name="description" content="[POST_DESCRIPTION]">
+    <link rel="canonical" href="https://skillsurge.co/blog/[POST_SLUG]/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="[POST_TITLE]">
+    <meta property="og:description" content="[POST_DESCRIPTION]">
+    <meta property="og:url" content="https://skillsurge.co/blog/[POST_SLUG]/">
+    <meta property="og:site_name" content="SkillSurge">
+    <meta property="og:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <meta property="article:published_time" content="[POST_DATE_ISO]T00:00:00Z">
+    <meta property="article:author" content="Aron Sarosi">
+    <meta property="article:section" content="[POST_CATEGORY]">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[POST_TITLE]">
+    <meta name="twitter:description" content="[POST_DESCRIPTION]">
+    <meta name="twitter:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <link rel="icon" type="image/png" href="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/sWPk2Vx98aQhRt8ccgHZVP">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[POST_TITLE]",
+        "description": "[POST_DESCRIPTION]",
+        "datePublished": "[POST_DATE_ISO]",
+        "dateModified": "[POST_DATE_ISO]",
+        "author": {
+            "@type": "Person",
+            "name": "Aron Sarosi",
+            "url": "https://skillsurge.co/#about"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "SkillSurge",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://skillsurge.co/blog/[POST_SLUG]/"
+        },
+        "image": "https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm",
+        "wordCount": [POST_WORD_COUNT],
+        "articleSection": "[POST_CATEGORY]",
+        "keywords": [[POST_KEYWORDS]]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillsurge.co/"},
+            {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://skillsurge.co/blog/"},
+            {"@type": "ListItem", "position": 3, "name": "[POST_TITLE]"}
+        ]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1A1A2E;
+            --navy-deep: #13132A;
+            --navy-card: #1E1E38;
+            --green: #4CAF50;
+            --green-bright: #5CDB5C;
+            --white: #FFFFFF;
+            --gray: #8888AA;
+            --text-light: #CCCCDD;
+            --gold: #F5C542;
+            --border: #2A2A50;
+            --code-bg: #13132A;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', -apple-system, sans-serif; background: var(--navy); color: var(--text-light); min-height: 100vh; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(rgba(76,175,80,0.07) 1px, transparent 1px); background-size: 28px 28px; pointer-events: none; z-index: 0; }
+
+        nav { position: fixed; top: 0; left: 0; right: 0; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; z-index: 100; transition: background 0.3s, backdrop-filter 0.3s; }
+        nav.scrolled { background: rgba(26,26,46,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav-logo img { height: 28px; width: auto; }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-link { color: var(--text-light); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .nav-link:hover { color: var(--white); }
+        .nav-link.active { color: var(--green); }
+
+        .container { max-width: 740px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+        .breadcrumb-wrap { padding: 110px 0 0; }
+        .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray); flex-wrap: wrap; }
+        .breadcrumb a { color: var(--gray); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--green); }
+        .breadcrumb-sep { opacity: 0.35; }
+
+        .post-header { padding: 24px 0 40px; }
+        .post-cat { display: inline-block; background: rgba(76,175,80,0.12); color: var(--green-bright); border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; margin-bottom: 18px; }
+        .post-header h1 { font-size: 38px; font-weight: 800; color: var(--white); line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 18px; }
+        .post-header h1 span { color: var(--green); }
+        .post-subtitle { font-size: 18px; color: var(--gray); line-height: 1.65; margin-bottom: 24px; }
+        .post-meta { display: flex; align-items: center; gap: 16px; font-size: 13px; color: var(--gray); flex-wrap: wrap; }
+        .meta-dot { opacity: 0.35; }
+        .post-divider { height: 1px; background: linear-gradient(90deg, rgba(76,175,80,0.25) 0%, rgba(76,175,80,0.05) 100%); margin: 40px 0; }
+
+        .toc { background: var(--navy-card); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 48px; overflow: hidden; }
+        .toc-toggle { width: 100%; padding: 18px 24px; background: none; border: none; color: var(--white); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+        .toc-toggle:hover { background: rgba(76,175,80,0.05); }
+        .toc-icon { font-size: 18px; color: var(--green); transition: transform 0.3s; }
+        .toc-icon.open { transform: rotate(180deg); }
+        .toc-list { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .toc-list.open { max-height: 600px; }
+        .toc-inner { padding: 4px 24px 20px; display: flex; flex-direction: column; gap: 4px; }
+        .toc-inner a { color: var(--text-light); text-decoration: none; font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid rgba(76,175,80,0.2); transition: all 0.2s; line-height: 1.4; }
+        .toc-inner a:hover { color: var(--green-bright); border-left-color: var(--green); padding-left: 18px; }
+
+        .post-content { font-size: 16px; line-height: 1.85; color: var(--text-light); padding-bottom: 20px; }
+        .post-content h2 { font-size: 26px; font-weight: 800; color: var(--white); margin: 52px 0 16px; letter-spacing: -0.3px; scroll-margin-top: 80px; }
+        .post-content h3 { font-size: 19px; font-weight: 700; color: var(--white); margin: 36px 0 12px; scroll-margin-top: 80px; }
+        .post-content p { margin-bottom: 20px; }
+        .post-content a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(76,175,80,0.4); transition: text-decoration-color 0.2s, color 0.2s; }
+        .post-content a:hover { color: var(--green-bright); text-decoration-color: var(--green-bright); }
+        .post-content strong { color: var(--white); font-weight: 600; }
+        .post-content ul, .post-content ol { margin: 4px 0 20px; padding-left: 24px; }
+        .post-content li { margin-bottom: 8px; }
+        .post-content blockquote { border-left: 3px solid var(--green); padding: 16px 20px; margin: 28px 0; background: rgba(76,175,80,0.05); border-radius: 0 12px 12px 0; color: var(--text-light); font-size: 15px; }
+        .post-content code { font-family: 'Fira Code', monospace; background: rgba(76,175,80,0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.88em; color: var(--green-bright); }
+
+        .code-block { position: relative; background: var(--code-bg); border-radius: 12px; padding: 20px 24px; margin: 24px 0; border-left: 3px solid var(--green); overflow-x: auto; }
+        .code-block pre { font-family: 'Fira Code', monospace; font-size: 13px; line-height: 1.7; color: #EEFFFF; white-space: pre; margin: 0; }
+        .code-block .copy-btn { position: absolute; top: 10px; right: 10px; background: rgba(76,175,80,0.2); color: var(--green); border: none; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.2s; }
+        .code-block .copy-btn:hover { background: var(--green); color: var(--white); }
+        .kw { color: #C792EA; } .bi { color: #82AAFF; } .st { color: #C3E88D; } .nu { color: #FFCB6B; } .cm { color: #546E7A; font-style: italic; } .op { color: #89DDFF; } .fn { color: #82AAFF; }
+
+        .milestone { background: rgba(76,175,80,0.05); border: 1px solid rgba(76,175,80,0.18); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+        .milestone-label { font-size: 10px; font-weight: 700; color: var(--green); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 10px; }
+        .warning-box { background: rgba(229,168,57,0.06); border: 1px solid rgba(229,168,57,0.2); border-radius: 14px; padding: 20px 24px; margin: 28px 0; }
+        .warning-label { font-size: 10px; font-weight: 700; color: var(--gold); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 10px; }
+        .warning-box p { font-size: 14px; color: var(--text-light); margin-bottom: 0; line-height: 1.65; }
+
+        .post-cta { margin: 64px 0 48px; background: rgba(76,175,80,0.06); border: 1px solid rgba(76,175,80,0.22); border-radius: 20px; padding: 44px 40px; text-align: center; }
+        .post-cta-label { display: block; font-size: 10px; font-weight: 700; color: var(--green); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+        .post-cta h3 { font-size: 24px; font-weight: 800; color: var(--white); line-height: 1.25; margin-bottom: 14px; }
+        .post-cta p { font-size: 15px; color: var(--gray); line-height: 1.65; max-width: 520px; margin: 0 auto 20px; }
+        .post-cta-proof { font-size: 13px; color: var(--gray); margin-bottom: 28px; }
+        .post-cta-proof .stars { color: var(--gold); }
+        .btn-cta { display: inline-block; padding: 15px 36px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 15px; transition: all 0.3s; }
+        .btn-cta:hover { background: var(--green-bright); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,175,80,0.3); text-decoration: none; color: var(--navy); }
+
+        .back-link-wrap { padding: 16px 0 64px; text-align: center; }
+        .back-link { font-size: 14px; color: var(--gray); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .back-link:hover { color: var(--green); }
+
+        footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 32px 24px; text-align: center; }
+        .footer-logo { margin-bottom: 12px; }
+        .footer-logo img { height: 24px; width: auto; opacity: 0.7; }
+        footer p { font-size: 12px; color: var(--gray); }
+
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s, transform 0.6s; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .nav-links { gap: 18px; }
+            .post-header h1 { font-size: 28px; }
+            .post-subtitle { font-size: 16px; }
+            .post-content h2 { font-size: 22px; }
+            .post-cta { padding: 32px 24px; }
+            .code-block pre { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <a href="/" class="nav-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></a>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/blog/" class="nav-link active">Blog</a>
+            <a href="/#about" class="nav-link">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-wrap">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <a href="/blog/">Blog</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <span>[POST_TITLE]</span>
+                </nav>
+            </div>
+
+            <!-- Post header -->
+            <header class="post-header">
+                <span class="post-cat">[POST_CATEGORY]</span>
+                <h1>[POST_TITLE]</h1>
+                <!-- TIP: Wrap 1-3 key words in <span> for green accent: <span>key words</span> -->
+                <p class="post-subtitle">[POST_DESCRIPTION]</p>
+                <div class="post-meta">
+                    <span>By Aron Sarosi</span>
+                    <span class="meta-dot">&middot;</span>
+                    <time datetime="[POST_DATE_ISO]">[POST_DATE_DISPLAY]</time>
+                    <span class="meta-dot">&middot;</span>
+                    <span>[POST_READING_TIME]</span>
+                </div>
+            </header>
+
+            <div class="post-divider"></div>
+
+            <!-- Table of Contents — update hrefs to match your h2 IDs -->
+            <div class="toc reveal">
+                <button class="toc-toggle" onclick="toggleTOC()" aria-expanded="false" aria-controls="toc-list">
+                    <span>Table of Contents</span>
+                    <span class="toc-icon" id="toc-icon">&#9660;</span>
+                </button>
+                <div class="toc-list" id="toc-list">
+                    <div class="toc-inner">
+                        <a href="#section-1">Section 1 Title</a>
+                        <a href="#section-2">Section 2 Title</a>
+                        <a href="#section-3">Section 3 Title</a>
+                        <!-- Add more TOC entries as needed -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article content — write your post here -->
+            <article class="post-content">
+
+                <p>Introduction paragraph goes here. Hook the reader, explain what they'll learn, and tell them who this post is for.</p>
+
+                <!-- ====== SECTION EXAMPLE ====== -->
+                <h2 id="section-1">Section 1 Title</h2>
+
+                <p>Content paragraph...</p>
+
+                <!-- Code block example (remove if not needed) -->
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><span class="cm"># Your Python code here</span>
+<span class="bi">print</span>(<span class="st">"Hello, World!"</span>)</pre>
+                </div>
+
+                <!-- Milestone box example (for project callouts) -->
+                <div class="milestone">
+                    <div class="milestone-label">Project</div>
+                    <p>Describe the milestone project here. Link to the python-projects page if relevant.</p>
+                </div>
+
+                <!-- Warning/tip box example -->
+                <div class="warning-box">
+                    <div class="warning-label">Note</div>
+                    <p>Important warning or tip for the reader.</p>
+                </div>
+
+                <!-- ====== SECTION 2 ====== -->
+                <h2 id="section-2">Section 2 Title</h2>
+
+                <p>Content paragraph...</p>
+
+                <!-- ====== CONCLUSION ====== -->
+                <h2 id="section-3">Conclusion</h2>
+
+                <p>Wrap up the post. Summarize the key points and give the reader a clear next action.</p>
+
+            </article>
+
+            <!-- CTA — customize copy per post or keep consistent -->
+            <div class="post-cta reveal">
+                <span class="post-cta-label">Ready to Start?</span>
+                <h3>Master Python with the Complete Python Masterclass</h3>
+                <p>40+ video lessons, real-world projects, and a step-by-step path from beginner to confident Python developer. Everything you need, in one course.</p>
+                <div class="post-cta-proof">
+                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9/5 rated &middot; Highest-rated Python course by SkillSurge
+                </div>
+                <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" class="btn-cta" target="_blank" rel="noopener">View the Course on Udemy</a>
+            </div>
+
+            <!-- Back link -->
+            <div class="back-link-wrap">
+                <a href="/blog/" class="back-link">&larr; Back to all articles</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge">
+        </div>
+        <p>&copy; 2026 SkillSurge. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        function toggleTOC() {
+            const list = document.getElementById('toc-list');
+            const icon = document.getElementById('toc-icon');
+            const btn = document.querySelector('.toc-toggle');
+            const isOpen = list.classList.toggle('open');
+            icon.classList.toggle('open', isOpen);
+            btn.setAttribute('aria-expanded', isOpen);
+        }
+
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            const text = pre.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

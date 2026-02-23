@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete 2026 Python Roadmap: From Zero to Job-Ready | SkillSurge Blog</title>
+    <meta name="description" content="Your complete month-by-month Python learning roadmap for 2026. From absolute beginner to building real projects with data science, APIs, and machine learning. Free resources included.">
+    <link rel="canonical" href="https://skillsurge.co/blog/2026-python-roadmap/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Complete 2026 Python Roadmap: From Zero to Job-Ready">
+    <meta property="og:description" content="Your complete month-by-month Python learning roadmap for 2026. From absolute beginner to building real projects with data science, APIs, and machine learning.">
+    <meta property="og:url" content="https://skillsurge.co/blog/2026-python-roadmap/">
+    <meta property="og:site_name" content="SkillSurge">
+    <meta property="og:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <meta property="article:published_time" content="2026-02-23T00:00:00Z">
+    <meta property="article:author" content="Aron Sarosi">
+    <meta property="article:section" content="Python">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Python Roadmap">
+    <meta property="article:tag" content="Learn Python">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Complete 2026 Python Roadmap: From Zero to Job-Ready">
+    <meta name="twitter:description" content="Your complete month-by-month Python learning roadmap for 2026. From absolute beginner to building real projects.">
+    <meta name="twitter:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <link rel="icon" type="image/png" href="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/sWPk2Vx98aQhRt8ccgHZVP">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The Complete 2026 Python Roadmap: From Zero to Job-Ready",
+        "description": "Your complete month-by-month Python learning roadmap for 2026. From absolute beginner to building real projects with data science, APIs, and machine learning.",
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": {
+            "@type": "Person",
+            "name": "Aron Sarosi",
+            "url": "https://skillsurge.co/#about"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "SkillSurge",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://skillsurge.co/blog/2026-python-roadmap/"
+        },
+        "image": "https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm",
+        "wordCount": 3200,
+        "articleSection": "Python",
+        "keywords": ["python roadmap 2026", "learn python 2026", "python for beginners", "python learning path", "how to learn python"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://skillsurge.co/"},
+            {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://skillsurge.co/blog/"},
+            {"@type": "ListItem", "position": 3, "name": "The Complete 2026 Python Roadmap"}
+        ]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1A1A2E;
+            --navy-deep: #13132A;
+            --navy-card: #1E1E38;
+            --green: #4CAF50;
+            --green-bright: #5CDB5C;
+            --white: #FFFFFF;
+            --gray: #8888AA;
+            --text-light: #CCCCDD;
+            --gold: #F5C542;
+            --border: #2A2A50;
+            --code-bg: #13132A;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', -apple-system, sans-serif;
+            background: var(--navy);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(rgba(76,175,80,0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+            transition: background 0.3s, backdrop-filter 0.3s;
+        }
+        nav.scrolled {
+            background: rgba(26,26,46,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .nav-logo img { height: 28px; width: auto; }
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--white); }
+        .nav-link.active { color: var(--green); }
+
+        /* Layout */
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-wrap { padding: 110px 0 0; }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--gray);
+            flex-wrap: wrap;
+        }
+        .breadcrumb a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .breadcrumb a:hover { color: var(--green); }
+        .breadcrumb-sep { opacity: 0.35; }
+
+        /* Post header */
+        .post-header { padding: 24px 0 40px; }
+        .post-cat {
+            display: inline-block;
+            background: rgba(76,175,80,0.12);
+            color: var(--green-bright);
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            margin-bottom: 18px;
+        }
+        .post-header h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 18px;
+        }
+        .post-header h1 span { color: var(--green); }
+        .post-subtitle {
+            font-size: 18px;
+            color: var(--gray);
+            line-height: 1.65;
+            margin-bottom: 24px;
+        }
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 13px;
+            color: var(--gray);
+            flex-wrap: wrap;
+        }
+        .meta-dot { opacity: 0.35; }
+        .post-divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(76,175,80,0.25) 0%, rgba(76,175,80,0.05) 100%);
+            margin: 40px 0;
+        }
+
+        /* Table of contents */
+        .toc {
+            background: var(--navy-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            margin-bottom: 48px;
+            overflow: hidden;
+        }
+        .toc-toggle {
+            width: 100%;
+            padding: 18px 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .toc-toggle:hover { background: rgba(76,175,80,0.05); }
+        .toc-icon { font-size: 18px; color: var(--green); transition: transform 0.3s; }
+        .toc-icon.open { transform: rotate(180deg); }
+        .toc-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .toc-list.open { max-height: 600px; }
+        .toc-inner {
+            padding: 4px 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .toc-inner a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 6px 0 6px 14px;
+            border-left: 2px solid rgba(76,175,80,0.2);
+            transition: all 0.2s;
+            line-height: 1.4;
+        }
+        .toc-inner a:hover {
+            color: var(--green-bright);
+            border-left-color: var(--green);
+            padding-left: 18px;
+        }
+
+        /* Article content */
+        .post-content {
+            font-size: 16px;
+            line-height: 1.85;
+            color: var(--text-light);
+            padding-bottom: 20px;
+        }
+        .post-content h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--white);
+            margin: 52px 0 16px;
+            letter-spacing: -0.3px;
+            scroll-margin-top: 80px;
+        }
+        .post-content h3 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--white);
+            margin: 36px 0 12px;
+            scroll-margin-top: 80px;
+        }
+        .post-content p { margin-bottom: 20px; }
+        .post-content a {
+            color: var(--green);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(76,175,80,0.4);
+            transition: text-decoration-color 0.2s, color 0.2s;
+        }
+        .post-content a:hover {
+            color: var(--green-bright);
+            text-decoration-color: var(--green-bright);
+        }
+        .post-content strong { color: var(--white); font-weight: 600; }
+        .post-content em { color: var(--text-light); font-style: italic; }
+        .post-content ul, .post-content ol {
+            margin: 4px 0 20px;
+            padding-left: 24px;
+        }
+        .post-content li { margin-bottom: 8px; }
+        .post-content blockquote {
+            border-left: 3px solid var(--green);
+            padding: 16px 20px;
+            margin: 28px 0;
+            background: rgba(76,175,80,0.05);
+            border-radius: 0 12px 12px 0;
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Code blocks */
+        .code-block {
+            position: relative;
+            background: var(--code-bg);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-left: 3px solid var(--green);
+            overflow-x: auto;
+        }
+        .code-block pre {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #EEFFFF;
+            white-space: pre;
+            margin: 0;
+        }
+        .code-block .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(76,175,80,0.2);
+            color: var(--green);
+            border: none;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.2s;
+        }
+        .code-block .copy-btn:hover { background: var(--green); color: var(--white); }
+        .kw { color: #C792EA; }
+        .bi { color: #82AAFF; }
+        .st { color: #C3E88D; }
+        .nu { color: #FFCB6B; }
+        .cm { color: #546E7A; font-style: italic; }
+        .op { color: #89DDFF; }
+        .fn { color: #82AAFF; }
+
+        /* Inline code */
+        .post-content code {
+            font-family: 'Fira Code', monospace;
+            background: rgba(76,175,80,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.88em;
+            color: var(--green-bright);
+        }
+
+        /* Milestone boxes */
+        .milestone {
+            background: rgba(76,175,80,0.05);
+            border: 1px solid rgba(76,175,80,0.18);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 28px 0;
+        }
+        .milestone-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--green);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .milestone h3 {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: var(--white) !important;
+            margin: 0 0 8px !important;
+        }
+        .milestone ul { margin-bottom: 0; }
+        .milestone li { font-size: 14px; }
+
+        /* Warning box */
+        .warning-box {
+            background: rgba(229,168,57,0.06);
+            border: 1px solid rgba(229,168,57,0.2);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin: 28px 0;
+        }
+        .warning-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .warning-box p { font-size: 14px; color: var(--text-light); margin-bottom: 0; line-height: 1.65; }
+
+        /* CTA block */
+        .post-cta {
+            margin: 64px 0 48px;
+            background: rgba(76,175,80,0.06);
+            border: 1px solid rgba(76,175,80,0.22);
+            border-radius: 20px;
+            padding: 44px 40px;
+            text-align: center;
+        }
+        .post-cta-label {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--green);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .post-cta h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+        .post-cta p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.65;
+            max-width: 520px;
+            margin: 0 auto 20px;
+        }
+        .post-cta-proof {
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 28px;
+        }
+        .post-cta-proof .stars { color: var(--gold); }
+        .btn-cta {
+            display: inline-block;
+            padding: 15px 36px;
+            background: var(--green);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        .btn-cta:hover {
+            background: var(--green-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(76,175,80,0.3);
+            text-decoration: none;
+            color: var(--navy);
+        }
+
+        /* Back to blog link */
+        .back-link-wrap {
+            padding: 16px 0 64px;
+            text-align: center;
+        }
+        .back-link {
+            font-size: 14px;
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--green); }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        .footer-logo { margin-bottom: 12px; }
+        .footer-logo img { height: 24px; width: auto; opacity: 0.7; }
+        footer p { font-size: 12px; color: var(--gray); }
+
+        /* Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .nav-links { gap: 18px; }
+            .post-header h1 { font-size: 28px; }
+            .post-subtitle { font-size: 16px; }
+            .post-content h2 { font-size: 22px; }
+            .post-cta { padding: 32px 24px; }
+            .post-cta h3 { font-size: 20px; }
+            .code-block pre { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <a href="/" class="nav-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></a>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/blog/" class="nav-link active">Blog</a>
+            <a href="/#about" class="nav-link">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-wrap">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <a href="/blog/">Blog</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <span>2026 Python Roadmap</span>
+                </nav>
+            </div>
+
+            <!-- Post header -->
+            <header class="post-header">
+                <span class="post-cat">Python</span>
+                <h1>The Complete <span>2026 Python Roadmap</span>: From Zero to Job-Ready</h1>
+                <p class="post-subtitle">A clear, month-by-month path to go from absolute beginner to building real Python projects — covering data science, APIs, automation, and machine learning basics.</p>
+                <div class="post-meta">
+                    <span>By Aron Sarosi</span>
+                    <span class="meta-dot">&middot;</span>
+                    <time datetime="2026-02-23">February 23, 2026</time>
+                    <span class="meta-dot">&middot;</span>
+                    <span>14 min read</span>
+                </div>
+            </header>
+
+            <div class="post-divider"></div>
+
+            <!-- Table of Contents -->
+            <div class="toc reveal">
+                <button class="toc-toggle" onclick="toggleTOC()" aria-expanded="false" aria-controls="toc-list">
+                    <span>Table of Contents</span>
+                    <span class="toc-icon" id="toc-icon">&#9660;</span>
+                </button>
+                <div class="toc-list" id="toc-list">
+                    <div class="toc-inner">
+                        <a href="#why-python-2026">Why Python in 2026?</a>
+                        <a href="#month-1-2">Months 1–2: Python Fundamentals</a>
+                        <a href="#month-3">Month 3: Intermediate Python</a>
+                        <a href="#month-4">Month 4: Data Science Foundations</a>
+                        <a href="#month-5">Month 5: Web Scraping &amp; Automation</a>
+                        <a href="#month-6">Month 6: Machine Learning Basics</a>
+                        <a href="#month-7-8">Months 7–8: Build Your Portfolio</a>
+                        <a href="#mistakes">Mistakes to Avoid</a>
+                        <a href="#resources">Recommended Resources</a>
+                        <a href="#conclusion">Where to Start Today</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article content -->
+            <article class="post-content">
+
+                <p>If you've been thinking about learning Python — 2026 is the year to actually do it.</p>
+
+                <p>Python is now the most widely used programming language in the world (<a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener">TIOBE Index, 2025</a>), and it's not slowing down. The rise of AI has made Python the language that powers the tools reshaping every industry. ChatGPT, Gemini, and Claude are all built on Python foundations. Data scientists, automation engineers, web developers, and researchers all speak Python.</p>
+
+                <p>But here's what holds most people back: <strong>they don't know where to start</strong>. There are too many tutorials, too many opinions, and too many paths. This roadmap cuts through the noise.</p>
+
+                <p>This guide gives you a clear, month-by-month plan from complete beginner to confident Python developer. By the end, you'll have real projects to show, real skills that matter, and a portfolio that speaks for itself.</p>
+
+                <p>Let's get into it.</p>
+
+                <h2 id="why-python-2026">Why Python in 2026? Is It Still Worth It?</h2>
+
+                <p>Short answer: <strong>yes, absolutely.</strong></p>
+
+                <p>Python has been the #1 most-wanted language in the Stack Overflow Developer Survey for years running. It dominates data science, machine learning, automation, and backend development. And with the AI boom only accelerating, Python's position is stronger than ever.</p>
+
+                <p>Here's why Python specifically makes sense to learn:</p>
+
+                <ul>
+                    <li><strong>Beginner-friendly syntax.</strong> Python reads almost like English. You spend less time fighting the language and more time actually learning programming.</li>
+                    <li><strong>Universally applicable.</strong> Web development (Django, Flask), data science (pandas, numpy), automation, AI/ML, scripting, finance, biology — Python shows up everywhere.</li>
+                    <li><strong>Massive ecosystem.</strong> Hundreds of thousands of packages on PyPI mean there's almost nothing you can't build.</li>
+                    <li><strong>Strong job market.</strong> Python developers are among the most in-demand, with salaries regularly exceeding $100K in the US.</li>
+                    <li><strong>AI is Python.</strong> If you want to work with AI tools, understand LLMs, or build AI-powered applications — Python is the entry point, full stop.</li>
+                </ul>
+
+                <blockquote>
+                    Python is the closest thing to a universal programming language that exists. Learning it opens more doors than any other single technical skill you could acquire in 2026.
+                </blockquote>
+
+                <p>Now let's get to the roadmap.</p>
+
+                <h2 id="month-1-2">Months 1–2: Python Fundamentals</h2>
+
+                <p>These two months are the foundation. Don't rush them. Don't skip them to get to "the cool stuff." The developers who struggle later are almost always the ones who skipped fundamentals.</p>
+
+                <h3>What to cover</h3>
+
+                <ul>
+                    <li><strong>Variables and data types</strong> — integers, floats, strings, booleans</li>
+                    <li><strong>Operators</strong> — arithmetic, comparison, logical</li>
+                    <li><strong>String manipulation</strong> — slicing, f-strings, methods</li>
+                    <li><strong>Collections</strong> — lists, tuples, dictionaries, sets</li>
+                    <li><strong>Control flow</strong> — if/elif/else, for loops, while loops</li>
+                    <li><strong>Functions</strong> — defining, calling, parameters, return values</li>
+                    <li><strong>User input</strong> — <code>input()</code>, type casting</li>
+                    <li><strong>Basic modules</strong> — <code>random</code>, <code>math</code>, <code>datetime</code></li>
+                </ul>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><span class="cm"># A simple function using fundamentals you'll learn in Month 1</span>
+<span class="kw">import</span> random
+<span class="kw">import</span> string
+
+<span class="kw">def</span> <span class="fn">generate_password</span>(length<span class="op">=</span><span class="nu">12</span>):
+    chars <span class="op">=</span> string.ascii_letters <span class="op">+</span> string.digits <span class="op">+</span> string.punctuation
+    password <span class="op">=</span> <span class="st">''</span>.join(random.choice(chars) <span class="kw">for</span> _ <span class="kw">in</span> <span class="bi">range</span>(length))
+    <span class="kw">return</span> password
+
+<span class="bi">print</span>(generate_password())  <span class="cm"># Output: something like @k3Xp#9Lm!Qv</span></pre>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-label">Month 1–2 Milestone Project</div>
+                    <h3>Password Generator</h3>
+                    <p>Build a tool that generates secure, random passwords. Users choose the length and character types. Simple, useful, and a great exercise in functions and the <code>random</code> module.</p>
+                    <p style="margin-top:12px; font-size:13px;"><a href="https://skillsurge.co/python-projects/">See the full project with starter code &rarr;</a></p>
+                </div>
+
+                <p><strong>How to study:</strong> Write code every day, even if it's just 20 minutes. Don't just read tutorials — type out the examples, break them, experiment. The goal is to get to the point where you can write a basic script without looking anything up.</p>
+
+                <h2 id="month-3">Month 3: Intermediate Python</h2>
+
+                <p>With fundamentals solid, Month 3 is where you start writing Python that actually does real things. This is when it gets genuinely exciting.</p>
+
+                <h3>What to cover</h3>
+
+                <ul>
+                    <li><strong>Object-oriented programming (OOP)</strong> — classes, objects, methods, inheritance</li>
+                    <li><strong>Error handling</strong> — try/except blocks, raising exceptions</li>
+                    <li><strong>File I/O</strong> — reading and writing files, CSV, JSON</li>
+                    <li><strong>Modules and packages</strong> — creating your own, using pip</li>
+                    <li><strong>Working with APIs</strong> — making HTTP requests with <code>requests</code></li>
+                    <li><strong>Comprehensions</strong> — list, dict, and set comprehensions</li>
+                    <li><strong>Lambda functions and map/filter</strong></li>
+                </ul>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><span class="kw">import</span> json
+
+<span class="cm"># Reading and writing data — you'll use this constantly</span>
+<span class="kw">def</span> <span class="fn">load_expenses</span>(filename):
+    <span class="kw">try</span>:
+        <span class="kw">with</span> <span class="bi">open</span>(filename, <span class="st">'r'</span>) <span class="kw">as</span> f:
+            <span class="kw">return</span> json.load(f)
+    <span class="kw">except</span> FileNotFoundError:
+        <span class="kw">return</span> []  <span class="cm"># return empty list if file doesn't exist yet</span>
+
+<span class="kw">def</span> <span class="fn">save_expenses</span>(expenses, filename):
+    <span class="kw">with</span> <span class="bi">open</span>(filename, <span class="st">'w'</span>) <span class="kw">as</span> f:
+        json.dump(expenses, f, indent<span class="op">=</span><span class="nu">2</span>)</pre>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-label">Month 3 Milestone Project</div>
+                    <h3>Expense Tracker</h3>
+                    <p>A command-line tool that lets users log, view, and summarize their expenses. Saved to a JSON file between sessions. Great for practicing file I/O, error handling, and basic OOP.</p>
+                    <p style="margin-top:12px; font-size:13px;"><a href="https://skillsurge.co/python-projects/">See all 5 beginner Python projects &rarr;</a></p>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-label">Watch out</div>
+                    <p>OOP is where many beginners get stuck. The syntax feels abstract at first. Don't panic — it clicks with practice. Build something using classes before moving on, even if it feels forced. The mental model will stick after you've actually written it.</p>
+                </div>
+
+                <h2 id="month-4">Month 4: Data Science Foundations</h2>
+
+                <p>Data science is one of the most in-demand Python skill sets in the job market, and it starts with just two libraries: <strong>pandas</strong> and <strong>matplotlib</strong>.</p>
+
+                <h3>What to cover</h3>
+
+                <ul>
+                    <li><strong>NumPy</strong> — arrays, vectorized operations, basic math</li>
+                    <li><strong>pandas</strong> — DataFrames, loading CSVs, filtering, grouping, aggregating</li>
+                    <li><strong>matplotlib &amp; seaborn</strong> — line charts, bar charts, histograms, scatter plots</li>
+                    <li><strong>Exploratory Data Analysis (EDA)</strong> — understanding a dataset before doing anything with it</li>
+                    <li><strong>Cleaning messy data</strong> — handling nulls, fixing types, renaming columns</li>
+                </ul>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt
+
+<span class="cm"># Load a CSV dataset and do quick EDA</span>
+df <span class="op">=</span> pd.read_csv(<span class="st">'sales_data.csv'</span>)
+
+<span class="bi">print</span>(df.shape)         <span class="cm"># (rows, columns)</span>
+<span class="bi">print</span>(df.dtypes)        <span class="cm"># check data types</span>
+<span class="bi">print</span>(df.isnull().<span class="bi">sum</span>())  <span class="cm"># check for missing values</span>
+
+<span class="cm"># Group by category and plot</span>
+monthly <span class="op">=</span> df.groupby(<span class="st">'month'</span>)[<span class="st">'revenue'</span>].sum()
+monthly.plot(kind<span class="op">=</span><span class="st">'bar'</span>, color<span class="op">=</span><span class="st">'#4CAF50'</span>)
+plt.title(<span class="st">'Revenue by Month'</span>)
+plt.show()</pre>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-label">Month 4 Milestone Project</div>
+                    <h3>Data Explorer</h3>
+                    <p>Build a script that loads any CSV dataset, runs automated EDA, and generates a set of charts. Real-world data skills that translate directly to job interviews.</p>
+                    <p style="margin-top:12px; font-size:13px;"><a href="https://skillsurge.co/python-projects/">See the full project walkthrough &rarr;</a></p>
+                </div>
+
+                <p>Jupyter Notebooks are your best friend here — install them with <code>pip install notebook</code> and run <code>jupyter notebook</code> in your terminal. The interactive cell-by-cell execution makes data exploration much more intuitive than running full scripts.</p>
+
+                <h2 id="month-5">Month 5: Web Scraping &amp; Automation</h2>
+
+                <p>This is when Python starts feeling like a superpower. Web scraping and automation let you extract data from anywhere and automate repetitive tasks — skills that are useful across nearly every industry.</p>
+
+                <h3>What to cover</h3>
+
+                <ul>
+                    <li><strong>requests</strong> — making HTTP GET/POST requests</li>
+                    <li><strong>BeautifulSoup</strong> — parsing HTML, extracting elements</li>
+                    <li><strong>Selenium</strong> (basics) — browser automation for dynamic pages</li>
+                    <li><strong>Scheduling scripts</strong> — running Python on a schedule</li>
+                    <li><strong>Working with APIs</strong> — REST APIs, JSON parsing, authentication</li>
+                </ul>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><span class="kw">import</span> requests
+<span class="kw">from</span> bs4 <span class="kw">import</span> BeautifulSoup
+
+<span class="kw">def</span> <span class="fn">scrape_headlines</span>(url):
+    response <span class="op">=</span> requests.get(url, timeout<span class="op">=</span><span class="nu">10</span>)
+    soup <span class="op">=</span> BeautifulSoup(response.text, <span class="st">'html.parser'</span>)
+
+    headlines <span class="op">=</span> []
+    <span class="kw">for</span> tag <span class="kw">in</span> soup.find_all(<span class="st">'h2'</span>):
+        text <span class="op">=</span> tag.get_text(strip<span class="op">=</span><span class="kw">True</span>)
+        <span class="kw">if</span> text:
+            headlines.append(text)
+
+    <span class="kw">return</span> headlines
+
+<span class="cm"># Returns a list of all h2 headings from any webpage</span></pre>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-label">Month 5 Milestone Project</div>
+                    <h3>Web Scraper</h3>
+                    <p>Build a scraper that collects structured data from a website of your choice and saves it to a CSV. Teaches requests, BeautifulSoup, data extraction, and ethical scraping practices.</p>
+                    <p style="margin-top:12px; font-size:13px;"><a href="https://skillsurge.co/python-projects/">See the full project with code &rarr;</a></p>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-label">Important</div>
+                    <p>Always check a website's <code>robots.txt</code> before scraping and respect the site's terms of service. Scrape responsibly — add delays between requests and don't hammer servers.</p>
+                </div>
+
+                <h2 id="month-6">Month 6: Machine Learning Basics</h2>
+
+                <p>You don't need a PhD to start using machine learning. With scikit-learn, you can build and run your first model in under 30 lines of code.</p>
+
+                <h3>What to cover</h3>
+
+                <ul>
+                    <li><strong>What ML actually is</strong> — supervised vs unsupervised, training vs inference</li>
+                    <li><strong>scikit-learn workflow</strong> — load data, split train/test, fit, predict, evaluate</li>
+                    <li><strong>Common algorithms</strong> — linear regression, logistic regression, decision trees, random forests</li>
+                    <li><strong>Model evaluation</strong> — accuracy, precision, recall, confusion matrix</li>
+                    <li><strong>Feature engineering basics</strong> — what makes a good feature</li>
+                </ul>
+
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    <pre><span class="kw">from</span> sklearn.model_selection <span class="kw">import</span> train_test_split
+<span class="kw">from</span> sklearn.ensemble <span class="kw">import</span> RandomForestClassifier
+<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> accuracy_score
+
+<span class="cm"># A complete ML pipeline in ~10 lines</span>
+X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(
+    X, y, test_size<span class="op">=</span><span class="nu">0.2</span>, random_state<span class="op">=</span><span class="nu">42</span>
+)
+
+model <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="nu">100</span>)
+model.fit(X_train, y_train)
+
+predictions <span class="op">=</span> model.predict(X_test)
+<span class="bi">print</span>(<span class="st">f'Accuracy: </span>{accuracy_score(y_test, predictions)<span class="op">:.2%</span>}<span class="st">'</span>)</pre>
+                </div>
+
+                <p>The goal of Month 6 isn't to become an ML engineer — it's to understand what machine learning is, how the workflow operates, and to have hands-on experience building a model. That context is invaluable even if you never specialize in ML.</p>
+
+                <h2 id="month-7-8">Months 7–8: Build Your Portfolio</h2>
+
+                <p>This is where everything comes together. No new concepts to learn — just building. A portfolio of 3–5 real Python projects is worth more to most employers than any certificate.</p>
+
+                <h3>Portfolio project ideas</h3>
+
+                <ul>
+                    <li><strong>Data analysis project</strong> — Take a real public dataset (sports, finance, climate), analyze it with pandas, and write up your findings. Host it on GitHub with a clear README.</li>
+                    <li><strong>Automation tool</strong> — Build something that solves a real problem in your life. A script that organizes files, a price tracker, a news summarizer that emails you daily.</li>
+                    <li><strong>Web scraper + dashboard</strong> — Scrape live data and visualize it. Sports stats, job listings, Reddit trends — your choice.</li>
+                    <li><strong>ML classification project</strong> — Pick a Kaggle dataset, build a model, document your process, and share results.</li>
+                </ul>
+
+                <h3>How to present your work</h3>
+
+                <ul>
+                    <li>Every project gets its own GitHub repository</li>
+                    <li>Write a proper <code>README.md</code> explaining what it does, how to run it, and what you learned</li>
+                    <li>Add screenshots or GIFs showing the project in action</li>
+                    <li>Comment your code clearly — future you (and potential employers) will thank you</li>
+                </ul>
+
+                <p>You don't need 20 projects. You need 3 good ones that show you can identify a problem, build a solution, and communicate what you did.</p>
+
+                <h2 id="mistakes">Mistakes to Avoid</h2>
+
+                <p>These are the patterns that slow people down the most:</p>
+
+                <h3>Tutorial hell</h3>
+                <p>Watching tutorials feels productive but it's largely passive. You need to be writing code, not watching someone else write it. For every tutorial you watch, spend twice as long actually building something with what you learned.</p>
+
+                <h3>Learning everything before building anything</h3>
+                <p>You don't need to know the entire Python documentation before you can build useful things. Start building projects in Month 1. The gaps in your knowledge will become obvious — and that's when you learn most effectively.</p>
+
+                <h3>Jumping between languages</h3>
+                <p>Python is enough. Don't start learning JavaScript because someone on Reddit said it's more useful. Pick Python, stick with it for at least a year, and go deep. Breadth can come later.</p>
+
+                <h3>Skipping the fundamentals</h3>
+                <p>Everyone wants to skip to machine learning or web development. But the developers who plateau are almost always the ones with shaky fundamentals. Spend real time on Months 1–2. They pay dividends for years.</p>
+
+                <h3>Studying without a community</h3>
+                <p>Learning in isolation is harder than it needs to be. Join a Discord, find a study group, share your projects publicly. Accountability and feedback accelerate learning dramatically.</p>
+
+                <h2 id="resources">Recommended Resources for 2026</h2>
+
+                <h3>Free resources</h3>
+
+                <ul>
+                    <li><a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener">Official Python Tutorial</a> — the best reference, surprisingly readable</li>
+                    <li><a href="https://automatetheboringstuff.com/" target="_blank" rel="noopener">Automate the Boring Stuff with Python</a> — free online, excellent for practical projects</li>
+                    <li><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener">Kaggle Learn</a> — free micro-courses on pandas, ML, and data visualization</li>
+                    <li><a href="https://skillsurge.co/python-projects/">SkillSurge Python Projects</a> — 5 free beginner projects with full source code</li>
+                </ul>
+
+                <h3>Structured learning</h3>
+
+                <p>Free resources are great for supplementing learning, but if you want a structured, step-by-step path that takes you from beginner to confident Python developer — my Python Masterclass on Udemy covers everything in this roadmap with 40+ lessons, real project walkthroughs, and a clear learning progression.</p>
+
+                <p>It's the highest-rated Python course I've built, designed specifically for people who learn best with video + practice + projects (not dry documentation).</p>
+
+                <h2 id="conclusion">Where to Start Today</h2>
+
+                <p>The worst thing you can do is spend another week researching the best way to start. Here's the simplest possible action you can take right now:</p>
+
+                <ol>
+                    <li><strong>Install Python</strong> — download from <a href="https://python.org" target="_blank" rel="noopener">python.org</a> (latest stable version)</li>
+                    <li><strong>Install VS Code</strong> — free, excellent Python support with extensions</li>
+                    <li><strong>Write your first script</strong> — <code>print("Hello, World!")</code> sounds silly but it confirms your setup works</li>
+                    <li><strong>Pick a learning resource</strong> — this roadmap tells you what to learn; pick one resource to learn it from and commit for 30 days</li>
+                </ol>
+
+                <p>Eight months from now, you'll have real Python skills, real projects to show, and the ability to build things that actually work. The only version of this that doesn't happen is the one where you don't start.</p>
+
+                <p>Let's go.</p>
+
+            </article>
+
+            <!-- CTA -->
+            <div class="post-cta reveal">
+                <span class="post-cta-label">Ready to Start?</span>
+                <h3>Master Python with the Complete Python Masterclass</h3>
+                <p>40+ video lessons, real-world projects, and a step-by-step path from beginner to confident Python developer. Everything in this roadmap, taught hands-on.</p>
+                <div class="post-cta-proof">
+                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9/5 rated &middot; Highest-rated Python course by SkillSurge
+                </div>
+                <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" class="btn-cta" target="_blank" rel="noopener">View the Course on Udemy</a>
+            </div>
+
+            <!-- Back to blog -->
+            <div class="back-link-wrap">
+                <a href="/blog/" class="back-link">&larr; Back to all articles</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge">
+        </div>
+        <p>&copy; 2026 SkillSurge. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // TOC toggle
+        function toggleTOC() {
+            const list = document.getElementById('toc-list');
+            const icon = document.getElementById('toc-icon');
+            const btn = document.querySelector('.toc-toggle');
+            const isOpen = list.classList.toggle('open');
+            icon.classList.toggle('open', isOpen);
+            btn.setAttribute('aria-expanded', isOpen);
+        }
+
+        // Copy code button
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            const text = pre.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+            });
+        }
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
