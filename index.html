@@ -279,6 +279,43 @@
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
+        /* ==========================================
+           COMMUNITY WAITLIST
+           ========================================== */
+        .community-inner { position: relative; z-index: 2; padding: 72px 24px; max-width: 680px; margin: 0 auto; text-align: center; }
+        .community-inner .section-tag { margin-bottom: 12px; }
+        .community-inner .section-h2 { margin-bottom: 16px; }
+        .community-desc { font-size: 17px; color: var(--text-light); line-height: 1.65; max-width: 540px; margin: 0 auto 12px; }
+        .community-perks { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+        .community-perk { font-size: 13px; color: var(--gray); display: flex; align-items: center; gap: 7px; }
+        .community-perk-icon { color: var(--green); font-size: 15px; }
+        .community-form { display: flex; gap: 12px; max-width: 520px; margin: 0 auto 12px; }
+        .community-form input { flex: 1; padding: 14px 18px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; min-width: 0; }
+        .community-form input:focus { border-color: var(--green); }
+        .community-form input::placeholder { color: var(--gray); }
+        .community-form .btn-community { padding: 14px 28px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-weight: 800; font-size: 15px; font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap; transition: all 0.3s; }
+        .community-form .btn-community:hover { background: var(--green-bright); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,175,80,0.3); }
+        .community-form .btn-community:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+        .community-name-row { max-width: 520px; margin: 0 auto 12px; }
+        .community-name-row input { width: 100%; padding: 14px 18px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
+        .community-name-row input:focus { border-color: var(--green); }
+        .community-name-row input::placeholder { color: var(--gray); }
+        .community-privacy { font-size: 12px; color: var(--gray); margin-top: 10px; }
+        .community-success { display: none; background: rgba(76,175,80,0.08); border: 1px solid rgba(76,175,80,0.25); border-radius: 16px; padding: 32px; max-width: 440px; margin: 0 auto; }
+        .community-success.show { display: block; }
+        .community-success-icon { font-size: 36px; margin-bottom: 12px; }
+        .community-success h3 { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+        .community-success p { font-size: 15px; color: var(--text-light); line-height: 1.6; }
+        .community-fields { }
+        .community-fields.hide { display: none; }
+        .soon-tag-link { cursor: pointer; display: inline-block; padding: 2px 8px; background: rgba(76,175,80,0.12); color: var(--green-bright); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0; transition: background 0.2s; text-decoration: none; }
+        .soon-tag-link:hover { background: rgba(76,175,80,0.22); }
+        @media (max-width: 600px) {
+            .community-form { flex-direction: column; }
+            .community-form .btn-community { width: 100%; }
+            .community-perks { gap: 14px; flex-direction: column; align-items: center; }
+        }
+
         @media (max-width: 768px) {
             nav { padding: 12px 20px; }
             .hero-inner { padding: 100px 20px 56px; }
@@ -350,7 +387,7 @@
                     <div class="track-sub">Courses & More</div>
                     <ul class="resource-list">
                         <li><span class="res-icon">🎓</span><span class="res-name">AI Tools Masterclass</span><span class="soon-tag">Soon</span></li>
-                        <li><span class="res-icon">🌍</span><span class="res-name">SkillSurge Community</span><span class="soon-tag">Soon</span></li>
+                        <li onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})"><span class="res-icon">🌍</span><span class="res-name">SkillSurge Community</span><a href="#community" class="soon-tag-link" onclick="event.stopPropagation()">Join Waitlist</a></li>
                     </ul>
                     <a href="#" onclick="openOnboarding(); return false;" class="btn-track">Get Started</a>
                     <div class="track-proof">Coming 2026 - be the first to know</div>
@@ -370,7 +407,7 @@
                     <div class="track-sub">Courses & More</div>
                     <ul class="resource-list">
                         <li onclick="window.open('https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F','_blank')"><span class="res-icon">🎓</span><span class="res-name">Python Masterclass - 40+ video lessons</span></li>
-                        <li><span class="res-icon">🌍</span><span class="res-name">SkillSurge Community</span><span class="soon-tag">Soon</span></li>
+                        <li onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})"><span class="res-icon">🌍</span><span class="res-name">SkillSurge Community</span><a href="#community" class="soon-tag-link" onclick="event.stopPropagation()">Join Waitlist</a></li>
                     </ul>
                     <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" class="btn-track">Explore the Course</a>
                     <div class="track-proof"><span class="stars">★★★★★</span> 100+ students enrolled</div>
@@ -431,6 +468,41 @@
                     <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Rashmi Bisht</div></div>
                     <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Patrick Weingartz</div></div>
                 </div></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- COMMUNITY WAITLIST -->
+    <section class="bg-bright-overlay" id="community">
+        <div class="community-inner">
+            <div class="section-tag">Community</div>
+            <h2 class="section-h2 reveal">Be First In When We Open the Doors</h2>
+            <p class="community-desc reveal">SkillSurge Community is coming — a space to learn alongside other Python and AI builders, get feedback, share projects, and grow faster together.</p>
+            <div class="community-perks reveal">
+                <span class="community-perk"><span class="community-perk-icon">✦</span> Project feedback &amp; accountability</span>
+                <span class="community-perk"><span class="community-perk-icon">✦</span> Live sessions with Aron</span>
+                <span class="community-perk"><span class="community-perk-icon">✦</span> Early access pricing</span>
+            </div>
+
+            <!-- Sign-up form -->
+            <div class="community-fields reveal" id="communityFields">
+                <div class="community-name-row">
+                    <input type="text" id="communityName" placeholder="Your first name" autocomplete="given-name">
+                </div>
+                <div class="community-form">
+                    <input type="email" id="communityEmail" placeholder="Your email address" autocomplete="email">
+                    <button class="btn-community" id="communityBtn" onclick="communitySubmit()">Join the Waitlist</button>
+                </div>
+                <p class="community-privacy">No spam. You'll only hear from us when the community is ready to launch.</p>
+            </div>
+
+            <!-- Success state -->
+            <div class="community-success" id="communitySuccess">
+                <div class="community-success-icon">🎉</div>
+                <h3>You're on the list!</h3>
+                <p>We'll email you the moment the SkillSurge Community opens. You'll be among the first to get access — and the early-bird pricing.</p>
             </div>
         </div>
     </section>
@@ -537,7 +609,43 @@
         }
 
         const KIT_API_KEY = 'U-0B6YZOem0yuvBzMaKDgQ';
-        const KIT_FORM_IDS = { python: '9068573', ai: '9110856' };
+        const KIT_FORM_IDS = { python: '9068573', ai: '9110856', community: '9125775' };
+
+        async function communitySubmit() {
+            const name = document.getElementById('communityName').value.trim();
+            const email = document.getElementById('communityEmail').value.trim();
+            const btn = document.getElementById('communityBtn');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!name) { alert('Please enter your first name.'); return; }
+            if (!email || !emailRegex.test(email)) { alert('Please enter a valid email address.'); return; }
+
+            btn.textContent = 'Joining...';
+            btn.disabled = true;
+
+            const prevErr = document.getElementById('community-submit-error');
+            if (prevErr) prevErr.remove();
+
+            try {
+                const res = await fetch(`https://api.convertkit.com/v3/forms/${KIT_FORM_IDS.community}/subscribe`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                    body: JSON.stringify({ api_key: KIT_API_KEY, email, first_name: name })
+                });
+                if (!res.ok) throw new Error('Subscription failed');
+
+                document.getElementById('communityFields').classList.add('hide');
+                document.getElementById('communitySuccess').classList.add('show');
+            } catch (err) {
+                btn.textContent = 'Join the Waitlist';
+                btn.disabled = false;
+                const errEl = document.createElement('p');
+                errEl.id = 'community-submit-error';
+                errEl.style.cssText = 'color:#ff6b6b;font-size:13px;text-align:center;margin-top:10px;';
+                errEl.textContent = 'Something went wrong. Please try again.';
+                btn.closest('.community-form').insertAdjacentElement('afterend', errEl);
+            }
+        }
 
         async function obSubmit() {
             const name = document.getElementById('obName').value.trim();
