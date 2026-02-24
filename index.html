@@ -129,8 +129,10 @@
         .offering-chevron { width: 16px; height: 16px; stroke: var(--gray); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-left: auto; flex-shrink: 0; transition: transform 0.25s ease; }
         .offering-item.open .offering-chevron { transform: rotate(180deg); }
         .offering-desc { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-top 0.25s ease; padding-top: 0; padding-left: 68px; }
-        .offering-item.open .offering-desc { max-height: 140px; padding-top: 12px; }
+        .offering-item.open .offering-desc { max-height: 280px; padding-top: 12px; }
         .offering-desc p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
+        .tool-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .tool-tag { display: inline-flex; align-items: center; padding: 4px 11px; font-size: 12px; font-weight: 600; color: var(--gray); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; letter-spacing: 0.3px; }
         .offering-icon { width: 52px; height: 52px; background: rgba(76,175,80,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .offering-icon svg { width: 24px; height: 24px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
         .offering-text { font-size: 15px; font-weight: 600; color: var(--text-light); letter-spacing: 0.1px; line-height: 1.3; }
@@ -353,13 +355,18 @@
                 <div class="offering-item reveal" onclick="toggleOffering(this)">
                     <div class="offering-item-header">
                         <div class="offering-icon">
-                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                         </div>
-                        <span class="offering-text">24/7 AI Assistants</span>
+                        <span class="offering-text">AI Strategy Partners</span>
                         <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
                     </div>
                     <div class="offering-desc">
-                        <p>Build an AI assistant tailored to your communication style and context. It drafts emails, summarises documents, manages research, and handles repetitive writing tasks - around the clock, without burning out or losing quality.</p>
+                        <p>Your personal board of advisors, available on demand. They write your sales copy, generate brand visuals, draft business plans, build landing pages, and turn rough ideas into polished deliverables. With Custom GPTs and Claude Projects, you build advisors trained on your brand, your voice, and your goals.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Claude</span>
+                            <span class="tool-tag">ChatGPT</span>
+                            <span class="tool-tag">Gemini</span>
+                        </div>
                     </div>
                 </div>
 
@@ -373,6 +380,11 @@
                     </div>
                     <div class="offering-desc">
                         <p>Connect AI to the tools you already use. A new task arrives, gets sorted, a response is drafted, and you're notified - all automatically. Turn hours of copy-paste work into pipelines that run without you.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Make</span>
+                            <span class="tool-tag">n8n</span>
+                            <span class="tool-tag">Zapier</span>
+                        </div>
                     </div>
                 </div>
 
@@ -385,20 +397,28 @@
                         <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
                     </div>
                     <div class="offering-desc">
-                        <p>Build AI systems designed for your specific goals - custom agents, retrieval pipelines, and prompt architectures that produce output tailored to you. Not a generic wrapper. Built for your exact workflow.</p>
+                        <p>These tools build entire products from a conversation. A fully functional website with Stripe payments. A SaaS dashboard with user login and subscriptions. An e-commerce store with inventory management. What used to take a developer team and months of budget now takes one person an afternoon.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Claude Code</span>
+                            <span class="tool-tag">Codex</span>
+                            <span class="tool-tag">Cursor</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="offering-item reveal" onclick="toggleOffering(this)">
                     <div class="offering-item-header">
                         <div class="offering-icon">
-                            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
                         </div>
-                        <span class="offering-text">AI Operations Stack</span>
+                        <span class="offering-text">24/7 Autonomous Agents</span>
                         <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
                     </div>
                     <div class="offering-desc">
-                        <p>Learn to map your entire workflow, find the highest-leverage tasks to automate, and build your personal AI stack - content creation, research, admin, comms - all running on systems you built yourself.</p>
+                        <p>OpenClaw runs as a bot inside your messaging apps and keeps working while you sleep. It monitors, responds, triages, and takes action across your systems without being prompted. Not a tool you open when you need it. A system that runs whether you're there or not.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">OpenClaw</span>
+                        </div>
                     </div>
                 </div>
 
