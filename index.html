@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/sWPk2Vx98aQhRt8ccgHZVP">
-    <title>SkillSurge – Close the Skill Gap</title>
-    <meta name="description" content="Learn AI tools and Python for free. Hands-on resources, courses, and community. Led by Aron Sarosi. Close the skill gap and start building real projects.">
+    <title>SkillSurge - Master AI for Free</title>
+    <meta name="description" content="Master AI tools for free with SkillSurge. Get the free AI Starter Guide, or grab the Plug & Play AI Setup and hit the ground running. Led by Aron Sarosi.">
     <meta name="google-site-verification" content="poqlgh0255t5eeihcpovH2ZEbqGHZl7LFyynFrqsZ5M">
     <link rel="canonical" href="https://skillsurge.co/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SkillSurge – Close the Skill Gap">
-    <meta property="og:description" content="Learn AI tools and Python for free. Hands-on resources, courses, and community. Led by Aron Sarosi. Close the skill gap and start building real projects.">
+    <meta property="og:title" content="SkillSurge - Master AI for Free">
+    <meta property="og:description" content="Master AI tools for free with SkillSurge. Get the free AI Starter Guide, or grab the Plug & Play AI Setup and hit the ground running. Led by Aron Sarosi.">
     <meta property="og:url" content="https://skillsurge.co/">
     <meta property="og:site_name" content="SkillSurge">
     <meta property="og:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SkillSurge – Close the Skill Gap">
-    <meta name="twitter:description" content="Learn AI tools and Python for free. Hands-on resources, courses, and community. Led by Aron Sarosi. Close the skill gap and start building real projects.">
+    <meta name="twitter:title" content="SkillSurge - Master AI for Free">
+    <meta name="twitter:description" content="Master AI tools for free with SkillSurge. Get the free AI Starter Guide, or grab the Plug & Play AI Setup and hit the ground running. Led by Aron Sarosi.">
     <meta name="twitter:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -26,13 +26,14 @@
             --navy: #1A1A2E;
             --navy-deep: #13132A;
             --navy-light: #242445;
-            --bright: #212142;
+            --surface: #171728;
             --green: #4CAF50;
             --green-bright: #5CDB5C;
             --white: #FFFFFF;
             --gray: #8888AA;
             --text-light: #CCCCDD;
             --gold: #F5C542;
+            --red: #C94040;
         }
 
         html { scroll-behavior: smooth; }
@@ -46,28 +47,10 @@
         }
 
         /* ==========================================
-           GLOBAL BACKGROUND PATTERN (all sections)
+           GLOBAL BACKGROUND PATTERN
            ========================================== */
-        .bg-pattern-global {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        /* Dot grid */
-        .bg-pattern-global::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-image: radial-gradient(rgba(76, 175, 80, 0.06) 1px, transparent 1px);
-            background-size: 48px 48px;
-        }
-
-        /* Flowing energy lines */
+        .bg-pattern-global { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden; }
+        .bg-pattern-global::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(76, 175, 80, 0.06) 1px, transparent 1px); background-size: 48px 48px; }
         .bg-pattern-global .gl { position: absolute; height: 1px; background: linear-gradient(90deg, transparent, rgba(76,175,80,0.12), transparent); animation: gFlow 12s linear infinite; }
         .bg-pattern-global .gl:nth-child(1) { top: 8%; width: 50%; left: -50%; animation-duration: 16s; }
         .bg-pattern-global .gl:nth-child(2) { top: 22%; width: 60%; left: -60%; animation-delay: 3s; animation-duration: 18s; }
@@ -76,8 +59,6 @@
         .bg-pattern-global .gl:nth-child(5) { top: 66%; width: 40%; left: -40%; animation-delay: 4s; animation-duration: 15s; }
         .bg-pattern-global .gl:nth-child(6) { top: 80%; width: 65%; left: -65%; animation-delay: 7s; animation-duration: 17s; }
         .bg-pattern-global .gl:nth-child(7) { top: 92%; width: 35%; left: -35%; animation-delay: 2s; animation-duration: 13s; }
-
-        /* Vertical data streams */
         .bg-pattern-global .gv { position: absolute; width: 1px; background: linear-gradient(180deg, transparent, rgba(76,175,80,0.08), transparent); animation: gDown 14s linear infinite; }
         .bg-pattern-global .gv:nth-child(8) { left: 8%; height: 30%; top: -30%; animation-duration: 18s; }
         .bg-pattern-global .gv:nth-child(9) { left: 25%; height: 40%; top: -40%; animation-delay: 3s; animation-duration: 22s; }
@@ -85,19 +66,14 @@
         .bg-pattern-global .gv:nth-child(11) { left: 60%; height: 45%; top: -45%; animation-delay: 1s; animation-duration: 20s; }
         .bg-pattern-global .gv:nth-child(12) { left: 78%; height: 30%; top: -30%; animation-delay: 4s; animation-duration: 17s; }
         .bg-pattern-global .gv:nth-child(13) { left: 92%; height: 38%; top: -38%; animation-delay: 7s; animation-duration: 19s; }
-
         @keyframes gFlow { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(calc(100vw + 100%)); opacity: 0; } }
         @keyframes gDown { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(calc(100vh + 100%)); opacity: 0; } }
 
-        /* Section-specific background overlays */
-        .bg-hero-overlay { position: relative; z-index: 1; background: var(--navy); }
-        .bg-hero-overlay::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(36,36,69,0.95) 0%, transparent 70%), radial-gradient(ellipse 35% 30% at 50% 40%, rgba(76,175,80,0.06) 0%, transparent 60%); pointer-events: none; }
-
-        .bg-bright-overlay { position: relative; z-index: 1; background: var(--bright); }
-        .bg-dark-overlay { position: relative; z-index: 1; background: var(--navy); }
-        .bg-deep-overlay { position: relative; z-index: 1; background: var(--navy-deep); }
-
-        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 5%, rgba(76,175,80,0.18) 50%, transparent 95%); position: relative; z-index: 1; }
+        .bg-a { position: relative; z-index: 1; background: var(--navy); }
+        .bg-a::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(36,36,69,0.95) 0%, transparent 70%), radial-gradient(ellipse 35% 30% at 50% 40%, rgba(76,175,80,0.06) 0%, transparent 60%); pointer-events: none; }
+        .bg-b { position: relative; z-index: 1; background: var(--surface); }
+        .bg-deep { position: relative; z-index: 1; background: var(--navy-deep); }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 5%, rgba(76,175,80,0.28) 50%, transparent 95%); position: relative; z-index: 1; }
 
         /* ==========================================
            NAVIGATION
@@ -121,17 +97,17 @@
         .hero-inner h1 .green { color: var(--green); }
         .hero-inner .subtitle { font-size: clamp(16px, 2vw, 19px); color: var(--text-light); font-weight: 400; line-height: 1.7; max-width: 660px; margin-bottom: 40px; animation: fadeUp 0.7s ease-out 0.15s both; }
         .hero-inner .subtitle strong { color: var(--white); font-weight: 600; }
-        .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 14px; animation: fadeUp 0.7s ease-out 0.25s both; }
-
+        .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 12px; animation: fadeUp 0.7s ease-out 0.25s both; }
         .btn-hero { display: inline-flex; align-items: center; padding: 16px 44px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 17px; transition: all 0.3s; position: relative; overflow: hidden; border: none; cursor: pointer; font-family: inherit; }
         .btn-hero::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
         .btn-hero:hover::before { left: 100%; }
         .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(76,175,80,0.4); background: #45a049; }
-
         .hero-rated { font-size: 14px; color: var(--gray); }
         .hero-rated .stars { color: var(--gold); letter-spacing: 1px; }
         .hero-rated strong { color: var(--text-light); }
-
+        .hero-free-note { font-size: 13px; color: var(--gray); }
+        .hero-free-note a { color: var(--green); text-decoration: underline; font-size: 13px; }
+        .hero-free-note a:hover { color: var(--green-bright); }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
         /* ==========================================
@@ -139,57 +115,91 @@
            ========================================== */
         .section-tag { text-align: center; color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
         .section-h2 { text-align: center; font-size: clamp(26px, 3.5vw, 40px); font-weight: 900; line-height: 1.1; letter-spacing: -1px; }
+        .section-intro { text-align: center; color: var(--text-light); font-size: 17px; line-height: 1.65; max-width: 580px; margin: 16px auto 48px; }
 
         /* ==========================================
-           TWO TRACKS
+           OFFERING STRIP
            ========================================== */
-        .tracks-inner { position: relative; z-index: 2; max-width: 960px; margin: 0 auto; padding: 64px 24px; }
-        .tracks-intro { text-align: center; color: var(--text-light); font-size: 16px; line-height: 1.6; max-width: 560px; margin: 16px auto 48px; }
-        .tracks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
-        .track-card { background: rgba(26,26,46,0.85); border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; transition: all 0.3s; }
-        .track-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); border-color: rgba(76,175,80,0.15); }
-
-        .track-label { color: var(--green-bright); font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 8px; }
-        .track-title { font-size: clamp(32px, 5vw, 48px); font-weight: 900; letter-spacing: -1.5px; text-transform: uppercase; margin-bottom: 14px; line-height: 1.0; }
-        .track-desc { color: var(--text-light); font-size: 16px; line-height: 1.6; margin-bottom: 28px; }
-
-        .track-sub { color: var(--white); font-size: 14px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid rgba(76,175,80,0.25); }
-
-        .resource-list { list-style: none; margin-bottom: 28px; }
-        .resource-list li { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--text-light); padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.5; cursor: pointer; transition: color 0.2s; }
-        .resource-list li:last-child { border-bottom: none; }
-        .resource-list li .res-name { position: relative; }
-        .res-expand { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease; opacity: 0; padding: 0 0 0 25px; }
-        .res-expand.open { max-height: 200px; opacity: 1; padding: 8px 0 12px 25px; }
-        .res-expand p { font-size: 13px; color: var(--text-light); line-height: 1.6; margin: 0 0 10px 0; }
-        .res-expand .btn-res-get { display: inline-block; padding: 7px 18px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 7px; font-weight: 700; font-size: 12px; cursor: pointer; border: none; transition: all 0.2s; }
-        .res-expand .btn-res-get:hover { background: #5bc45f; transform: translateY(-1px); }
-        .resource-list li:hover { color: var(--white); }
-        .resource-list .res-icon { color: var(--green); font-size: 15px; flex-shrink: 0; }
-        .resource-list .res-name { flex: 1; font-weight: 500; }
-
-        .res-tag { display: inline-block; padding: 2px 8px; background: rgba(76,175,80,0.15); color: var(--green-bright); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0; }
-        .soon-tag { display: inline-block; padding: 2px 8px; background: rgba(245,197,66,0.12); color: var(--gold); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0; }
-
-        .btn-track { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 15px; transition: all 0.3s; position: relative; overflow: hidden; margin-top: auto; }
-        .btn-track::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
-        .btn-track:hover::before { left: 100%; }
-        .btn-track:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(76,175,80,0.35); }
-
-        .btn-track-outline { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; background: transparent; border: 2px solid rgba(76,175,80,0.4); color: var(--green); text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 15px; transition: all 0.3s; margin-top: auto; }
-        .btn-track-outline:hover { background: rgba(76,175,80,0.08); border-color: var(--green); transform: translateY(-2px); }
-
-        .track-proof { margin-top: 14px; font-size: 13px; color: var(--gray); text-align: center; }
-        .track-proof .stars { color: var(--gold); }
+        .offering-inner { position: relative; z-index: 2; max-width: 960px; margin: 0 auto; padding: 72px 24px; }
+        .offering-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-items: start; }
+        .offering-item { display: flex; flex-direction: column; padding: 18px 22px; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+        .offering-item:hover { border-color: rgba(76,175,80,0.3); background: rgba(76,175,80,0.04); }
+        .offering-item.open { border-color: rgba(76,175,80,0.35); }
+        .offering-item-header { display: flex; align-items: center; gap: 16px; }
+        .offering-chevron { width: 16px; height: 16px; stroke: var(--gray); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-left: auto; flex-shrink: 0; transition: transform 0.25s ease; }
+        .offering-item.open .offering-chevron { transform: rotate(180deg); }
+        .offering-desc { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-top 0.25s ease; padding-top: 0; padding-left: 68px; }
+        .offering-item.open .offering-desc { max-height: 140px; padding-top: 12px; }
+        .offering-desc p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
+        .offering-icon { width: 52px; height: 52px; background: rgba(76,175,80,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .offering-icon svg { width: 24px; height: 24px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .offering-text { font-size: 15px; font-weight: 600; color: var(--text-light); letter-spacing: 0.1px; line-height: 1.3; }
 
         /* ==========================================
-           STATS
+           OUR OFFERING: PRODUCTS
            ========================================== */
-        .stats-inner { position: relative; z-index: 2; display: flex; justify-content: center; gap: 64px; flex-wrap: wrap; max-width: 700px; margin: 0 auto; padding: 64px 24px; }
-        .stat { text-align: center; }
-        .stat-number { font-size: 32px; font-weight: 900; color: var(--green); letter-spacing: -1px; line-height: 1; }
-        .stat-label { font-size: 14px; color: var(--gray); font-weight: 500; margin-top: 6px; }
+        .cta-dual-inner { position: relative; z-index: 2; max-width: 960px; margin: 0 auto; padding: 72px 24px; }
+        .cta-dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+
+        /* Shared product card */
+        .product-card { background: rgba(76,175,80,0.07); border: 1px solid rgba(76,175,80,0.28); border-radius: 20px; padding: 36px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--green); }
+
+        .product-badge { display: inline-flex; align-items: center; background: rgba(245,197,66,0.15); color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; margin-bottom: 18px; align-self: flex-start; }
+        .product-title { font-size: clamp(24px, 2.5vw, 30px); font-weight: 900; color: var(--white); margin-bottom: 6px; letter-spacing: -0.5px; }
+        .product-tagline { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 20px; }
+        .product-price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+        .product-price { font-size: 44px; font-weight: 900; color: var(--white); letter-spacing: -2px; line-height: 1; }
+        .product-price-currency { font-size: 20px; font-weight: 700; color: var(--white); }
+        .product-price-label { font-size: 15px; font-weight: 600; color: var(--gray); letter-spacing: 0; line-height: 1; }
+        .product-price-sub { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+        .product-includes { list-style: none; margin-bottom: 28px; flex: 1; }
+        .product-includes li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text-light); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.55; }
+        .product-includes li:last-child { border-bottom: none; }
+        .product-tick { color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; font-size: 13px; }
+        .btn-product { width: 100%; padding: 15px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 16px; cursor: pointer; transition: all 0.3s; }
+        .btn-product:hover { background: #45a049; box-shadow: 0 8px 28px rgba(76,175,80,0.4); transform: translateY(-2px); }
+        .btn-product-outline { width: 100%; padding: 15px; background: rgba(76,175,80,0.08); border: 2px solid rgba(76,175,80,0.35); color: var(--green); border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 16px; cursor: pointer; transition: all 0.3s; }
+        .btn-product-outline:hover { background: rgba(76,175,80,0.18); border-color: var(--green); transform: translateY(-2px); }
+        .btn-product-outline:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .product-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 10px; }
+
+        /* Community form */
+        .community-form-inner { display: flex; flex-direction: column; gap: 10px; }
+        .community-form-inner input { width: 100%; padding: 13px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
+        .community-form-inner input:focus { border-color: var(--green); }
+        .community-form-inner input::placeholder { color: var(--gray); }
+        .community-cta-success { display: none; background: rgba(76,175,80,0.08); border: 1px solid rgba(76,175,80,0.25); border-radius: 14px; padding: 28px; text-align: center; }
+        .community-cta-success.show { display: block; }
+        .community-cta-success h4 { font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+        .community-cta-success p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+        /* ==========================================
+           PAIN POINTS
+           ========================================== */
+        .pain-inner { position: relative; z-index: 2; max-width: 960px; margin: 0 auto; padding: 72px 24px; }
+        .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .pain-card { background: rgba(14,14,26,0.8); border: 1px solid rgba(201,64,64,0.16); border-left: 3px solid rgba(201,64,64,0.55); border-radius: 12px; padding: 28px; transition: border-color 0.3s, transform 0.25s; display: flex; flex-direction: column; }
+        .pain-card:hover { border-color: rgba(201,64,64,0.32); border-left-color: var(--red); transform: translateY(-2px); }
+        .pain-card-icon { width: 38px; height: 38px; border-radius: 9px; background: rgba(201,64,64,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; flex-shrink: 0; }
+        .pain-card-icon svg { width: 17px; height: 17px; stroke: var(--red); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+        .pain-card h3 { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.4; }
+        .pain-card p { font-size: 15px; color: var(--text-light); line-height: 1.65; flex: 1; }
+        .pain-stat { font-size: 12px; font-weight: 700; color: rgba(201,64,64,0.85); margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(201,64,64,0.1); }
+
+        /* ==========================================
+           SOLUTION
+           ========================================== */
+        .sol-inner { position: relative; z-index: 2; max-width: 960px; margin: 0 auto; padding: 72px 24px; }
+        .sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .sol-card { background: rgba(14,14,26,0.8); border: 1px solid rgba(76,175,80,0.14); border-radius: 12px; padding: 28px; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.25s; display: flex; flex-direction: column; }
+        .sol-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--green), transparent 70%); opacity: 0.55; }
+        .sol-card:hover { border-color: rgba(76,175,80,0.32); transform: translateY(-2px); }
+        .sol-card-icon { width: 38px; height: 38px; border-radius: 9px; background: rgba(76,175,80,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; flex-shrink: 0; }
+        .sol-card-icon svg { width: 17px; height: 17px; stroke: var(--green); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+        .sol-card h3 { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.4; }
+        .sol-card p { font-size: 15px; color: var(--text-light); line-height: 1.65; flex: 1; }
+        .sol-result { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(76,175,80,0.1); font-size: 13px; font-weight: 700; color: var(--green); }
 
         /* ==========================================
            REVIEWS
@@ -197,7 +207,6 @@
         .reviews-inner { position: relative; z-index: 2; padding: 64px 0; }
         .reviews-inner .section-tag, .reviews-inner .section-h2 { padding: 0 24px; }
         .reviews-inner .section-h2 { margin-bottom: 48px; }
-
         .ticker-container { max-width: 900px; margin: 0 auto; overflow: hidden; }
         .ticker-wrap { width: 100%; overflow: hidden; margin-bottom: 14px; }
         .ticker { display: flex; gap: 14px; width: max-content; }
@@ -205,7 +214,6 @@
         .ticker-row-2 .ticker { animation: scrollRight 65s linear infinite; }
         @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
-
         .ticker-card { flex-shrink: 0; width: 380px; height: 170px; background: rgba(26,26,46,0.85); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; justify-content: center; }
         .ticker-card.compact { width: 190px; height: 170px; text-align: center; }
         .tc-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 10px; }
@@ -213,12 +221,32 @@
         .tc-author { font-size: 14px; color: var(--gray); font-weight: 700; }
 
         /* ==========================================
-           ABOUT
+           PYTHON SECONDARY SECTION
            ========================================== */
-        .about-inner { position: relative; z-index: 2; padding: 64px 24px; max-width: 720px; margin: 0 auto; text-align: center; }
-        .about-inner .section-h2 { margin-bottom: 28px; }
-        .about-inner p { font-size: 17px; color: var(--text-light); line-height: 1.7; font-weight: 400; margin-bottom: 18px; text-align: left; }
-        .about-inner p strong { color: var(--white); font-weight: 600; }
+        .python-inner { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; padding: 72px 24px; text-align: center; }
+        .python-card { background: rgba(20,20,36,0.9); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 52px 44px; }
+        .python-card .section-tag { color: var(--gray); margin-bottom: 14px; }
+        .python-card h2 { font-size: clamp(22px, 3vw, 34px); font-weight: 900; letter-spacing: -0.5px; margin-bottom: 16px; color: var(--white); }
+        .python-card p { font-size: 16px; color: var(--text-light); line-height: 1.7; max-width: 520px; margin: 0 auto 16px; }
+        .python-proof { font-size: 15px; color: var(--gray); margin-bottom: 32px; }
+        .python-proof .stars { color: var(--gold); }
+        .python-proof strong { color: var(--text-light); }
+        .btn-python { display: inline-flex; align-items: center; justify-content: center; padding: 15px 36px; background: rgba(76,175,80,0.1); border: 2px solid rgba(76,175,80,0.3); color: var(--green); text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 16px; font-family: inherit; transition: all 0.3s; }
+        .btn-python:hover { background: rgba(76,175,80,0.18); border-color: var(--green); transform: translateY(-2px); }
+
+        /* ==========================================
+           FOUNDER SECTION
+           ========================================== */
+        .founder-inner { position: relative; z-index: 2; padding: 72px 24px; max-width: 860px; margin: 0 auto; }
+        .founder-grid { max-width: 700px; margin: 0 auto; }
+        .founder-text .section-tag { text-align: left; margin-bottom: 20px; }
+        .founder-text p { font-size: 17px; color: var(--text-light); line-height: 1.7; font-weight: 400; margin-bottom: 18px; }
+        .founder-text p strong { color: var(--white); font-weight: 600; }
+        .founder-profile { display: flex; align-items: center; gap: 22px; margin-bottom: 32px; }
+        .founder-avatar { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(76,175,80,0.35); flex-shrink: 0; }
+        .founder-profile-info { display: flex; flex-direction: column; gap: 5px; }
+        .founder-fullname { font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: -0.3px; }
+        .founder-role { font-size: 13px; font-weight: 500; color: var(--green); letter-spacing: 0.5px; text-transform: uppercase; }
 
         /* ==========================================
            MODAL
@@ -237,7 +265,6 @@
         .form-group input { width: 100%; padding: 12px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
         .form-group input:focus { border-color: var(--green); }
         .form-group input::placeholder { color: var(--gray); }
-
         .interest-pills { display: flex; gap: 12px; margin-bottom: 20px; }
         .interest-pill { flex: 1; padding: 18px 14px; text-align: center; background: rgba(18,18,31,0.6); border: 2px solid rgba(255,255,255,0.08); border-radius: 14px; cursor: pointer; transition: all 0.2s; }
         .interest-pill:hover { border-color: rgba(76,175,80,0.25); }
@@ -245,101 +272,50 @@
         .interest-pill .pill-emoji { font-size: 32px; margin-bottom: 8px; }
         .interest-pill .pill-label { font-size: 15px; font-weight: 700; color: var(--text-light); }
         .interest-pill.selected .pill-label { color: var(--white); }
-
-        .check-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-        .check-item { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(18,18,31,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; cursor: pointer; transition: all 0.2s; }
-        .check-item:hover { border-color: rgba(76,175,80,0.25); }
-        .check-item.selected { border-color: var(--green); background: rgba(76,175,80,0.08); }
-        .check-item input[type="checkbox"] { display: none; }
-        .check-box { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.2); border-radius: 5px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-        .check-item.selected .check-box { background: var(--green); border-color: var(--green); }
-        .check-item.selected .check-box::after { content: '✓'; color: white; font-size: 14px; font-weight: 700; }
-        .check-label { font-size: 15px; color: var(--text-light); font-weight: 500; }
-        .check-item.selected .check-label { color: var(--white); }
-
         .btn-modal { width: 100%; padding: 14px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-top: 8px; }
         .btn-modal:hover { background: #45a049; box-shadow: 0 6px 24px rgba(76,175,80,0.3); }
         .btn-modal:disabled { opacity: 0.4; cursor: not-allowed; }
-        .modal-note { text-align: center; margin-top: 12px; font-size: 12px; color: var(--gray); }
         .step-indicator { text-align: center; margin-bottom: 20px; font-size: 13px; color: var(--gray); letter-spacing: 1px; }
-
-        .lead-magnet { background: rgba(76,175,80,0.06); border: 1px solid rgba(76,175,80,0.2); border-radius: 14px; padding: 22px 24px; margin-bottom: 28px; }
-        .lm-title { font-size: 16px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
-        .lm-desc { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 18px; }
-        .btn-lead-magnet { display: inline-block; padding: 11px 24px; background: var(--green); color: var(--white); border: none; border-radius: 9px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; transition: all 0.2s; }
-        .btn-lead-magnet:hover { background: #45a049; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(76,175,80,0.3); }
 
         /* ==========================================
            FOOTER
            ========================================== */
         footer { position: relative; z-index: 1; text-align: center; padding: 32px 24px; border-top: 1px solid rgba(255,255,255,0.04); background: var(--navy-deep); }
-        .footer-logo img { height: 28px; width: auto; opacity: 1; margin-bottom: 10px; }
+        .footer-logo img { height: 28px; width: auto; margin-bottom: 10px; }
         footer p { color: var(--gray); font-size: 14px; }
 
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* ==========================================
-           COMMUNITY WAITLIST
+           RESPONSIVE
            ========================================== */
-        .community-inner { position: relative; z-index: 2; padding: 72px 24px; max-width: 680px; margin: 0 auto; text-align: center; }
-        .community-inner .section-tag { margin-bottom: 12px; }
-        .community-inner .section-h2 { margin-bottom: 16px; }
-        .community-desc { font-size: 17px; color: var(--text-light); line-height: 1.65; max-width: 540px; margin: 0 auto 12px; }
-        .community-perks { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
-        .community-perk { font-size: 13px; color: var(--gray); display: flex; align-items: center; gap: 7px; }
-        .community-perk-icon { color: var(--green); font-size: 15px; }
-        .community-form { display: flex; gap: 12px; max-width: 520px; margin: 0 auto 12px; }
-        .community-form input { flex: 1; padding: 14px 18px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; min-width: 0; }
-        .community-form input:focus { border-color: var(--green); }
-        .community-form input::placeholder { color: var(--gray); }
-        .community-form .btn-community { padding: 14px 28px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-weight: 800; font-size: 15px; font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap; transition: all 0.3s; }
-        .community-form .btn-community:hover { background: var(--green-bright); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,175,80,0.3); }
-        .community-form .btn-community:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
-        .community-name-row { max-width: 520px; margin: 0 auto 12px; }
-        .community-name-row input { width: 100%; padding: 14px 18px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
-        .community-name-row input:focus { border-color: var(--green); }
-        .community-name-row input::placeholder { color: var(--gray); }
-        .community-privacy { font-size: 12px; color: var(--gray); margin-top: 10px; }
-        .community-success { display: none; background: rgba(76,175,80,0.08); border: 1px solid rgba(76,175,80,0.25); border-radius: 16px; padding: 32px; max-width: 440px; margin: 0 auto; }
-        .community-success.show { display: block; }
-        .community-success-icon { font-size: 36px; margin-bottom: 12px; }
-        .community-success h3 { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
-        .community-success p { font-size: 15px; color: var(--text-light); line-height: 1.6; }
-        .community-fields { }
-        .community-fields.hide { display: none; }
-        .soon-tag-link { cursor: pointer; display: inline-block; padding: 2px 8px; background: rgba(245,197,66,0.12); color: var(--gold); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0; transition: background 0.2s; text-decoration: none; }
-        .soon-tag-link:hover { background: rgba(245,197,66,0.22); }
-        @media (max-width: 600px) {
-            .community-form { flex-direction: column; }
-            .community-form .btn-community { width: 100%; }
-            .community-perks { gap: 14px; flex-direction: column; align-items: center; }
-        }
-
         @media (max-width: 768px) {
             nav { padding: 12px 20px; }
             .hero-inner { padding: 100px 20px 56px; }
-            .tracks-grid { grid-template-columns: 1fr; }
+            .offering-grid { grid-template-columns: 1fr; }
+            .cta-dual-grid { grid-template-columns: 1fr; }
+            .pain-grid { grid-template-columns: 1fr; }
+            .sol-grid { grid-template-columns: 1fr; }
             .stats-inner { gap: 32px; }
             .modal { padding: 28px; }
             .ticker-card { width: 300px; }
             .ticker-card.compact { width: 180px; }
-            .track-card { padding: 28px; }
             .interest-pills { flex-direction: column; }
+            .python-card { padding: 36px 24px; }
         }
         @media (max-width: 480px) { .btn-hero { padding: 14px 28px; font-size: 15px; } }
     </style>
 </head>
 <body>
 
-    <!-- Global background pattern (covers entire page) -->
     <div class="bg-pattern-global">
         <div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div>
         <div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div>
     </div>
 
-    <!-- HERO -->
-    <section class="bg-hero-overlay">
+    <!-- ===== HERO ===== -->
+    <section class="bg-a">
         <nav id="navbar">
             <a href="#" class="nav-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></a>
             <div class="nav-links">
@@ -352,121 +328,191 @@
 
         <div class="hero-inner">
             <div class="hero-tagline"><span class="pulse-dot"></span> Close the skill gap</div>
-            <h1>Start Learning<br><span class="green">for Free.</span></h1>
+            <h1>Master AI<br><span class="green">for free.</span></h1>
             <p class="subtitle">
-                Whether you want to <strong>master the latest AI tools</strong> or <strong>learn Python from scratch</strong>, we'll give you everything you need to close the skill gap and start building today.
+                AI is moving fast - and those who know how to use it are gaining a massive advantage over those who don't. Start with the <strong>Free AI Starter Guide</strong> or grab the <strong>Plug &amp; Play AI Setup</strong> to unlock your potential with AI.
             </p>
             <div class="hero-cta-group">
-                <button class="btn-hero" onclick="openOnboarding()">Get Free Resources</button>
-                <span class="hero-rated"><span class="stars">★★★★★</span> <strong>4.9/5 rated</strong> - Udemy's highest rated Python course</span>
+                <button class="btn-hero" onclick="openOnboarding()">Get the Free AI Starter Guide</button>
+                <span class="hero-rated"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4.9/5 rated</strong></span>
+                <span class="hero-free-note">Ready to go deeper? <a href="#offering">See the Plug &amp; Play AI Setup</a></span>
             </div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- TRACKS -->
-    <section class="bg-bright-overlay" id="tracks">
-        <div class="tracks-inner">
+    <!-- ===== OFFERING STRIP ===== -->
+    <section class="bg-b">
+        <div class="offering-inner">
+            <div class="section-tag">AI Capabilities</div>
+            <h2 class="section-h2 reveal">Here's what you can do with AI.</h2>
+            <p class="section-intro reveal">These are the skills that separate people who get results from AI and people who don't.</p>
+            <div class="offering-grid">
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        </div>
+                        <span class="offering-text">24/7 AI Assistants</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>Build an AI assistant tailored to your communication style and context. It drafts emails, summarises documents, manages research, and handles repetitive writing tasks - around the clock, without burning out or losing quality.</p>
+                    </div>
+                </div>
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/></svg>
+                        </div>
+                        <span class="offering-text">Automated Workflows</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>Connect AI to the tools you already use. A new task arrives, gets sorted, a response is drafted, and you're notified - all automatically. Turn hours of copy-paste work into pipelines that run without you.</p>
+                    </div>
+                </div>
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+                        </div>
+                        <span class="offering-text">Custom AI Agents</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>Build AI systems designed for your specific goals - custom agents, retrieval pipelines, and prompt architectures that produce output tailored to you. Not a generic wrapper. Built for your exact workflow.</p>
+                    </div>
+                </div>
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        </div>
+                        <span class="offering-text">AI Operations Stack</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>Learn to map your entire workflow, find the highest-leverage tasks to automate, and build your personal AI stack - content creation, research, admin, comms - all running on systems you built yourself.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== OUR OFFERING ===== -->
+    <section class="bg-a" id="offering">
+        <div class="cta-dual-inner">
             <div class="section-tag">Our offering</div>
-            <h2 class="section-h2 reveal">Choose Your Path</h2>
-            <p class="tracks-intro reveal">Start with free resources. When you're ready for structured, guided learning - we've got courses and community for that too.</p>
-            <div class="tracks-grid">
+            <h2 class="section-h2 reveal">Go deeper when you're ready.</h2>
+            <p class="section-intro reveal">The AI Starter Guide gets you moving for free. The Plug &amp; Play AI Setup takes you further, faster. Join the community and you won't be building alone.</p>
 
-                <!-- AI TOOLS (first / left) -->
-                <div class="track-card reveal">
-                    <div class="track-label">Build with AI</div>
-                    <div class="track-title">AI&nbsp;Tools</div>
-                    <p class="track-desc">Learn how to use Claude, ChatGPT, and AI coding assistants to build real games, web apps, and automations. No coding experience needed - just curiosity and a laptop.</p>
-                    <div class="track-sub">Free Resource</div>
-                    <div class="lead-magnet">
-                        <div class="lm-title">🤖 10 Powerful AI Prompts</div>
-                        <div class="lm-desc">Copy-paste prompts for ChatGPT and Claude that will change how you use AI. From productivity to business analysis.</div>
-                        <button class="btn-lead-magnet" onclick="openOnboarding()">Get it for Free</button>
+            <div class="cta-dual-grid">
+
+                <!-- PLUG & PLAY AI SETUP -->
+                <div class="product-card reveal">
+                    <div class="product-badge">Coming Soon</div>
+                    <div class="product-title">Plug &amp; Play AI Setup</div>
+                    <div class="product-tagline">Stop guessing and start getting results. Everything pre-built and ready to use - prompts, templates, and a toolkit you can plug straight into your workflow today.</div>
+                    <div class="product-price-row">
+                        <span class="product-price-currency">$</span>
+                        <span class="product-price">27</span>
                     </div>
-                    <div class="track-sub">Courses & More</div>
-                    <ul class="resource-list">
-                        <li onclick="openAIWaitlist()"><span class="res-icon">🎓</span><span class="res-name">AI Tools Masterclass</span><a href="#" class="soon-tag-link" onclick="event.preventDefault(); event.stopPropagation(); openAIWaitlist()">Join Waitlist</a></li>
-                        <li onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})"><span class="res-icon">🌍</span><span class="res-name">SkillSurge Community</span><a href="#community" class="soon-tag-link" onclick="event.stopPropagation()">Join Waitlist</a></li>
+                    <p class="product-price-sub">One-time. Instant access.</p>
+                    <ul class="product-includes">
+                        <li><span class="product-tick">&#10003;</span> 50+ copy-paste prompts for all major AI tools</li>
+                        <li><span class="product-tick">&#10003;</span> AI tool comparison guide - which to use and when</li>
+                        <li><span class="product-tick">&#10003;</span> 5 real-world workflow templates (content, research, email)</li>
+                        <li><span class="product-tick">&#10003;</span> Prompt engineering foundations explained simply</li>
+                        <li><span class="product-tick">&#10003;</span> Bonus: The 3 AI tools worth your time (and the ones that aren't)</li>
                     </ul>
-                    <a href="#" onclick="openOnboarding(); return false;" class="btn-track">Get Started</a>
-                    <div class="track-proof">Coming 2026 - be the first to know</div>
+                    <button class="btn-product" onclick="openAIWaitlist()">Join the Waitlist</button>
+                    <p class="product-note"><span style="color:var(--gold);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong style="color:var(--text-light);">4.9/5 rated</strong></p>
                 </div>
 
-                <!-- PYTHON (second / right) -->
-                <div class="track-card reveal">
-                    <div class="track-label">Learn to code</div>
-                    <div class="track-title">Python</div>
-                    <p class="track-desc">Not quite ready for AI? Start with the fundamentals. Go from "what is a variable?" to building real projects with data science and machine learning - all in plain English.</p>
-                    <div class="track-sub">Free Resource</div>
-                    <div class="lead-magnet">
-                        <div class="lm-title">🐍 8-Week Python Roadmap</div>
-                        <div class="lm-desc">A week-by-week plan from zero to building real projects. Covers basics through data science and machine learning.</div>
-                        <button class="btn-lead-magnet" onclick="openOnboarding()">Get it for Free</button>
+                <!-- SKILLSURGE COMMUNITY -->
+                <div class="product-card reveal">
+                    <div class="product-badge">Coming Soon</div>
+                    <div class="product-title">SkillSurge Community</div>
+                    <div class="product-tagline">Weekly live sessions, AI project builds, and a group of people actually doing this - not just talking about it.</div>
+                    <div class="product-price-row">
+                        <span class="product-price-label">Early Access</span>
                     </div>
-                    <div class="track-sub">Courses & More</div>
-                    <ul class="resource-list">
-                        <li onclick="window.open('https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F','_blank')"><span class="res-icon">🎓</span><span class="res-name">Python Masterclass - 40+ video lessons</span></li>
-                        <li onclick="document.getElementById('community').scrollIntoView({behavior:'smooth'})"><span class="res-icon">🌍</span><span class="res-name">SkillSurge Community</span><a href="#community" class="soon-tag-link" onclick="event.stopPropagation()">Join Waitlist</a></li>
+                    <p class="product-price-sub">Founding member pricing - reserved for waitlist.</p>
+                    <ul class="product-includes">
+                        <li><span class="product-tick">&#10003;</span> Weekly live AI tool walkthroughs with Aron</li>
+                        <li><span class="product-tick">&#10003;</span> Build and ship real projects together</li>
+                        <li><span class="product-tick">&#10003;</span> Founding member pricing locked in forever</li>
+                        <li><span class="product-tick">&#10003;</span> Direct Q+A access every week</li>
+                        <li><span class="product-tick">&#10003;</span> Private community for AI builders</li>
                     </ul>
-                    <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" class="btn-track">Explore the Course</a>
-                    <div class="track-proof"><span class="stars">★★★★★</span> 100+ students enrolled</div>
+                    <div id="communityCtaFields">
+                        <div class="community-form-inner">
+                            <input type="text" id="communityName" placeholder="Your first name" autocomplete="given-name">
+                            <input type="email" id="communityEmail" placeholder="Your email address" autocomplete="email">
+                            <button class="btn-product" id="communityBtn" onclick="communitySubmit()">Join the Waitlist</button>
+                            <p class="product-note"><span style="color:var(--gold);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong style="color:var(--text-light);">4.9/5 rated</strong></p>
+                        </div>
+                    </div>
+                    <div class="community-cta-success" id="communitySuccess">
+                        <div style="font-size:32px;margin-bottom:12px;">&#127881;</div>
+                        <h4>You're on the list!</h4>
+                        <p>We'll email you when the community opens - at founding member pricing.</p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- STATS -->
-    <section class="bg-dark-overlay">
-        <div class="stats-inner">
-            <div class="stat reveal"><div class="stat-number">100+</div><div class="stat-label">Students Enrolled</div></div>
-            <div class="stat reveal"><div class="stat-number">40+</div><div class="stat-label">Video Lessons</div></div>
-            <div class="stat reveal"><div class="stat-number">20+</div><div class="stat-label">Five-Star Reviews</div></div>
-        </div>
-    </section>
 
     <div class="section-divider"></div>
 
-    <!-- REVIEWS -->
-    <section class="bg-bright-overlay" id="reviews">
+    <!-- ===== REVIEWS ===== -->
+    <section class="bg-a" id="reviews">
         <div class="reviews-inner">
-            <div class="section-tag">What students are saying</div>
-            <h2 class="section-h2 reveal">Don't Just Take My Word For It</h2>
+            <div class="section-tag">Reviews</div>
+            <h2 class="section-h2 reveal">Don't just take my word for it.</h2>
             <div class="ticker-container">
                 <div class="ticker-wrap ticker-row-1"><div class="ticker">
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Honestly, I came into this course not knowing a single thing about coding. The instructor made everything super approachable and actually kind of fun…"</div><div class="tc-author">- Yulia</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"This is such a great course for beginners looking to start a career in Python. Aron is easy to follow, straight to the point, and explains things clearly with real examples."</div><div class="tc-author">- Faaiz ul Haque</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Super easy to follow along. He has a chill laid-back approach and breaks things down well for beginners."</div><div class="tc-author">- Zain Haque</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Started from zero, the course is high above my expectations."</div><div class="tc-author">- Laszlo Fulop</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- In Jin Jung</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"It's so interesting, I like it."</div><div class="tc-author">- Richard Mulinda</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Michael Schley</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Honestly, I came into this course not knowing a single thing about coding. The instructor made everything super approachable and actually kind of fun…"</div><div class="tc-author">- Yulia</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"This is such a great course for beginners looking to start a career in Python. Aron is easy to follow, straight to the point, and explains things clearly with real examples."</div><div class="tc-author">- Faaiz ul Haque</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Super easy to follow along. He has a chill laid-back approach and breaks things down well for beginners."</div><div class="tc-author">- Zain Haque</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Started from zero, the course is high above my expectations."</div><div class="tc-author">- Laszlo Fulop</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- In Jin Jung</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"It's so interesting, I like it."</div><div class="tc-author">- Richard Mulinda</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Michael Schley</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Honestly, I came into this course not knowing a single thing about coding. The instructor made everything super approachable and actually kind of fun."</div><div class="tc-author">- Yulia</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"This is such a great course for beginners looking to start a career in Python. Aron is easy to follow, straight to the point, and explains things clearly with real examples."</div><div class="tc-author">- Faaiz ul Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Super easy to follow along. He has a chill laid-back approach and breaks things down well for beginners."</div><div class="tc-author">- Zain Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Started from zero, the course is high above my expectations."</div><div class="tc-author">- Laszlo Fulop</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- In Jin Jung</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"It's so interesting, I like it."</div><div class="tc-author">- Richard Mulinda</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Michael Schley</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Honestly, I came into this course not knowing a single thing about coding. The instructor made everything super approachable and actually kind of fun."</div><div class="tc-author">- Yulia</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"This is such a great course for beginners looking to start a career in Python. Aron is easy to follow, straight to the point, and explains things clearly with real examples."</div><div class="tc-author">- Faaiz ul Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Super easy to follow along. He has a chill laid-back approach and breaks things down well for beginners."</div><div class="tc-author">- Zain Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Started from zero, the course is high above my expectations."</div><div class="tc-author">- Laszlo Fulop</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- In Jin Jung</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"It's so interesting, I like it."</div><div class="tc-author">- Richard Mulinda</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Michael Schley</div></div>
                 </div></div>
                 <div class="ticker-wrap ticker-row-2"><div class="ticker">
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Very informative. Clear explanations and engaging delivery."</div><div class="tc-author">- Lionel Gutierrez</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Good. Valuable information and helpful practice activities."</div><div class="tc-author">- Vaibhav P. Chaudhary</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Abdikarimdahir</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Andrii Shtoiko</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Praveen Kumar</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Rashmi Bisht</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Patrick Weingartz</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Very informative. Clear explanations and engaging delivery."</div><div class="tc-author">- Lionel Gutierrez</div></div>
-                    <div class="ticker-card"><div class="tc-stars">★★★★★</div><div class="tc-quote">"Good. Valuable information and helpful practice activities."</div><div class="tc-author">- Vaibhav P. Chaudhary</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Abdikarimdahir</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Andrii Shtoiko</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Praveen Kumar</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Rashmi Bisht</div></div>
-                    <div class="ticker-card compact"><div class="tc-stars">★★★★★</div><div class="tc-author">- Patrick Weingartz</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Very informative. Clear explanations and engaging delivery."</div><div class="tc-author">- Lionel Gutierrez</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Good. Valuable information and helpful practice activities."</div><div class="tc-author">- Vaibhav P. Chaudhary</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Abdikarimdahir</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Andrii Shtoiko</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Praveen Kumar</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Rashmi Bisht</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Patrick Weingartz</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Very informative. Clear explanations and engaging delivery."</div><div class="tc-author">- Lionel Gutierrez</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Good. Valuable information and helpful practice activities."</div><div class="tc-author">- Vaibhav P. Chaudhary</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Abdikarimdahir</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Andrii Shtoiko</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Praveen Kumar</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Rashmi Bisht</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Patrick Weingartz</div></div>
                 </div></div>
             </div>
         </div>
@@ -474,68 +520,67 @@
 
     <div class="section-divider"></div>
 
-    <!-- COMMUNITY WAITLIST -->
-    <section class="bg-bright-overlay" id="community">
-        <div class="community-inner">
-            <div class="section-tag">Community</div>
-            <h2 class="section-h2 reveal">Be First In When We Open the Doors</h2>
-            <p class="community-desc reveal">SkillSurge Community is coming — a space to learn alongside other Python and AI builders, get feedback, share projects, and grow faster together.</p>
-            <div class="community-perks reveal">
-                <span class="community-perk"><span class="community-perk-icon">✦</span> Project feedback &amp; accountability</span>
-                <span class="community-perk"><span class="community-perk-icon">✦</span> Live sessions with Aron</span>
-                <span class="community-perk"><span class="community-perk-icon">✦</span> Early access pricing</span>
-            </div>
-
-            <!-- Sign-up form -->
-            <div class="community-fields reveal" id="communityFields">
-                <div class="community-name-row">
-                    <input type="text" id="communityName" placeholder="Your first name" autocomplete="given-name">
-                </div>
-                <div class="community-form">
-                    <input type="email" id="communityEmail" placeholder="Your email address" autocomplete="email">
-                    <button class="btn-community" id="communityBtn" onclick="communitySubmit()">Join the Waitlist</button>
-                </div>
-                <p class="community-privacy">No spam. You'll only hear from us when the community is ready to launch.</p>
-            </div>
-
-            <!-- Success state -->
-            <div class="community-success" id="communitySuccess">
-                <div class="community-success-icon">🎉</div>
-                <h3>You're on the list!</h3>
-                <p>We'll email you the moment the SkillSurge Community opens. You'll be among the first to get access — and the early-bird pricing.</p>
+    <!-- ===== PYTHON (SECONDARY) ===== -->
+    <section class="bg-b">
+        <div class="python-inner">
+            <div class="section-tag">Learn Python</div>
+            <h2 class="section-h2 reveal" style="margin-bottom:48px;">Want to build your coding foundation first?</h2>
+            <div class="product-card reveal" style="max-width:580px;margin:0 auto;">
+                <div class="product-badge" style="background:rgba(76,175,80,0.15);color:var(--green);">New</div>
+                <div class="product-title">The Python Masterclass</div>
+                <div class="product-tagline">Want to build your coding foundation first? Go from zero to real data science and machine learning projects - in plain English, at your own pace.</div>
+                <ul class="product-includes">
+                    <li><span class="product-tick">&#10003;</span> 40+ video lessons covering Python from scratch</li>
+                    <li><span class="product-tick">&#10003;</span> Real-world data science and machine learning projects</li>
+                    <li><span class="product-tick">&#10003;</span> Beginner-friendly - no prior experience needed</li>
+                    <li><span class="product-tick">&#10003;</span> Lifetime access on Udemy, learn at your own pace</li>
+                </ul>
+                <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" target="_blank" rel="noopener" class="btn-product" style="display:block;text-align:center;text-decoration:none;">Check out the Python Masterclass</a>
+                <p class="product-note"><span style="color:var(--gold);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong style="color:var(--text-light);">4.9/5 rated</strong> &middot; Udemy's highest rated Python course</p>
             </div>
         </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- ABOUT -->
-    <section class="bg-deep-overlay" id="about">
-        <div class="about-inner">
-            <div class="section-tag">About SkillSurge</div>
-            <h2 class="section-h2 reveal">Hi, I'm Aron.</h2>
-            <p class="reveal">
-                I'm a data scientist with a passion for teaching. I worked as a data scientist for close to 10 years, <strong>leading several data science teams on large-scale transformation projects</strong> at one of the UK's largest investment management firms.
-            </p>
-            <p class="reveal">
-                I became a course creator to teach you everything I wish I knew when I started out - through <strong>practical, project-based lessons using real-world data</strong>. Whether you're aiming for a career in data science, curious about Python and machine learning, or want to learn how to use the latest AI tools to build real projects - I'm here to help you get started.
-            </p>
+    <!-- ===== MEET THE FOUNDER ===== -->
+    <section class="bg-deep" id="about">
+        <div class="founder-inner">
+            <div class="founder-grid">
+                <div class="founder-text">
+                    <div class="section-tag" style="text-align:left;">Meet the founder</div>
+                    <h2 class="section-h2 reveal" style="text-align:left;margin-bottom:24px;">Hi, I'm Aron.</h2>
+                    <p class="reveal">
+                        With over 10 years of experience as a data scientist, most recently as <strong>Data Science Team Lead at one of the UK's largest investment management firms</strong>, leading teams on large-scale transformation projects.
+                    </p>
+                    <p class="reveal">
+                        I became a course creator to teach you everything I wish I'd known when I started - through <strong>practical, project-based lessons using real-world data</strong>. The Python Masterclass on Udemy became the platform's highest rated Python course (4.9/5).
+                    </p>
+                    <div class="founder-profile reveal">
+                        <img src="Aron Sarosi.png" alt="Áron Sárosi" class="founder-avatar">
+                        <div class="founder-profile-info">
+                            <div class="founder-fullname">Áron Sárosi</div>
+                            <div class="founder-role">Data Scientist &amp; AI Specialist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></div>
-        <p style="font-size: 10px;">© 2026 SkillSurge. All rights reserved.</p>
+        <p style="font-size: 10px;">&#169; 2026 SkillSurge. All rights reserved.</p>
     </footer>
 
-    <!-- AI TOOLS WAITLIST MODAL -->
+    <!-- ===== AI TOOLS WAITLIST MODAL ===== -->
     <div class="modal-overlay" id="aiWaitlistOverlay" onclick="if(event.target===this)closeAIWaitlist()">
         <div class="modal">
-            <button class="modal-close" onclick="closeAIWaitlist()">×</button>
+            <button class="modal-close" onclick="closeAIWaitlist()">&#215;</button>
             <div id="aiw-form-step" class="modal-step active">
                 <h3>Join the AI Tools Waitlist</h3>
-                <p class="modal-sub">Be first to know when the AI Tools Masterclass launches — and get early-bird access.</p>
+                <p class="modal-sub">Be first to know when the AI Tools Masterclass launches - and get early-bird access.</p>
                 <div class="form-group">
                     <label for="aiwName">First name</label>
                     <input type="text" id="aiwName" placeholder="Your first name" autocomplete="given-name">
@@ -549,7 +594,7 @@
             </div>
             <div id="aiw-success-step" class="modal-step">
                 <div style="text-align:center;padding:12px 0;">
-                    <div style="font-size:40px;margin-bottom:16px;">🎉</div>
+                    <div style="font-size:40px;margin-bottom:16px;">&#127881;</div>
                     <h3>You're on the list!</h3>
                     <p class="modal-sub">We'll email you when the AI Tools Masterclass launches. Expect early-bird pricing and first access.</p>
                     <button class="btn-hero" onclick="closeAIWaitlist()" style="width:100%;margin-top:8px;">Back to Site</button>
@@ -558,15 +603,15 @@
         </div>
     </div>
 
-    <!-- ONBOARDING MODAL -->
+    <!-- ===== ONBOARDING MODAL ===== -->
     <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
         <div class="modal">
-            <button class="modal-close" onclick="closeModal()">×</button>
+            <button class="modal-close" onclick="closeModal()">&#215;</button>
 
             <div class="modal-step active" id="ob-step1">
                 <div class="step-indicator">Step 1 of 2</div>
-                <h3>Get Your Free Resources</h3>
-                <p class="modal-sub">Tell us a little about yourself and we'll send the right stuff straight to your inbox.</p>
+                <h3>Get Your Free AI Starter Guide</h3>
+                <p class="modal-sub">Drop your details and we'll send the right free resource straight to your inbox.</p>
                 <div class="form-group"><label>First name</label><input type="text" id="obName" placeholder="Your first name"></div>
                 <div class="form-group"><label>Email address</label><input type="email" id="obEmail" placeholder="you@email.com"></div>
                 <button class="btn-modal" onclick="obStep2()">Next</button>
@@ -574,25 +619,28 @@
 
             <div class="modal-step" id="ob-step2">
                 <div class="step-indicator">Step 2 of 2</div>
-                <h3>What are you most interested in?</h3>
-                <p class="modal-sub">Pick one and we'll send the right free resource straight to your inbox.</p>
+                <h3>What would you like to receive?</h3>
+                <p class="modal-sub">Pick one and we'll send the AI Starter Guide or the Python Roadmap - completely free.</p>
                 <div class="interest-pills">
                     <div class="interest-pill" onclick="selectInterest(this, 'ai')">
-                        <div class="pill-emoji">🤖</div>
-                        <div class="pill-label">AI Tools</div>
+                        <div class="pill-emoji">&#129302;</div>
+                        <div class="pill-label">AI Starter Guide</div>
                     </div>
                     <div class="interest-pill" onclick="selectInterest(this, 'python')">
-                        <div class="pill-emoji">🐍</div>
-                        <div class="pill-label">Python</div>
+                        <div class="pill-emoji">&#128013;</div>
+                        <div class="pill-label">Python Roadmap</div>
                     </div>
                 </div>
-                <button class="btn-modal" id="obStep2Btn" onclick="obSubmit()" disabled>Get Free Resources</button>
+                <button class="btn-modal" id="obStep2Btn" onclick="obSubmit()" disabled>Send it to me</button>
             </div>
 
             <div class="modal-step" id="ob-step4">
-                <h3>You're in! 🎉</h3>
-                <p class="modal-sub">Check your email for your free resources.</p>
-                <button class="btn-modal" onclick="closeModal()">Back to Site</button>
+                <div style="text-align:center;padding:12px 0;">
+                    <div style="font-size:40px;margin-bottom:16px;">&#127881;</div>
+                    <h3>You're in!</h3>
+                    <p class="modal-sub">Your free resource is on its way - check your inbox. When you're ready to go further, the Plug &amp; Play AI Setup is waiting for you.</p>
+                    <button class="btn-modal" onclick="closeModal()">Back to Site</button>
+                </div>
             </div>
         </div>
     </div>
@@ -602,14 +650,24 @@
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        let selectedInterest = null;
+        // Offering strip accordion
+        function toggleOffering(el) {
+            var isOpen = el.classList.contains('open');
+            document.querySelectorAll('.offering-item').forEach(function(item) { item.classList.remove('open'); });
+            if (!isOpen) el.classList.add('open');
+        }
 
+        let selectedInterest = null;
+        const KIT_API_KEY = 'U-0B6YZOem0yuvBzMaKDgQ';
+        const KIT_FORM_IDS = { python: '9068573', ai: '9110856', community: '9125775', aiTools: '9125807' };
+
+        /* ---- Onboarding modal ---- */
         function openOnboarding() {
             selectedInterest = null;
             document.querySelectorAll('.interest-pill').forEach(p => p.classList.remove('selected'));
             const btn = document.getElementById('obStep2Btn');
             btn.disabled = true;
-            btn.textContent = 'Get Free Resources';
+            btn.textContent = 'Send it to me';
             const prevErr = document.getElementById('ob-submit-error');
             if (prevErr) prevErr.remove();
             showStep('ob-step1');
@@ -619,7 +677,7 @@
 
         function closeModal() { document.getElementById('modalOverlay').classList.remove('active'); document.body.style.overflow = ''; }
 
-        function showStep(id) { document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active')); document.getElementById(id).classList.add('active'); }
+        function showStep(id) { document.querySelectorAll('#modalOverlay .modal-step').forEach(s => s.classList.remove('active')); document.getElementById(id).classList.add('active'); }
 
         function obStep2() {
             const n = document.getElementById('obName').value.trim();
@@ -637,9 +695,35 @@
             document.getElementById('obStep2Btn').disabled = false;
         }
 
-        const KIT_API_KEY = 'U-0B6YZOem0yuvBzMaKDgQ';
-        const KIT_FORM_IDS = { python: '9068573', ai: '9110856', community: '9125775', aiTools: '9125807' };
+        async function obSubmit() {
+            const name = document.getElementById('obName').value.trim();
+            const email = document.getElementById('obEmail').value.trim();
+            const btn = document.getElementById('obStep2Btn');
+            btn.textContent = 'Working on it...';
+            btn.disabled = true;
+            const prevErr = document.getElementById('ob-submit-error');
+            if (prevErr) prevErr.remove();
+            try {
+                const formId = KIT_FORM_IDS[selectedInterest];
+                const res = await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                    body: JSON.stringify({ api_key: KIT_API_KEY, email, first_name: name })
+                });
+                if (!res.ok) throw new Error('Subscription failed');
+                showStep('ob-step4');
+            } catch (err) {
+                btn.textContent = 'Send it to me';
+                btn.disabled = false;
+                const errEl = document.createElement('p');
+                errEl.id = 'ob-submit-error';
+                errEl.style.cssText = 'color:#ff6b6b;font-size:13px;text-align:center;margin-top:10px;';
+                errEl.textContent = 'Something went wrong. Please try again.';
+                btn.insertAdjacentElement('afterend', errEl);
+            }
+        }
 
+        /* ---- AI Tools Waitlist modal ---- */
         function openAIWaitlist() {
             document.getElementById('aiwName').value = '';
             document.getElementById('aiwEmail').value = '';
@@ -663,16 +747,12 @@
             const email = document.getElementById('aiwEmail').value.trim();
             const btn = document.getElementById('aiwBtn');
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
             if (!name) { alert('Please enter your first name.'); return; }
             if (!email || !emailRegex.test(email)) { alert('Please enter a valid email address.'); return; }
-
             btn.textContent = 'Joining...';
             btn.disabled = true;
-
             const prevErr = document.getElementById('aiw-submit-error');
             if (prevErr) prevErr.remove();
-
             try {
                 const res = await fetch(`https://api.convertkit.com/v3/forms/${KIT_FORM_IDS.aiTools}/subscribe`, {
                     method: 'POST',
@@ -680,7 +760,6 @@
                     body: JSON.stringify({ api_key: KIT_API_KEY, email, first_name: name })
                 });
                 if (!res.ok) throw new Error('Subscription failed');
-
                 document.getElementById('aiw-form-step').classList.remove('active');
                 document.getElementById('aiw-success-step').classList.add('active');
             } catch (err) {
@@ -694,21 +773,18 @@
             }
         }
 
+        /* ---- Community waitlist ---- */
         async function communitySubmit() {
             const name = document.getElementById('communityName').value.trim();
             const email = document.getElementById('communityEmail').value.trim();
             const btn = document.getElementById('communityBtn');
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
             if (!name) { alert('Please enter your first name.'); return; }
             if (!email || !emailRegex.test(email)) { alert('Please enter a valid email address.'); return; }
-
             btn.textContent = 'Joining...';
             btn.disabled = true;
-
             const prevErr = document.getElementById('community-submit-error');
             if (prevErr) prevErr.remove();
-
             try {
                 const res = await fetch(`https://api.convertkit.com/v3/forms/${KIT_FORM_IDS.community}/subscribe`, {
                     method: 'POST',
@@ -716,46 +792,13 @@
                     body: JSON.stringify({ api_key: KIT_API_KEY, email, first_name: name })
                 });
                 if (!res.ok) throw new Error('Subscription failed');
-
-                document.getElementById('communityFields').classList.add('hide');
+                document.getElementById('communityCtaFields').style.display = 'none';
                 document.getElementById('communitySuccess').classList.add('show');
             } catch (err) {
                 btn.textContent = 'Join the Waitlist';
                 btn.disabled = false;
                 const errEl = document.createElement('p');
                 errEl.id = 'community-submit-error';
-                errEl.style.cssText = 'color:#ff6b6b;font-size:13px;text-align:center;margin-top:10px;';
-                errEl.textContent = 'Something went wrong. Please try again.';
-                btn.closest('.community-form').insertAdjacentElement('afterend', errEl);
-            }
-        }
-
-        async function obSubmit() {
-            const name = document.getElementById('obName').value.trim();
-            const email = document.getElementById('obEmail').value.trim();
-            const btn = document.getElementById('obStep2Btn');
-
-            btn.textContent = 'Working on it...';
-            btn.disabled = true;
-
-            const prevErr = document.getElementById('ob-submit-error');
-            if (prevErr) prevErr.remove();
-
-            try {
-                const formId = KIT_FORM_IDS[selectedInterest];
-                const res = await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json; charset=utf-8' },
-                    body: JSON.stringify({ api_key: KIT_API_KEY, email, first_name: name })
-                });
-                if (!res.ok) throw new Error('Subscription failed');
-
-                showStep('ob-step4');
-            } catch (err) {
-                btn.textContent = 'Get Free Resources';
-                btn.disabled = false;
-                const errEl = document.createElement('p');
-                errEl.id = 'ob-submit-error';
                 errEl.style.cssText = 'color:#ff6b6b;font-size:13px;text-align:center;margin-top:10px;';
                 errEl.textContent = 'Something went wrong. Please try again.';
                 btn.insertAdjacentElement('afterend', errEl);
