@@ -157,7 +157,6 @@
         .product-price-sub { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
         .product-includes { list-style: none; margin-bottom: 28px; }
         .cta-dual-grid .product-card > .btn-product { margin-top: auto; }
-        #communityCtaFields { margin-top: 12px; }
         .product-includes li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text-light); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.55; }
         .product-includes li:last-child { border-bottom: none; }
         .product-tick { color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; font-size: 13px; }
@@ -168,15 +167,6 @@
         .btn-product-outline:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
         .product-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 10px; }
 
-        /* Community form */
-        .community-form-inner { display: flex; flex-direction: column; gap: 10px; }
-        .community-form-inner input { width: 100%; padding: 13px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
-        .community-form-inner input:focus { border-color: var(--green); }
-        .community-form-inner input::placeholder { color: var(--gray); }
-        .community-cta-success { display: none; background: rgba(76,175,80,0.08); border: 1px solid rgba(76,175,80,0.25); border-radius: 14px; padding: 28px; text-align: center; }
-        .community-cta-success.show { display: block; }
-        .community-cta-success h4 { font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
-        .community-cta-success p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
 
         /* ==========================================
            PAIN POINTS
@@ -476,19 +466,8 @@
                         <li><span class="product-tick">&#10003;</span> Direct Q+A and build reviews every week</li>
                         <li><span class="product-tick">&#10003;</span> Private community of AI builders shipping real projects</li>
                     </ul>
-                    <div id="communityCtaFields">
-                        <div class="community-form-inner">
-                            <input type="text" id="communityName" placeholder="Your name" autocomplete="given-name">
-                            <input type="email" id="communityEmail" placeholder="Your email address" autocomplete="email">
-                            <button class="btn-product" id="communityBtn" onclick="communitySubmit()">Join the Waitlist</button>
-                        </div>
-                    </div>
+                    <button class="btn-product" onclick="openCommunityWaitlist()">Join the Waitlist</button>
                     <p class="product-note"><span style="color:var(--gold);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong style="color:var(--text-light);">4.9/5 rated</strong></p>
-                    <div class="community-cta-success" id="communitySuccess">
-                        <div style="font-size:32px;margin-bottom:12px;">&#127881;</div>
-                        <h4>You're on the list!</h4>
-                        <p>We'll email you when the community opens - at founding member pricing.</p>
-                    </div>
                 </div>
 
             </div>
@@ -622,6 +601,35 @@
                     <h3>You're on the list!</h3>
                     <p class="modal-sub">We'll email you when the AI Builder's Toolkit launches. Expect early-bird pricing and first access.</p>
                     <button class="btn-hero" onclick="closeAIWaitlist()" style="width:100%;margin-top:8px;">Back to Site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COMMUNITY WAITLIST MODAL ===== -->
+    <div class="modal-overlay" id="communityWaitlistOverlay" onclick="if(event.target===this)closeCommunityWaitlist()">
+        <div class="modal">
+            <button class="modal-close" onclick="closeCommunityWaitlist()">&#215;</button>
+            <div id="comm-form-step" class="modal-step active">
+                <h3>Join the Community Waitlist</h3>
+                <p class="modal-sub">Be first through the door - at founding member pricing.</p>
+                <div class="form-group">
+                    <label for="commName">Your name</label>
+                    <input type="text" id="commName" placeholder="Your name" autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                    <label for="commEmail">Email address</label>
+                    <input type="email" id="commEmail" placeholder="you@example.com" autocomplete="email">
+                </div>
+                <button class="btn-hero" id="commBtn" onclick="communitySubmit()" style="width:100%;margin-top:4px;">Join the Waitlist</button>
+                <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:10px;">No spam. Just a heads-up when it opens.</p>
+            </div>
+            <div id="comm-success-step" class="modal-step">
+                <div style="text-align:center;padding:12px 0;">
+                    <div style="font-size:40px;margin-bottom:16px;">&#127881;</div>
+                    <h3>You're on the list!</h3>
+                    <p class="modal-sub">We'll email you when the community opens - at founding member pricing.</p>
+                    <button class="btn-hero" onclick="closeCommunityWaitlist()" style="width:100%;margin-top:8px;">Back to Site</button>
                 </div>
             </div>
         </div>
@@ -798,12 +806,20 @@
         }
 
         /* ---- Community waitlist ---- */
+        function openCommunityWaitlist() {
+            document.getElementById('communityWaitlistOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeCommunityWaitlist() {
+            document.getElementById('communityWaitlistOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
         async function communitySubmit() {
-            const name = document.getElementById('communityName').value.trim();
-            const email = document.getElementById('communityEmail').value.trim();
-            const btn = document.getElementById('communityBtn');
+            const name = document.getElementById('commName').value.trim();
+            const email = document.getElementById('commEmail').value.trim();
+            const btn = document.getElementById('commBtn');
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!name) { alert('Please enter your first name.'); return; }
+            if (!name) { alert('Please enter your name.'); return; }
             if (!email || !emailRegex.test(email)) { alert('Please enter a valid email address.'); return; }
             btn.textContent = 'Joining...';
             btn.disabled = true;
@@ -816,8 +832,8 @@
                     body: JSON.stringify({ api_key: KIT_API_KEY, email, first_name: name })
                 });
                 if (!res.ok) throw new Error('Subscription failed');
-                document.getElementById('communityCtaFields').style.display = 'none';
-                document.getElementById('communitySuccess').classList.add('show');
+                document.getElementById('comm-form-step').classList.remove('active');
+                document.getElementById('comm-success-step').classList.add('active');
             } catch (err) {
                 btn.textContent = 'Join the Waitlist';
                 btn.disabled = false;
