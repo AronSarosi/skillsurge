@@ -97,7 +97,7 @@
         .hero-inner .subtitle { font-size: clamp(17px, 2.2vw, 21px); color: var(--text-light); font-weight: 400; line-height: 1.7; max-width: 660px; margin-bottom: 40px; animation: fadeUp 0.7s ease-out 0.15s both; }
         .hero-inner .subtitle strong { color: var(--white); font-weight: 600; }
         .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 12px; animation: fadeUp 0.7s ease-out 0.25s both; }
-        .btn-hero { display: inline-flex; align-items: center; padding: 16px 44px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 17px; transition: all 0.3s; position: relative; overflow: hidden; border: none; cursor: pointer; font-family: inherit; }
+        .btn-hero { display: inline-flex; align-items: center; justify-content: center; padding: 16px 44px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 17px; transition: all 0.3s; position: relative; overflow: hidden; border: none; cursor: pointer; font-family: inherit; }
         .btn-hero::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
         .btn-hero:hover::before { left: 100%; }
         .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(76,175,80,0.4); background: #45a049; }
@@ -257,7 +257,7 @@
         .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--text-light); margin-bottom: 6px; }
         .form-group input { width: 100%; padding: 12px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
         .form-group input:focus { border-color: var(--green); }
-        .form-group input::placeholder { color: var(--gray); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--gray); }
         .interest-pills { display: flex; gap: 12px; margin-bottom: 20px; }
         .interest-pill { flex: 1; padding: 18px 14px; text-align: center; background: rgba(18,18,31,0.6); border: 2px solid rgba(255,255,255,0.08); border-radius: 14px; cursor: pointer; transition: all 0.2s; }
         .interest-pill:hover { border-color: rgba(76,175,80,0.25); }
@@ -265,7 +265,7 @@
         .interest-pill .pill-emoji { font-size: 32px; margin-bottom: 8px; }
         .interest-pill .pill-label { font-size: 15px; font-weight: 700; color: var(--text-light); }
         .interest-pill.selected .pill-label { color: var(--white); }
-        .btn-modal { width: 100%; padding: 14px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-top: 8px; }
+        .btn-modal { width: 100%; padding: 14px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-top: 8px; text-align: center; }
         .btn-modal:hover { background: #45a049; box-shadow: 0 6px 24px rgba(76,175,80,0.3); }
         .btn-modal:disabled { opacity: 0.4; cursor: not-allowed; }
         .step-indicator { text-align: center; margin-bottom: 20px; font-size: 13px; color: var(--gray); letter-spacing: 1px; }
@@ -315,7 +315,7 @@
                 <a href="/blog/" class="nav-link">Blog</a>
                 <a href="#reviews" class="nav-link">Reviews</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#" onclick="openOnboarding(); return false;" class="nav-link">Contact</a>
+                <a href="#" onclick="openContact(); return false;" class="nav-link">Contact</a>
             </div>
         </nav>
 
@@ -327,7 +327,7 @@
             <div class="hero-cta-group">
                 <button class="btn-hero" onclick="openOnboarding()">Get the Free AI Starter Guide</button>
                 <span class="hero-rated"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4.9/5 rated</strong></span>
-                <span class="hero-free-note">Ready to build now? <a href="#offering">Get The AI Launchpad - $27</a></span>
+                <span class="hero-free-note">Ready to build now? <a href="#offering">Check out The AI Launchpad</a></span>
             </div>
         </div>
     </section>
@@ -429,11 +429,6 @@
                     <div class="product-badge">Coming Soon</div>
                     <div class="product-title">The AI Launchpad</div>
                     <div class="product-tagline">Your complete AI setup system. Three tools. Six guides. Everything configured, explained, and ready to use - so you go from "I've tried ChatGPT" to building real things with AI.</div>
-                    <div class="product-price-row">
-                        <span class="product-price-currency">$</span>
-                        <span class="product-price">27</span>
-                    </div>
-                    <p class="product-price-sub">One-time. Instant access.</p>
                     <ul class="product-includes">
                         <li><span class="product-tick">&#10003;</span> The AI Stack Blueprint - which tools you need, how they connect, and what to ignore</li>
                         <li><span class="product-tick">&#10003;</span> Claude Setup &amp; Power-User Guide - projects, system prompts, and workflows configured for you</li>
@@ -442,7 +437,7 @@
                         <li><span class="product-tick">&#10003;</span> The Prompt Operating System - 5 reusable frameworks that work across any AI tool</li>
                         <li><span class="product-tick">&#10003;</span> Bonus: AI Business Models Cheat Sheet - how real people are earning with AI right now</li>
                     </ul>
-                    <button class="btn-product" onclick="openAIWaitlist()">Get The AI Launchpad - $27</button>
+                    <button class="btn-product" onclick="openAIWaitlist()">Join the Waitlist</button>
                     <p class="product-note"><span style="color:var(--gold);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong style="color:var(--text-light);">4.9/5 rated</strong></p>
                 </div>
 
@@ -576,25 +571,24 @@
         <div class="modal">
             <button class="modal-close" onclick="closeAIWaitlist()">&#215;</button>
             <div id="aiw-form-step" class="modal-step active">
-                <h3>Get The AI Launchpad</h3>
-                <p class="modal-sub">Instant access to 6 guides, 3 automation templates, and a complete AI setup system. One-time payment, yours forever.</p>
+                <h3>Join the AI Launchpad Waitlist</h3>
+                <p class="modal-sub">Be first to know when it launches - and lock in the early access price before it goes public.</p>
                 <div class="form-group">
                     <label for="aiwName">First name</label>
-                    <input type="text" id="aiwName" placeholder="Your first name" autocomplete="given-name">
+                    <input type="text" id="aiwName" placeholder="First name" autocomplete="given-name">
                 </div>
                 <div class="form-group">
                     <label for="aiwEmail">Email address</label>
-                    <input type="email" id="aiwEmail" placeholder="you@example.com" autocomplete="email">
+                    <input type="email" id="aiwEmail" placeholder="Email address" autocomplete="email">
                 </div>
-                <button class="btn-hero" id="aiwBtn" onclick="aiToolsSubmit()" style="width:100%;margin-top:4px;">Get Instant Access - $27</button>
-                <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:10px;">One-time payment. Instant download. No subscription.</p>
+                <button class="btn-modal" id="aiwBtn" onclick="aiToolsSubmit()" style="margin-top:4px;">Join the Waitlist</button>
             </div>
             <div id="aiw-success-step" class="modal-step">
                 <div style="text-align:center;padding:12px 0;">
                     <div style="font-size:40px;margin-bottom:16px;">&#127881;</div>
                     <h3>You're in!</h3>
-                    <p class="modal-sub">Check your email - your AI Launchpad is on its way. Start with the AI Stack Blueprint, then work through each guide in order.</p>
-                    <button class="btn-hero" onclick="closeAIWaitlist()" style="width:100%;margin-top:8px;">Back to Site</button>
+                    <p class="modal-sub">You're on the list. We'll email you when it launches - at the early access price.</p>
+                    <button class="btn-modal" onclick="closeAIWaitlist()" style="margin-top:8px;">Back to Site</button>
                 </div>
             </div>
         </div>
@@ -609,13 +603,13 @@
                 <p class="modal-sub">Be first through the door - at founding member pricing.</p>
                 <div class="form-group">
                     <label for="commName">Your name</label>
-                    <input type="text" id="commName" placeholder="Your name" autocomplete="given-name">
+                    <input type="text" id="commName" placeholder="First name" autocomplete="given-name">
                 </div>
                 <div class="form-group">
                     <label for="commEmail">Email address</label>
-                    <input type="email" id="commEmail" placeholder="you@example.com" autocomplete="email">
+                    <input type="email" id="commEmail" placeholder="Email address" autocomplete="email">
                 </div>
-                <button class="btn-hero" id="commBtn" onclick="communitySubmit()" style="width:100%;margin-top:4px;">Join the Waitlist</button>
+                <button class="btn-modal" id="commBtn" onclick="communitySubmit()" style="margin-top:4px;">Join the Waitlist</button>
                 <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:10px;">No spam. Just a heads-up when it opens.</p>
             </div>
             <div id="comm-success-step" class="modal-step">
@@ -623,8 +617,41 @@
                     <div style="font-size:40px;margin-bottom:16px;">&#127881;</div>
                     <h3>You're on the list!</h3>
                     <p class="modal-sub">We'll email you when the community opens - at founding member pricing.</p>
-                    <button class="btn-hero" onclick="closeCommunityWaitlist()" style="width:100%;margin-top:8px;">Back to Site</button>
+                    <button class="btn-modal" onclick="closeCommunityWaitlist()" style="margin-top:8px;">Back to Site</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CONTACT MODAL ===== -->
+    <div class="modal-overlay" id="contactOverlay" onclick="if(event.target===this)closeContact()">
+        <div class="modal">
+            <button class="modal-close" onclick="closeContact()">&times;</button>
+            <div id="contact-form-wrap">
+                <h3>Get in touch</h3>
+                <p class="modal-sub">Have a question or want to work together? Drop me a message and I'll get back to you.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contact-name">Your name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="How can I help?" required style="width:100%;padding:12px 16px;background:rgba(18,18,31,0.8);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;resize:vertical;min-height:120px;transition:border-color 0.3s;"></textarea>
+                    </div>
+                    <div id="contact-error" style="color:#ff6b6b;font-size:13px;margin-bottom:10px;display:none;"></div>
+                    <button type="submit" class="btn-modal" id="contactSubmitBtn">Send message</button>
+                </form>
+            </div>
+            <div id="contact-success" style="display:none;text-align:center;padding:12px 0;">
+                <div style="font-size:40px;margin-bottom:16px;">&#10003;</div>
+                <h3>Message sent!</h3>
+                <p class="modal-sub">Thanks for reaching out. I'll get back to you soon.</p>
+                <button class="btn-modal" onclick="closeContact()">Back to Site</button>
             </div>
         </div>
     </div>
@@ -639,7 +666,7 @@
                 <h3>Get Your Free AI Starter Guide</h3>
                 <p class="modal-sub">Drop your details and we'll send the right free resource straight to your inbox.</p>
                 <div class="form-group"><label>First name</label><input type="text" id="obName" placeholder="Your first name"></div>
-                <div class="form-group"><label>Email address</label><input type="email" id="obEmail" placeholder="you@email.com"></div>
+                <div class="form-group"><label>Email address</label><input type="email" id="obEmail" placeholder="Email address"></div>
                 <button class="btn-modal" onclick="obStep2()">Next</button>
             </div>
 
@@ -686,6 +713,47 @@
         let selectedInterest = null;
         const KIT_API_KEY = 'U-0B6YZOem0yuvBzMaKDgQ';
         const KIT_FORM_IDS = { python: '9068573', ai: '9110856', community: '9125775', aiTools: '9125807' };
+
+        /* ---- Contact modal ---- */
+        function openContact() {
+            document.getElementById('contactOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeContact() {
+            document.getElementById('contactOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            const err = document.getElementById('contact-error');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            err.style.display = 'none';
+            const data = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                message: document.getElementById('contact-message').value
+            };
+            try {
+                const res = await fetch('https://formspree.io/f/mnjbwzey', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    document.getElementById('contact-form-wrap').style.display = 'none';
+                    document.getElementById('contact-success').style.display = 'block';
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                err.textContent = 'Something went wrong. Please email aron@skillsurge.co directly.';
+                err.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Send message';
+            }
+        });
 
         /* ---- Onboarding modal ---- */
         function openOnboarding() {
@@ -753,7 +821,7 @@
         function openAIWaitlist() {
             document.getElementById('aiwName').value = '';
             document.getElementById('aiwEmail').value = '';
-            document.getElementById('aiwBtn').textContent = 'Get Instant Access \u2014 $27';
+            document.getElementById('aiwBtn').textContent = 'Join the Waitlist';
             document.getElementById('aiwBtn').disabled = false;
             const prevErr = document.getElementById('aiw-submit-error');
             if (prevErr) prevErr.remove();
@@ -789,7 +857,7 @@
                 document.getElementById('aiw-form-step').classList.remove('active');
                 document.getElementById('aiw-success-step').classList.add('active');
             } catch (err) {
-                btn.textContent = 'Get Instant Access \u2014 $27';
+                btn.textContent = 'Join the Waitlist';
                 btn.disabled = false;
                 const errEl = document.createElement('p');
                 errEl.id = 'aiw-submit-error';
