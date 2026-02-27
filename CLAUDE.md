@@ -55,15 +55,18 @@ skillsurge/
 ```
 
 ### Homepage Section Order (index.html)
-1. **Hero** (bg-a #1A1A2E) - "Master AI for free." headline, AI Starter Guide CTA
+1. **Hero** (bg-a #1A1A2E) - "Build Your Business with AI" headline, AI Starter Guide CTA
 2. **AI Capabilities** (bg-b #171728) - 4-item accordion (see below)
-3. **Our Offering** (bg-a) - Plug & Play AI Setup card + SkillSurge Community card
+3. **Solutions** (bg-a) - AI Launchpad card + SkillSurge Community card
 4. **Reviews** (bg-a) - Ticker rows with student quotes
 5. **Learn Python** (bg-b) - Python Masterclass product card
-6. **Meet the Founder** (bg-deep #13132A) - Aron bio + round headshot
+6. **About** (bg-deep #13132A) - SkillSurge mission, no founder profile
 7. **Footer**
 8. **AI Tools Waitlist Modal** - ConvertKit form 9125807
 9. **Onboarding Modal** - 3-step: name/email → AI or Python → success
+
+### Nav Links (current order)
+Solutions → About → Contact (no Blog link in the main nav)
 
 ### AI Capabilities Accordion (4 boxes, 2x2 grid)
 Boxes go top-left → top-right → bottom-left → bottom-right (progression: entry to advanced):
@@ -106,7 +109,12 @@ Tool tags: `.tool-tag` pills styled with subtle border, gray text, 12px font.
 7. **Brand name** - always "SkillSurge" with capital S's. Never "Skillsurge" or "skillsurge"
 8. **Buttons** - green background, white bold text, rounded corners (10px), text like "Visit SkillSurge" not "skillsurge.co"
 9. **Logo placement in PDFs** - cover page top-left only, final page bottom center, footer text on other pages
-10. **No generic AI copy** - avoid "unlock your potential", "embark on a journey", "game-changer", "dive in"
+10. **No generic AI copy** - avoid "unlock your potential", "embark on a journey", "game-changer", "dive in", "start building"
+11. **No full stops at the end of headings** - h1, h2, section titles never end with a full stop. Question marks are fine.
+12. **No bold in body paragraphs** - don't use `<strong>` to highlight phrases within paragraph text. Bold is for headings only.
+13. **SkillSurge is a business, not a person** - all website copy uses "we/us/our", never "I/me/my". The one exception is emails, which are personal from Aron.
+14. **Section tags always centred** - `.section-tag` is centre-aligned by default. Never override with `text-align:left`. Don't add inline style overrides to section tags.
+15. **About section** - mission-focused, no founder photo or bio. Tag centred, paragraph text left-aligned. No h2 heading in this section.
 
 ### Code Block Styling (Website)
 - VS Code Material theme syntax highlighting
@@ -152,6 +160,10 @@ Tool tags: `.tool-tag` pills styled with subtle border, gray text, 12px font.
 - Having to iterate many times on something that should have been right the first time
 - Pay-per-use pricing models
 - Generic AI-sounding copy
+- Full stops at the end of headings
+- Bold text scattered through body paragraphs
+- First-person language ("I", "me", "my") in website copy
+- Left-aligned section tags (they should always be centred)
 
 ## Key URLs
 - Website: https://skillsurge.co
