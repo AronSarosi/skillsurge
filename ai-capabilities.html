@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/sWPk2Vx98aQhRt8ccgHZVP">
+    <title>AI Capabilities - SkillSurge</title>
+    <meta name="description" content="What you can actually do with AI today. From strategy and content to automated workflows, real product builds, and 24/7 agents.">
+    <link rel="canonical" href="https://skillsurge.co/ai-capabilities">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI Capabilities - SkillSurge">
+    <meta property="og:description" content="What you can actually do with AI today. From strategy and content to automated workflows, real product builds, and 24/7 agents.">
+    <meta property="og:url" content="https://skillsurge.co/ai-capabilities">
+    <meta property="og:site_name" content="SkillSurge">
+    <meta property="og:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Capabilities - SkillSurge">
+    <meta name="twitter:description" content="What you can actually do with AI today. From strategy and content to automated workflows, real product builds, and 24/7 agents.">
+    <meta name="twitter:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1A1A2E;
+            --navy-deep: #13132A;
+            --navy-light: #242445;
+            --surface: #171728;
+            --green: #4CAF50;
+            --green-bright: #5CDB5C;
+            --white: #FFFFFF;
+            --gray: #8888AA;
+            --text-light: #CCCCDD;
+            --gold: #F5C542;
+            --red: #C94040;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            overflow-x: hidden;
+            font-size: 19px;
+        }
+
+        /* ==========================================
+           GLOBAL BACKGROUND PATTERN
+           ========================================== */
+        .bg-pattern-global { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden; }
+        .bg-pattern-global::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(76,175,80,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(76,175,80,0.05) 1px, transparent 1px); background-size: 48px 48px; }
+        .bg-pattern-global .gl { position: absolute; height: 1px; background: linear-gradient(90deg, transparent, rgba(76,175,80,0.12), transparent); animation: gFlow 12s linear infinite; }
+        .bg-pattern-global .gl:nth-child(1) { top: 8%; width: 50%; left: -50%; animation-duration: 16s; }
+        .bg-pattern-global .gl:nth-child(2) { top: 22%; width: 60%; left: -60%; animation-delay: 3s; animation-duration: 18s; }
+        .bg-pattern-global .gl:nth-child(3) { top: 38%; width: 45%; left: -45%; animation-delay: 6s; animation-duration: 14s; }
+        .bg-pattern-global .gl:nth-child(4) { top: 52%; width: 55%; left: -55%; animation-delay: 1s; animation-duration: 20s; }
+        .bg-pattern-global .gl:nth-child(5) { top: 66%; width: 40%; left: -40%; animation-delay: 4s; animation-duration: 15s; }
+        .bg-pattern-global .gl:nth-child(6) { top: 80%; width: 65%; left: -65%; animation-delay: 7s; animation-duration: 17s; }
+        .bg-pattern-global .gl:nth-child(7) { top: 92%; width: 35%; left: -35%; animation-delay: 2s; animation-duration: 13s; }
+        .bg-pattern-global .gv { position: absolute; width: 1px; background: linear-gradient(180deg, transparent, rgba(76,175,80,0.08), transparent); animation: gDown 14s linear infinite; }
+        .bg-pattern-global .gv:nth-child(8) { left: 8%; height: 30%; top: -30%; animation-duration: 18s; }
+        .bg-pattern-global .gv:nth-child(9) { left: 25%; height: 40%; top: -40%; animation-delay: 3s; animation-duration: 22s; }
+        .bg-pattern-global .gv:nth-child(10) { left: 42%; height: 35%; top: -35%; animation-delay: 6s; animation-duration: 16s; }
+        .bg-pattern-global .gv:nth-child(11) { left: 60%; height: 45%; top: -45%; animation-delay: 1s; animation-duration: 20s; }
+        .bg-pattern-global .gv:nth-child(12) { left: 78%; height: 30%; top: -30%; animation-delay: 4s; animation-duration: 17s; }
+        .bg-pattern-global .gv:nth-child(13) { left: 92%; height: 38%; top: -38%; animation-delay: 7s; animation-duration: 19s; }
+        @keyframes gFlow { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(calc(100vw + 100%)); opacity: 0; } }
+        @keyframes gDown { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(calc(100vh + 100%)); opacity: 0; } }
+
+        .bg-a { position: relative; z-index: 1; background: var(--navy); }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 5%, rgba(76,175,80,0.28) 50%, transparent 95%); position: relative; z-index: 1; }
+
+        /* ==========================================
+           NAVIGATION
+           ========================================== */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s; }
+        nav.scrolled { background: rgba(19,19,42,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(76,175,80,0.12); padding: 10px 40px; }
+        .nav-logo img { height: 40px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-link { color: var(--gray); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.3s; }
+        .nav-link:hover { color: var(--white); }
+        .nav-link.active { color: var(--green); }
+
+        /* ==========================================
+           PAGE HERO
+           ========================================== */
+        .page-hero { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 140px 24px 72px; max-width: 780px; margin: 0 auto; }
+        .page-hero-tag { color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 18px; animation: fadeUp 0.6s ease-out 0.05s both; }
+        .page-hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 900; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 20px; animation: fadeUp 0.6s ease-out 0.12s both; }
+        .page-hero .subtitle { font-size: clamp(16px, 2vw, 19px); color: var(--text-light); line-height: 1.7; max-width: 600px; animation: fadeUp 0.6s ease-out 0.2s both; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ==========================================
+           SECTION UTILITIES
+           ========================================== */
+        .section-tag { text-align: center; color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+        .section-h2 { text-align: center; font-size: clamp(26px, 3.5vw, 40px); font-weight: 900; line-height: 1.1; letter-spacing: -1px; }
+        .section-intro { text-align: center; color: var(--text-light); font-size: 18px; line-height: 1.65; max-width: 680px; margin: 16px auto 0; }
+
+        /* ==========================================
+           AI CAPABILITIES ACCORDION
+           ========================================== */
+        .offering-inner { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; padding: 80px 24px; }
+        .offering-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-items: start; margin-top: 48px; }
+        .offering-item { display: flex; flex-direction: column; padding: 18px 22px; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+        .offering-item:hover { border-color: rgba(76,175,80,0.3); background: rgba(76,175,80,0.04); }
+        .offering-item.open { border-color: rgba(76,175,80,0.35); }
+        .offering-item-header { display: flex; align-items: center; gap: 16px; }
+        .offering-chevron { width: 16px; height: 16px; stroke: var(--gray); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-left: auto; flex-shrink: 0; transition: transform 0.25s ease; }
+        .offering-item.open .offering-chevron { transform: rotate(180deg); }
+        .offering-desc { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-top 0.25s ease; padding-top: 0; padding-left: 68px; }
+        .offering-item.open .offering-desc { max-height: 600px; padding-top: 12px; }
+        .offering-desc p { font-size: 15px; color: var(--text-light); line-height: 1.65; }
+        .tool-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .tool-tag { display: inline-flex; align-items: center; padding: 4px 11px; font-size: 12px; font-weight: 600; color: var(--gray); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; letter-spacing: 0.3px; }
+        .offering-icon { width: 52px; height: 52px; background: rgba(76,175,80,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .offering-icon svg { width: 24px; height: 24px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .offering-text { font-size: 15px; font-weight: 600; color: var(--text-light); letter-spacing: 0.1px; line-height: 1.3; }
+
+        /* ==========================================
+           CTA BANNER
+           ========================================== */
+        .cta-banner-inner { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; padding: 80px 24px; text-align: center; }
+        .cta-banner-h2 { font-size: clamp(26px, 3.5vw, 42px); font-weight: 900; line-height: 1.15; letter-spacing: -1px; margin-bottom: 18px; }
+        .cta-banner-sub { font-size: 18px; color: var(--text-light); line-height: 1.65; max-width: 520px; margin: 0 auto 36px; }
+        .cta-banner-note { font-size: 13px; color: var(--gray); margin-top: 16px; }
+        .btn-hero { display: inline-flex; align-items: center; justify-content: center; padding: 16px 44px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 17px; transition: all 0.3s; position: relative; overflow: hidden; border: none; cursor: pointer; font-family: inherit; }
+        .btn-hero::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
+        .btn-hero:hover::before { left: 100%; }
+        .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(76,175,80,0.4); background: #45a049; }
+
+        /* ==========================================
+           MODAL
+           ========================================== */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(12,12,20,0.85); backdrop-filter: blur(6px); z-index: 1000; justify-content: center; align-items: center; padding: 24px; }
+        .modal-overlay.active { display: flex; }
+        .modal { background: var(--navy-light); border: 1px solid rgba(76,175,80,0.15); border-radius: 20px; padding: 40px; max-width: 480px; width: 100%; position: relative; animation: fadeUp 0.3s ease-out; color: var(--white); max-height: 90vh; overflow-y: auto; }
+        .modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--gray); font-size: 24px; cursor: pointer; transition: color 0.2s; }
+        .modal-close:hover { color: var(--white); }
+        .modal h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .modal .modal-sub { font-size: 15px; color: var(--text-light); margin-bottom: 24px; line-height: 1.5; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--text-light); margin-bottom: 6px; }
+        .form-group input { width: 100%; padding: 12px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
+        .form-group input:focus { border-color: var(--green); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--gray); }
+        .btn-modal { width: 100%; padding: 14px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-top: 8px; text-align: center; }
+        .btn-modal:hover { background: #45a049; box-shadow: 0 6px 24px rgba(76,175,80,0.3); }
+        .btn-modal:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        footer { position: relative; z-index: 1; text-align: center; padding: 32px 24px; border-top: 1px solid rgba(76,175,80,0.12); background: var(--navy-deep); }
+        .footer-logo img { height: 34px; width: auto; margin-bottom: 10px; }
+        footer p { color: var(--gray); font-size: 14px; }
+        .footer-links { display: flex; justify-content: center; gap: 24px; margin-top: 12px; }
+        .footer-link { color: var(--gray); text-decoration: none; font-size: 13px; transition: color 0.3s; }
+        .footer-link:hover { color: var(--text-light); }
+
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ==========================================
+           RESPONSIVE
+           ========================================== */
+        @media (max-width: 768px) {
+            nav { padding: 12px 20px; }
+            .page-hero { padding: 110px 20px 56px; }
+            .offering-grid { grid-template-columns: 1fr; }
+            .modal { padding: 28px; }
+        }
+        @media (max-width: 480px) {
+            .btn-hero { padding: 14px 28px; font-size: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern-global">
+        <div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div>
+        <div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div>
+    </div>
+
+    <!-- ===== NAV ===== -->
+    <nav id="navbar">
+        <a href="/" class="nav-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></a>
+        <div class="nav-links">
+            <a href="/solutions" class="nav-link">Solutions</a>
+            <a href="/#about" class="nav-link">About</a>
+            <a href="/python" class="nav-link">Python Course</a>
+            <a href="#" onclick="openContact(); return false;" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="bg-a">
+        <div class="page-hero">
+            <div class="page-hero-tag">AI Capabilities</div>
+            <h1>What you can do with AI</h1>
+            <p class="subtitle">These are the four categories where AI is genuinely changing what's possible - and the tools leading each one.</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== AI CAPABILITIES ACCORDION ===== -->
+    <section class="bg-a">
+        <div class="offering-inner">
+
+            <div class="offering-grid">
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><path d="M9 17h6"/><path d="M10 20h4"/><path d="M14.2 14.8A4 4 0 1 0 9.8 14.8L9 17h6l-0.8-2.2"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="5" y1="5" x2="7" y2="7"/><line x1="19" y1="5" x2="17" y2="7"/><line x1="2" y1="11.5" x2="5" y2="11.5"/><line x1="19" y1="11.5" x2="22" y2="11.5"/></svg>
+                        </div>
+                        <span class="offering-text">AI-Powered Strategy &amp; Content</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>Your personal board of advisors, available on demand. They write your sales copy, generate brand visuals, draft business plans, build landing pages, and turn rough ideas into polished deliverables. With Custom GPTs and Claude Projects, you build advisors trained on your brand, your voice, and your goals.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Claude</span>
+                            <span class="tool-tag">ChatGPT</span>
+                            <span class="tool-tag">Gemini</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><rect x="1" y="2" width="7" height="5" rx="1"/><rect x="16" y="2" width="7" height="5" rx="1"/><rect x="8.5" y="17" width="7" height="5" rx="1"/><path d="M4.5 7v4.5a1 1 0 0 0 1 1h6"/><path d="M19.5 7v4.5a1 1 0 0 1-1 1h-6"/><line x1="12" y1="12.5" x2="12" y2="17"/></svg>
+                        </div>
+                        <span class="offering-text">Automated Workflows</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>Connect AI to the tools you already use. A new task arrives, gets sorted, a response is drafted, and you're notified - all automatically. Turn hours of copy-paste work into pipelines that run without you.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Make</span>
+                            <span class="tool-tag">n8n</span>
+                            <span class="tool-tag">Zapier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27,6.96 12,12 20.73,6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <span class="offering-text">Build Real Products With AI</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>These tools build entire products from a conversation. A portfolio site, a SaaS dashboard, an e-commerce store - what used to take a developer team and months of budget now takes one person and an afternoon. The AI LaunchPad is your guided path to your first build.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Claude Code</span>
+                            <span class="tool-tag">Cursor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offering-item reveal" onclick="toggleOffering(this)">
+                    <div class="offering-item-header">
+                        <div class="offering-icon">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="2"/><circle cx="9" cy="14" r="2"/><circle cx="15" cy="14" r="2"/><line x1="10" y1="18" x2="14" y2="18"/><line x1="12" y1="2" x2="12" y2="9"/><circle cx="12" cy="2" r="1.5"/></svg>
+                        </div>
+                        <span class="offering-text">24/7 AI Agents</span>
+                        <svg class="offering-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+                    </div>
+                    <div class="offering-desc">
+                        <p>AI that keeps working while you sleep. Monitors, responds, triages, and takes action across your systems without being prompted. A set of tools that run whether you're there or not - so your business doesn't stop when you do.</p>
+                        <div class="tool-tags">
+                            <span class="tool-tag">OpenClaw</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== CTA ===== -->
+    <section class="bg-a">
+        <div class="cta-banner-inner">
+            <h2 class="cta-banner-h2 reveal">Want to learn how to use these?</h2>
+            <p class="cta-banner-sub reveal">Book a free discovery call. We'll figure out which AI tools are right for what you want to build.</p>
+            <a href="[TALLY_FORM_LINK]" class="btn-hero reveal">Book Your Free Discovery Call</a>
+            <p class="cta-banner-note reveal">15-minute call - no commitment</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></div>
+        <p style="font-size: 10px;">&#169; 2026 SkillSurge. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/solutions" class="footer-link">Solutions</a>
+            <a href="/python" class="footer-link">Python Course</a>
+            <a href="/#about" class="footer-link">About</a>
+            <a href="#" onclick="openContact(); return false;" class="footer-link">Contact</a>
+        </div>
+    </footer>
+
+    <!-- ===== CONTACT MODAL ===== -->
+    <div class="modal-overlay" id="contactOverlay" onclick="if(event.target===this)closeContact()">
+        <div class="modal">
+            <button class="modal-close" onclick="closeContact()">&times;</button>
+            <div id="contact-form-wrap">
+                <h3>Get in touch</h3>
+                <p class="modal-sub">Have a question or want to work together? Drop us a message and we'll get back to you.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contact-name">Your name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="How can we help?" required style="width:100%;padding:12px 16px;background:rgba(18,18,31,0.8);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;resize:vertical;min-height:120px;transition:border-color 0.3s;"></textarea>
+                    </div>
+                    <div id="contact-error" style="color:#ff6b6b;font-size:13px;margin-bottom:10px;display:none;"></div>
+                    <button type="submit" class="btn-modal" id="contactSubmitBtn">Send message</button>
+                </form>
+            </div>
+            <div id="contact-success" style="display:none;text-align:center;padding:12px 0;">
+                <div style="font-size:40px;margin-bottom:16px;">&#10003;</div>
+                <h3>Message sent!</h3>
+                <p class="modal-sub">Thanks for reaching out. We'll get back to you soon.</p>
+                <button class="btn-modal" onclick="closeContact()">Back to Site</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // AI Capabilities accordion
+        function toggleOffering(el) {
+            var isOpen = el.classList.contains('open');
+            document.querySelectorAll('.offering-item').forEach(function(item) { item.classList.remove('open'); });
+            if (!isOpen) el.classList.add('open');
+        }
+
+        /* ---- Contact modal ---- */
+        function openContact() {
+            document.getElementById('contactOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeContact() {
+            document.getElementById('contactOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            const err = document.getElementById('contact-error');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            err.style.display = 'none';
+            const data = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                message: document.getElementById('contact-message').value
+            };
+            try {
+                const res = await fetch('https://formspree.io/f/mnjbwzey', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    document.getElementById('contact-form-wrap').style.display = 'none';
+                    document.getElementById('contact-success').style.display = 'block';
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                err.textContent = 'Something went wrong. Please email aron@skillsurge.co directly.';
+                err.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Send message';
+            }
+        });
+    </script>
+</body>
+</html>

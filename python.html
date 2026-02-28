@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/sWPk2Vx98aQhRt8ccgHZVP">
+    <title>The Python Masterclass - SkillSurge</title>
+    <meta name="description" content="Udemy's highest-rated Python course. Go from zero to real data science and machine learning projects at your own pace. Rated 4.9/5 by thousands of students.">
+    <link rel="canonical" href="https://skillsurge.co/python">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Python Masterclass - SkillSurge">
+    <meta property="og:description" content="Udemy's highest-rated Python course. Go from zero to real data science and machine learning projects at your own pace.">
+    <meta property="og:url" content="https://skillsurge.co/python">
+    <meta property="og:site_name" content="SkillSurge">
+    <meta property="og:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Python Masterclass - SkillSurge">
+    <meta name="twitter:description" content="Udemy's highest-rated Python course. Go from zero to real data science and machine learning projects at your own pace.">
+    <meta name="twitter:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1A1A2E;
+            --navy-deep: #13132A;
+            --navy-light: #242445;
+            --green: #4CAF50;
+            --green-bright: #5CDB5C;
+            --white: #FFFFFF;
+            --gray: #8888AA;
+            --text-light: #CCCCDD;
+            --gold: #F5C542;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            overflow-x: hidden;
+            font-size: 19px;
+        }
+
+        /* ==========================================
+           GLOBAL BACKGROUND PATTERN
+           ========================================== */
+        .bg-pattern-global { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden; }
+        .bg-pattern-global::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(76,175,80,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(76,175,80,0.05) 1px, transparent 1px); background-size: 48px 48px; }
+        .bg-pattern-global .gl { position: absolute; height: 1px; background: linear-gradient(90deg, transparent, rgba(76,175,80,0.12), transparent); animation: gFlow 12s linear infinite; }
+        .bg-pattern-global .gl:nth-child(1) { top: 8%; width: 50%; left: -50%; animation-duration: 16s; }
+        .bg-pattern-global .gl:nth-child(2) { top: 22%; width: 60%; left: -60%; animation-delay: 3s; animation-duration: 18s; }
+        .bg-pattern-global .gl:nth-child(3) { top: 38%; width: 45%; left: -45%; animation-delay: 6s; animation-duration: 14s; }
+        .bg-pattern-global .gl:nth-child(4) { top: 52%; width: 55%; left: -55%; animation-delay: 1s; animation-duration: 20s; }
+        .bg-pattern-global .gl:nth-child(5) { top: 66%; width: 40%; left: -40%; animation-delay: 4s; animation-duration: 15s; }
+        .bg-pattern-global .gl:nth-child(6) { top: 80%; width: 65%; left: -65%; animation-delay: 7s; animation-duration: 17s; }
+        .bg-pattern-global .gl:nth-child(7) { top: 92%; width: 35%; left: -35%; animation-delay: 2s; animation-duration: 13s; }
+        .bg-pattern-global .gv { position: absolute; width: 1px; background: linear-gradient(180deg, transparent, rgba(76,175,80,0.08), transparent); animation: gDown 14s linear infinite; }
+        .bg-pattern-global .gv:nth-child(8) { left: 8%; height: 30%; top: -30%; animation-duration: 18s; }
+        .bg-pattern-global .gv:nth-child(9) { left: 25%; height: 40%; top: -40%; animation-delay: 3s; animation-duration: 22s; }
+        .bg-pattern-global .gv:nth-child(10) { left: 42%; height: 35%; top: -35%; animation-delay: 6s; animation-duration: 16s; }
+        .bg-pattern-global .gv:nth-child(11) { left: 60%; height: 45%; top: -45%; animation-delay: 1s; animation-duration: 20s; }
+        .bg-pattern-global .gv:nth-child(12) { left: 78%; height: 30%; top: -30%; animation-delay: 4s; animation-duration: 17s; }
+        .bg-pattern-global .gv:nth-child(13) { left: 92%; height: 38%; top: -38%; animation-delay: 7s; animation-duration: 19s; }
+        @keyframes gFlow { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(calc(100vw + 100%)); opacity: 0; } }
+        @keyframes gDown { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(calc(100vh + 100%)); opacity: 0; } }
+
+        .bg-a { position: relative; z-index: 1; background: var(--navy); }
+        .bg-b { position: relative; z-index: 1; background: var(--navy); }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 5%, rgba(76,175,80,0.28) 50%, transparent 95%); position: relative; z-index: 1; }
+
+        /* ==========================================
+           NAVIGATION
+           ========================================== */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s; }
+        nav.scrolled { background: rgba(19,19,42,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(76,175,80,0.12); padding: 10px 40px; }
+        .nav-logo img { height: 40px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-link { color: var(--gray); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.3s; }
+        .nav-link:hover { color: var(--white); }
+        .nav-link-active { color: var(--white); }
+
+        /* ==========================================
+           SECTION UTILITIES
+           ========================================== */
+        .section-tag { text-align: center; color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+        .section-h2 { text-align: center; font-size: clamp(26px, 3.5vw, 40px); font-weight: 900; line-height: 1.1; letter-spacing: -1px; }
+
+        /* ==========================================
+           HERO
+           ========================================== */
+        .python-hero { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 130px 24px 80px; max-width: 800px; margin: 0 auto; }
+        .python-hero h1 { font-size: clamp(38px, 5.5vw, 72px); font-weight: 900; line-height: 1.05; margin-bottom: 20px; letter-spacing: -2px; }
+        .python-hero h1 .green { color: var(--green); }
+        .python-hero .subtitle { font-size: clamp(17px, 2vw, 20px); color: var(--text-light); font-weight: 400; line-height: 1.7; max-width: 580px; margin-bottom: 12px; }
+        .python-hero .hero-rated { font-size: 15px; color: var(--gray); margin-bottom: 36px; }
+        .python-hero .hero-rated .stars { color: var(--gold); letter-spacing: 1px; }
+        .python-hero .hero-rated strong { color: var(--text-light); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ==========================================
+           BUTTONS
+           ========================================== */
+        .btn-hero { display: inline-flex; align-items: center; justify-content: center; padding: 16px 44px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 17px; transition: all 0.3s; position: relative; overflow: hidden; border: none; cursor: pointer; font-family: inherit; }
+        .btn-hero::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
+        .btn-hero:hover::before { left: 100%; }
+        .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(76,175,80,0.4); background: #45a049; }
+
+        /* ==========================================
+           COURSE CARD
+           ========================================== */
+        .course-section { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; padding: 72px 24px; }
+        .product-card { background: rgba(76,175,80,0.07); border: 1px solid rgba(76,175,80,0.28); border-radius: 20px; padding: 44px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--green); }
+        .product-badge { display: inline-flex; align-items: center; background: rgba(76,175,80,0.12); color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; margin-bottom: 18px; align-self: flex-start; }
+        .product-title { font-size: clamp(22px, 2.5vw, 30px); font-weight: 900; color: var(--white); margin-bottom: 10px; letter-spacing: -0.5px; }
+        .product-tagline { font-size: 16px; color: var(--text-light); line-height: 1.6; margin-bottom: 24px; }
+        .product-includes { list-style: none; margin-bottom: 32px; }
+        .product-includes li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text-light); padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.55; }
+        .product-includes li:last-child { border-bottom: none; }
+        .product-tick { color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; font-size: 14px; }
+        .product-note { text-align: center; font-size: 13px; color: var(--gray); margin-top: 12px; }
+
+        /* ==========================================
+           REVIEWS
+           ========================================== */
+        .reviews-inner { position: relative; z-index: 2; padding: 64px 0; }
+        .reviews-inner .section-tag, .reviews-inner .section-h2 { padding: 0 24px; }
+        .reviews-inner .section-h2 { margin-bottom: 48px; }
+        .ticker-container { max-width: 900px; margin: 0 auto; overflow: hidden; }
+        .ticker-wrap { width: 100%; overflow: hidden; margin-bottom: 14px; }
+        .ticker { display: flex; gap: 14px; width: max-content; }
+        .ticker-row-1 .ticker { animation: scrollLeft 70s linear infinite; }
+        .ticker-row-2 .ticker { animation: scrollRight 65s linear infinite; }
+        @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+        .ticker-card { flex-shrink: 0; width: 380px; height: 170px; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; justify-content: center; }
+        .ticker-card.compact { width: 190px; height: 170px; text-align: center; }
+        .tc-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 10px; }
+        .tc-quote { font-size: 16px; color: var(--text-light); font-style: italic; line-height: 1.6; margin-bottom: 12px; }
+        .tc-author { font-size: 14px; color: var(--gray); font-weight: 700; }
+
+        /* ==========================================
+           BOTTOM CTA
+           ========================================== */
+        .bottom-cta { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; padding: 80px 24px; text-align: center; }
+        .bottom-cta h2 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 900; letter-spacing: -1px; margin-bottom: 32px; }
+        .bottom-cta-note { font-size: 14px; color: var(--gray); margin-top: 14px; }
+        .bottom-cta-note .stars { color: var(--gold); }
+
+        /* ==========================================
+           MODAL
+           ========================================== */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(12,12,20,0.85); backdrop-filter: blur(6px); z-index: 1000; justify-content: center; align-items: center; padding: 24px; }
+        .modal-overlay.active { display: flex; }
+        .modal { background: var(--navy-light); border: 1px solid rgba(76,175,80,0.15); border-radius: 20px; padding: 40px; max-width: 480px; width: 100%; position: relative; animation: fadeUp 0.3s ease-out; color: var(--white); max-height: 90vh; overflow-y: auto; }
+        .modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--gray); font-size: 24px; cursor: pointer; transition: color 0.2s; }
+        .modal-close:hover { color: var(--white); }
+        .modal h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .modal .modal-sub { font-size: 15px; color: var(--text-light); margin-bottom: 24px; line-height: 1.5; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--text-light); margin-bottom: 6px; }
+        .form-group input { width: 100%; padding: 12px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
+        .form-group input:focus { border-color: var(--green); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--gray); }
+        .btn-modal { width: 100%; padding: 14px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-top: 8px; text-align: center; }
+        .btn-modal:hover { background: #45a049; box-shadow: 0 6px 24px rgba(76,175,80,0.3); }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        footer { position: relative; z-index: 1; text-align: center; padding: 32px 24px; border-top: 1px solid rgba(76,175,80,0.12); background: var(--navy-deep); }
+        .footer-logo img { height: 34px; width: auto; margin-bottom: 10px; }
+        footer p { color: var(--gray); font-size: 14px; }
+        .footer-links { display: flex; justify-content: center; gap: 24px; margin-top: 12px; }
+        .footer-link { color: var(--gray); text-decoration: none; font-size: 13px; transition: color 0.3s; }
+        .footer-link:hover { color: var(--text-light); }
+
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ==========================================
+           RESPONSIVE
+           ========================================== */
+        @media (max-width: 768px) {
+            nav { padding: 12px 20px; }
+            .python-hero { padding: 110px 20px 60px; }
+            .ticker-card { width: 300px; }
+            .ticker-card.compact { width: 180px; }
+            .product-card { padding: 32px 24px; }
+            .modal { padding: 28px; }
+        }
+        @media (max-width: 480px) { .btn-hero { padding: 14px 28px; font-size: 15px; } }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern-global">
+        <div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div>
+        <div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div>
+    </div>
+
+    <!-- ===== NAV ===== -->
+    <nav id="navbar">
+        <a href="/" class="nav-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></a>
+        <div class="nav-links">
+            <a href="/#products" class="nav-link">Products</a>
+            <a href="/#about" class="nav-link">About</a>
+            <a href="/python" class="nav-link nav-link-active">Python Course</a>
+            <a href="#" onclick="openContact(); return false;" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ===== PYTHON HERO ===== -->
+    <section class="bg-a">
+        <div class="python-hero">
+            <div class="section-tag">Learn Python</div>
+            <h1>The <span class="green">Python</span> Masterclass</h1>
+            <p class="subtitle">Udemy's highest-rated Python course. Go from zero to real data science and machine learning projects at your own pace.</p>
+            <p class="hero-rated"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4.9/5 rated</strong> &middot; Udemy's #1 highest-rated Python course</p>
+            <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" target="_blank" rel="noopener" class="btn-hero">Check out the Python Masterclass on Udemy</a>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== COURSE DETAILS ===== -->
+    <section class="bg-b">
+        <div class="course-section">
+            <div class="product-card reveal">
+                <div class="product-badge">Python Course</div>
+                <div class="product-title">The Python Masterclass</div>
+                <div class="product-tagline">Go from zero to real data science and machine learning projects at your own pace. A perfect way to build real technical foundations alongside your AI skills.</div>
+                <ul class="product-includes">
+                    <li><span class="product-tick">&#10003;</span> 40+ video lessons covering Python from scratch</li>
+                    <li><span class="product-tick">&#10003;</span> Real-world data science and machine learning projects</li>
+                    <li><span class="product-tick">&#10003;</span> Beginner-friendly - no prior experience needed</li>
+                    <li><span class="product-tick">&#10003;</span> Lifetime access on Udemy, learn at your own pace</li>
+                </ul>
+                <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" target="_blank" rel="noopener" class="btn-hero" style="font-size:16px;">Go to the Python Masterclass on Udemy</a>
+                <p class="product-note"><span style="color:var(--gold);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong style="color:var(--text-light);">4.9/5 rated</strong> &middot; Udemy's highest-rated Python course</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="bg-a" id="reviews">
+        <div class="reviews-inner">
+            <div class="section-tag">Reviews</div>
+            <h2 class="section-h2 reveal">Don't just take our word for it</h2>
+            <div class="ticker-container">
+                <div class="ticker-wrap ticker-row-1"><div class="ticker">
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Honestly, I came into this course not knowing a single thing about coding. The instructor made everything super approachable and actually kind of fun."</div><div class="tc-author">- Yulia</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"This is such a great course for beginners looking to start a career in Python. Aron is easy to follow, straight to the point, and explains things clearly with real examples."</div><div class="tc-author">- Faaiz ul Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Super easy to follow along. He has a chill laid-back approach and breaks things down well for beginners."</div><div class="tc-author">- Zain Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Started from zero, the course is high above my expectations."</div><div class="tc-author">- Laszlo Fulop</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- In Jin Jung</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"It's so interesting, I like it."</div><div class="tc-author">- Richard Mulinda</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Michael Schley</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Honestly, I came into this course not knowing a single thing about coding. The instructor made everything super approachable and actually kind of fun."</div><div class="tc-author">- Yulia</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"This is such a great course for beginners looking to start a career in Python. Aron is easy to follow, straight to the point, and explains things clearly with real examples."</div><div class="tc-author">- Faaiz ul Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Super easy to follow along. He has a chill laid-back approach and breaks things down well for beginners."</div><div class="tc-author">- Zain Haque</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Started from zero, the course is high above my expectations."</div><div class="tc-author">- Laszlo Fulop</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- In Jin Jung</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"It's so interesting, I like it."</div><div class="tc-author">- Richard Mulinda</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Michael Schley</div></div>
+                </div></div>
+                <div class="ticker-wrap ticker-row-2"><div class="ticker">
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Very informative. Clear explanations and engaging delivery."</div><div class="tc-author">- Lionel Gutierrez</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Good. Valuable information and helpful practice activities."</div><div class="tc-author">- Vaibhav P. Chaudhary</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Abdikarimdahir</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Andrii Shtoiko</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Praveen Kumar</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Rashmi Bisht</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Patrick Weingartz</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Very informative. Clear explanations and engaging delivery."</div><div class="tc-author">- Lionel Gutierrez</div></div>
+                    <div class="ticker-card"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-quote">"Good. Valuable information and helpful practice activities."</div><div class="tc-author">- Vaibhav P. Chaudhary</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Abdikarimdahir</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Andrii Shtoiko</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Praveen Kumar</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Rashmi Bisht</div></div>
+                    <div class="ticker-card compact"><div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="tc-author">- Patrick Weingartz</div></div>
+                </div></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== BOTTOM CTA ===== -->
+    <section class="bg-b">
+        <div class="bottom-cta">
+            <h2 class="reveal">Start learning Python today</h2>
+            <a href="https://www.udemy.com/course/python-masterclass-complete-python-bootcamp-for-beginners/?referralCode=95196B198D53AA8D671F" target="_blank" rel="noopener" class="btn-hero reveal">Go to the Python Masterclass on Udemy</a>
+            <p class="bottom-cta-note reveal"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9/5 &middot; Udemy's highest-rated Python course</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></div>
+        <p style="font-size: 10px;">&#169; 2026 SkillSurge. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/#products" class="footer-link">Products</a>
+            <a href="/python" class="footer-link">Python Course</a>
+            <a href="/#about" class="footer-link">About</a>
+            <a href="#" onclick="openContact(); return false;" class="footer-link">Contact</a>
+        </div>
+    </footer>
+
+    <!-- ===== CONTACT MODAL ===== -->
+    <div class="modal-overlay" id="contactOverlay" onclick="if(event.target===this)closeContact()">
+        <div class="modal">
+            <button class="modal-close" onclick="closeContact()">&times;</button>
+            <div id="contact-form-wrap">
+                <h3>Get in touch</h3>
+                <p class="modal-sub">Have a question or want to work together? Drop us a message and we'll get back to you.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contact-name">Your name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="How can we help?" required style="width:100%;padding:12px 16px;background:rgba(18,18,31,0.8);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;resize:vertical;min-height:120px;transition:border-color 0.3s;"></textarea>
+                    </div>
+                    <div id="contact-error" style="color:#ff6b6b;font-size:13px;margin-bottom:10px;display:none;"></div>
+                    <button type="submit" class="btn-modal" id="contactSubmitBtn">Send message</button>
+                </form>
+            </div>
+            <div id="contact-success" style="display:none;text-align:center;padding:12px 0;">
+                <div style="font-size:40px;margin-bottom:16px;">&#10003;</div>
+                <h3>Message sent!</h3>
+                <p class="modal-sub">Thanks for reaching out. We'll get back to you soon.</p>
+                <button class="btn-modal" onclick="closeContact()">Back to Site</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function openContact() {
+            document.getElementById('contactOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeContact() {
+            document.getElementById('contactOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            const err = document.getElementById('contact-error');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            err.style.display = 'none';
+            const data = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                message: document.getElementById('contact-message').value
+            };
+            try {
+                const res = await fetch('https://formspree.io/f/mnjbwzey', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    document.getElementById('contact-form-wrap').style.display = 'none';
+                    document.getElementById('contact-success').style.display = 'block';
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                err.textContent = 'Something went wrong. Please email aron@skillsurge.co directly.';
+                err.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Send message';
+            }
+        });
+    </script>
+</body>
+</html>

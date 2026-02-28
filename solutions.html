@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/sWPk2Vx98aQhRt8ccgHZVP">
+    <title>Solutions - SkillSurge</title>
+    <meta name="description" content="Choose your path. The AI Playbook ($19), SkillSurge Community ($49/mo), or The AI LaunchPad ($299) with 1-on-1 personal guidance.">
+    <link rel="canonical" href="https://skillsurge.co/solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Solutions - SkillSurge">
+    <meta property="og:description" content="Choose your path. The AI Playbook, SkillSurge Community, or The AI LaunchPad with 1-on-1 personal guidance.">
+    <meta property="og:url" content="https://skillsurge.co/solutions">
+    <meta property="og:site_name" content="SkillSurge">
+    <meta property="og:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solutions - SkillSurge">
+    <meta name="twitter:description" content="Choose your path. The AI Playbook, SkillSurge Community, or The AI LaunchPad with 1-on-1 personal guidance.">
+    <meta name="twitter:image" content="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1A1A2E;
+            --navy-deep: #13132A;
+            --navy-light: #242445;
+            --green: #4CAF50;
+            --green-bright: #5CDB5C;
+            --white: #FFFFFF;
+            --gray: #8888AA;
+            --text-light: #CCCCDD;
+            --gold: #F5C542;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; font-size: 19px; }
+
+        /* Background pattern */
+        .bg-pattern-global { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden; }
+        .bg-pattern-global::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(76,175,80,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(76,175,80,0.05) 1px, transparent 1px); background-size: 48px 48px; }
+        .bg-pattern-global .gl { position: absolute; height: 1px; background: linear-gradient(90deg, transparent, rgba(76,175,80,0.12), transparent); animation: gFlow 12s linear infinite; }
+        .bg-pattern-global .gl:nth-child(1) { top: 8%; width: 50%; left: -50%; animation-duration: 16s; }
+        .bg-pattern-global .gl:nth-child(2) { top: 22%; width: 60%; left: -60%; animation-delay: 3s; animation-duration: 18s; }
+        .bg-pattern-global .gl:nth-child(3) { top: 38%; width: 45%; left: -45%; animation-delay: 6s; animation-duration: 14s; }
+        .bg-pattern-global .gl:nth-child(4) { top: 52%; width: 55%; left: -55%; animation-delay: 1s; animation-duration: 20s; }
+        .bg-pattern-global .gl:nth-child(5) { top: 66%; width: 40%; left: -40%; animation-delay: 4s; animation-duration: 15s; }
+        .bg-pattern-global .gl:nth-child(6) { top: 80%; width: 65%; left: -65%; animation-delay: 7s; animation-duration: 17s; }
+        .bg-pattern-global .gl:nth-child(7) { top: 92%; width: 35%; left: -35%; animation-delay: 2s; animation-duration: 13s; }
+        .bg-pattern-global .gv { position: absolute; width: 1px; background: linear-gradient(180deg, transparent, rgba(76,175,80,0.08), transparent); animation: gDown 14s linear infinite; }
+        .bg-pattern-global .gv:nth-child(8) { left: 8%; height: 30%; top: -30%; animation-duration: 18s; }
+        .bg-pattern-global .gv:nth-child(9) { left: 25%; height: 40%; top: -40%; animation-delay: 3s; animation-duration: 22s; }
+        .bg-pattern-global .gv:nth-child(10) { left: 42%; height: 35%; top: -35%; animation-delay: 6s; animation-duration: 16s; }
+        .bg-pattern-global .gv:nth-child(11) { left: 60%; height: 45%; top: -45%; animation-delay: 1s; animation-duration: 20s; }
+        .bg-pattern-global .gv:nth-child(12) { left: 78%; height: 30%; top: -30%; animation-delay: 4s; animation-duration: 17s; }
+        .bg-pattern-global .gv:nth-child(13) { left: 92%; height: 38%; top: -38%; animation-delay: 7s; animation-duration: 19s; }
+        @keyframes gFlow { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(calc(100vw + 100%)); opacity: 0; } }
+        @keyframes gDown { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(calc(100vh + 100%)); opacity: 0; } }
+
+        .bg-a { position: relative; z-index: 1; background: var(--navy); }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 5%, rgba(76,175,80,0.28) 50%, transparent 95%); position: relative; z-index: 1; }
+
+        /* Nav */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s; }
+        nav.scrolled { background: rgba(19,19,42,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(76,175,80,0.12); padding: 10px 40px; }
+        .nav-logo img { height: 40px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-link { color: var(--gray); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.3s; }
+        .nav-link:hover { color: var(--white); }
+        .nav-link.active { color: var(--white); }
+
+        /* Section utilities */
+        .section-tag { text-align: center; color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+        .section-h2 { text-align: center; font-size: clamp(26px, 3.5vw, 40px); font-weight: 900; line-height: 1.1; letter-spacing: -1px; }
+        .section-intro { text-align: center; color: var(--text-light); font-size: 18px; line-height: 1.65; max-width: 680px; margin: 16px auto 56px; }
+
+        /* Page hero */
+        .page-hero { position: relative; z-index: 2; text-align: center; padding: 130px 24px 72px; max-width: 800px; margin: 0 auto; }
+        .page-hero h1 { font-size: clamp(36px, 4.5vw, 58px); font-weight: 900; line-height: 1.1; letter-spacing: -2px; margin-bottom: 20px; text-transform: uppercase; }
+        .page-hero h1 .green { color: var(--green); }
+        .page-hero p { font-size: clamp(16px, 2vw, 19px); color: var(--text-light); line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+        /* Product cards */
+        .products-inner { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; padding: 72px 24px; }
+        .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+        .product-card { background: rgba(76,175,80,0.07); border: 1px solid rgba(76,175,80,0.28); border-radius: 20px; padding: 32px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--green); }
+        .product-card-featured { background: rgba(76,175,80,0.1); border-color: rgba(76,175,80,0.6); box-shadow: 0 0 60px rgba(76,175,80,0.14), 0 0 0 1px rgba(76,175,80,0.08); }
+        .product-card-featured::before { height: 4px; background: linear-gradient(90deg, var(--green), var(--green-bright)); }
+        .product-badge { display: inline-flex; align-items: center; background: rgba(76,175,80,0.12); color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; margin-bottom: 18px; align-self: flex-start; }
+        .product-badge-gold { background: rgba(245,197,66,0.18); color: var(--gold); border: 1px solid rgba(245,197,66,0.3); }
+        .product-title { font-size: clamp(19px, 1.8vw, 24px); font-weight: 900; color: var(--white); margin-bottom: 8px; letter-spacing: -0.5px; }
+        .product-tagline { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 20px; }
+        .product-price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+        .product-price { font-size: 42px; font-weight: 900; color: var(--white); letter-spacing: -2px; line-height: 1; }
+        .product-price-currency { font-size: 18px; font-weight: 700; color: var(--white); }
+        .product-price-label { font-size: 14px; font-weight: 600; color: var(--gray); }
+        .product-price-sub { font-size: 12px; color: var(--gray); margin-bottom: 18px; min-height: 16px; }
+        .product-tier-inherit { font-size: 12px; font-weight: 600; color: var(--green); margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid rgba(76,175,80,0.15); }
+        .product-includes { list-style: none; margin-bottom: 18px; }
+        .product-includes li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text-light); padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.5; }
+        .product-includes li:last-child { border-bottom: none; }
+        .product-tick { color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+        .product-bonus-compact { display: flex; flex-direction: column; gap: 5px; margin-bottom: 16px; }
+        .product-bonus-tag { font-size: 12px; color: var(--gold); font-weight: 600; display: flex; align-items: center; gap: 5px; }
+        .product-spacer { flex: 1; }
+        .product-note { text-align: center; font-size: 11px; color: var(--gray); margin-top: 8px; }
+
+        .btn-product-hero { width: 100%; padding: 14px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; transition: all 0.3s; display: block; text-align: center; text-decoration: none; position: relative; overflow: hidden; }
+        .btn-product-hero::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
+        .btn-product-hero:hover::before { left: 100%; }
+        .btn-product-hero:hover { background: #45a049; box-shadow: 0 8px 28px rgba(76,175,80,0.4); transform: translateY(-2px); }
+
+        /* CTA Banner */
+        .cta-banner { position: relative; z-index: 1; background: var(--navy); }
+        .cta-banner-inner { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; padding: 80px 24px; text-align: center; }
+        .cta-banner-h2 { font-size: clamp(26px, 3.5vw, 42px); font-weight: 900; line-height: 1.15; letter-spacing: -1px; margin-bottom: 18px; }
+        .cta-banner-sub { font-size: 18px; color: var(--text-light); line-height: 1.65; max-width: 520px; margin: 0 auto 36px; }
+        .cta-banner-note { font-size: 13px; color: var(--gray); margin-top: 16px; }
+        .btn-hero { display: inline-flex; align-items: center; justify-content: center; padding: 16px 44px; background: var(--green); color: var(--white); text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 17px; transition: all 0.3s; position: relative; overflow: hidden; border: none; cursor: pointer; font-family: inherit; }
+        .btn-hero::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
+        .btn-hero:hover::before { left: 100%; }
+        .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(76,175,80,0.4); background: #45a049; }
+
+        /* Modal */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(12,12,20,0.85); backdrop-filter: blur(6px); z-index: 1000; justify-content: center; align-items: center; padding: 24px; }
+        .modal-overlay.active { display: flex; }
+        .modal { background: var(--navy-light); border: 1px solid rgba(76,175,80,0.15); border-radius: 20px; padding: 40px; max-width: 480px; width: 100%; position: relative; animation: fadeUp 0.3s ease-out; color: var(--white); max-height: 90vh; overflow-y: auto; }
+        .modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--gray); font-size: 24px; cursor: pointer; transition: color 0.2s; }
+        .modal-close:hover { color: var(--white); }
+        .modal h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .modal .modal-sub { font-size: 15px; color: var(--text-light); margin-bottom: 24px; line-height: 1.5; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--text-light); margin-bottom: 6px; }
+        .form-group input { width: 100%; padding: 12px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; transition: border-color 0.3s; }
+        .form-group input:focus { border-color: var(--green); }
+        .form-group input::placeholder { color: var(--gray); }
+        .btn-modal { width: 100%; padding: 14px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-top: 8px; text-align: center; }
+        .btn-modal:hover { background: #45a049; }
+
+        /* Footer */
+        footer { position: relative; z-index: 1; text-align: center; padding: 32px 24px; border-top: 1px solid rgba(76,175,80,0.12); background: var(--navy-deep); }
+        .footer-logo img { height: 34px; width: auto; margin-bottom: 10px; }
+        footer p { color: var(--gray); font-size: 14px; }
+        .footer-links { display: flex; justify-content: center; gap: 24px; margin-top: 12px; }
+        .footer-link { color: var(--gray); text-decoration: none; font-size: 13px; transition: color 0.3s; }
+        .footer-link:hover { color: var(--text-light); }
+
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .products-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 12px 20px; }
+            .page-hero { padding: 100px 20px 56px; }
+            .modal { padding: 28px; }
+        }
+        @media (max-width: 480px) { .btn-hero { padding: 14px 28px; font-size: 15px; } }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern-global">
+        <div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div><div class="gl"></div>
+        <div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div><div class="gv"></div>
+    </div>
+
+    <!-- ===== NAV ===== -->
+    <nav id="navbar">
+        <a href="/" class="nav-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></a>
+        <div class="nav-links">
+            <a href="/solutions" class="nav-link active">Solutions</a>
+            <a href="/#about" class="nav-link">About</a>
+            <a href="/python" class="nav-link">Python Course</a>
+            <a href="#" onclick="openContact(); return false;" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="bg-a">
+        <div class="page-hero">
+            <div class="section-tag">Solutions</div>
+            <h1>Choose Your <span class="green">Path</span></h1>
+            <p>Whether you want to learn at your own pace, grow with a community, or get personal 1-on-1 guidance - there's a SkillSurge product for you.</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== PRODUCTS GRID ===== -->
+    <section class="bg-a">
+        <div class="products-inner">
+            <div class="products-grid">
+
+                <!-- THE AI PLAYBOOK -->
+                <div class="product-card reveal">
+                    <div class="product-badge">Start Here</div>
+                    <div class="product-title">The AI Playbook</div>
+                    <div class="product-tagline">The essential prompting system for building real things with AI - not just chatting with it. Templates, techniques, and frameworks you'll use every day.</div>
+                    <div class="product-price-row">
+                        <span class="product-price-currency">$</span>
+                        <span class="product-price">19</span>
+                    </div>
+                    <p class="product-price-sub">one-time &middot; includes AI Starter Guide</p>
+                    <ul class="product-includes">
+                        <li><span class="product-tick">&#10003;</span> Prompt templates for real tasks (websites, copy, business plans)</li>
+                        <li><span class="product-tick">&#10003;</span> Reverse prompt engineering techniques</li>
+                        <li><span class="product-tick">&#10003;</span> Common mistakes that waste your time (and how to avoid them)</li>
+                        <li><span class="product-tick">&#10003;</span> Frameworks that work across any AI tool</li>
+                        <li><span class="product-tick">&#10003;</span> AI Starter Guide included free</li>
+                    </ul>
+                    <div class="product-spacer"></div>
+                    <a href="[AI_PLAYBOOK_PAYMENT_LINK]" class="btn-product-hero">Get the Playbook</a>
+                </div>
+
+                <!-- SKILLSURGE COMMUNITY -->
+                <div class="product-card reveal">
+                    <div class="product-badge">Grow Together</div>
+                    <div class="product-title">SkillSurge Community</div>
+                    <div class="product-tagline">The support, accountability, and peer community to keep you building with AI - not just learning about it.</div>
+                    <div class="product-price-row">
+                        <span class="product-price-currency">$</span>
+                        <span class="product-price">49</span>
+                        <span class="product-price-label">/month</span>
+                    </div>
+                    <p class="product-price-sub">&nbsp;</p>
+                    <div class="product-tier-inherit">Everything in The AI Playbook, plus:</div>
+                    <ul class="product-includes">
+                        <li><span class="product-tick">&#10003;</span> Access to the SkillSurge community on Skool</li>
+                        <li><span class="product-tick">&#10003;</span> Resource library (guides, templates, walk-throughs)</li>
+                        <li><span class="product-tick">&#10003;</span> Connect with other AI builders working on real projects</li>
+                        <li><span class="product-tick">&#10003;</span> Ongoing support and accountability</li>
+                    </ul>
+                    <div class="product-spacer"></div>
+                    <a href="[SKOOL_COMMUNITY_LINK]" class="btn-product-hero">Join Community</a>
+                </div>
+
+                <!-- THE AI LAUNCHPAD (FEATURED) -->
+                <div class="product-card product-card-featured reveal">
+                    <div class="product-badge product-badge-gold">Recommended</div>
+                    <div class="product-title">The AI LaunchPad</div>
+                    <div class="product-tagline">The fast track. I personally help you build your website, app, or business idea using AI - live, together, over 2 weeks.</div>
+                    <div class="product-price-row">
+                        <span class="product-price-currency">$</span>
+                        <span class="product-price">299</span>
+                    </div>
+                    <p class="product-price-sub">Only 10 spots per round</p>
+                    <div class="product-tier-inherit">Everything in Community, plus:</div>
+                    <ul class="product-includes">
+                        <li><span class="product-tick">&#10003;</span> 1-on-1 live build sessions with Aron over 2 weeks</li>
+                        <li><span class="product-tick">&#10003;</span> Drop-in workshop-room access multiple times per week</li>
+                        <li><span class="product-tick">&#10003;</span> Choose your track: website, app, business idea, or "not sure yet"</li>
+                        <li><span class="product-tick">&#10003;</span> Walk away with a real, working project you built yourself</li>
+                    </ul>
+                    <div class="product-bonus-compact">
+                        <span class="product-bonus-tag">&#9733; Includes AI Playbook ($19 value)</span>
+                        <span class="product-bonus-tag">&#9733; Includes 3 months Community ($147 value)</span>
+                    </div>
+                    <a href="[TALLY_FORM_LINK]" class="btn-product-hero">Book Discovery Call</a>
+                    <p class="product-note">15-minute call - no commitment. Let's talk about what you want to build.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner">
+        <div class="cta-banner-inner">
+            <h2 class="cta-banner-h2 reveal">Not sure which is right for you?</h2>
+            <p class="cta-banner-sub reveal">Book a free 15-minute discovery call and we'll figure it out together. No commitment, no pressure.</p>
+            <a href="[TALLY_FORM_LINK]" class="btn-hero reveal">Book Your Free Discovery Call</a>
+            <p class="cta-banner-note reveal">Only 10 spots per round &middot; No commitment</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-logo"><img src="https://embed.filekitcdn.com/e/orvB4YAaFh5cwZEqvWLP8j/c2UYCBqADThkd3nAWv64Nm" alt="SkillSurge"></div>
+        <p style="font-size: 10px;">&#169; 2026 SkillSurge. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/solutions" class="footer-link">Solutions</a>
+            <a href="/python" class="footer-link">Python Course</a>
+            <a href="/#about" class="footer-link">About</a>
+            <a href="#" onclick="openContact(); return false;" class="footer-link">Contact</a>
+        </div>
+    </footer>
+
+    <!-- ===== CONTACT MODAL ===== -->
+    <div class="modal-overlay" id="contactOverlay" onclick="if(event.target===this)closeContact()">
+        <div class="modal">
+            <button class="modal-close" onclick="closeContact()">&times;</button>
+            <div id="contact-form-wrap">
+                <h3>Get in touch</h3>
+                <p class="modal-sub">Have a question or want to work together? Drop us a message and we'll get back to you.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contact-name">Your name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="How can we help?" required style="width:100%;padding:12px 16px;background:rgba(18,18,31,0.8);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;resize:vertical;min-height:120px;transition:border-color 0.3s;"></textarea>
+                    </div>
+                    <div id="contact-error" style="color:#ff6b6b;font-size:13px;margin-bottom:10px;display:none;"></div>
+                    <button type="submit" class="btn-modal" id="contactSubmitBtn">Send message</button>
+                </form>
+            </div>
+            <div id="contact-success" style="display:none;text-align:center;padding:12px 0;">
+                <div style="font-size:40px;margin-bottom:16px;">&#10003;</div>
+                <h3>Message sent!</h3>
+                <p class="modal-sub">Thanks for reaching out. We'll get back to you soon.</p>
+                <button class="btn-modal" onclick="closeContact()">Back to Site</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        function openContact() {
+            document.getElementById('contactOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeContact() {
+            document.getElementById('contactOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            const err = document.getElementById('contact-error');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            err.style.display = 'none';
+            const data = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                message: document.getElementById('contact-message').value
+            };
+            try {
+                const res = await fetch('https://formspree.io/f/mnjbwzey', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    document.getElementById('contact-form-wrap').style.display = 'none';
+                    document.getElementById('contact-success').style.display = 'block';
+                } else { throw new Error(); }
+            } catch {
+                err.textContent = 'Something went wrong. Please email aron@skillsurge.co directly.';
+                err.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Send message';
+            }
+        });
+    </script>
+</body>
+</html>
