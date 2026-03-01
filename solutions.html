@@ -165,6 +165,22 @@
             .modal { padding: 28px; }
         }
         @media (max-width: 480px) { .btn-hero { padding: 14px 28px; font-size: 15px; } }
+
+        /* ==========================================
+           DISCOVERY CALL MODAL
+           ========================================== */
+        .modal-step { display: none; }
+        .modal-step.active { display: block; }
+        .step-indicator { text-align: center; margin-bottom: 20px; font-size: 13px; color: var(--gray); letter-spacing: 1px; }
+        .dc-pills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 24px; }
+        .dc-pill { padding: 16px 12px; text-align: center; background: rgba(18,18,31,0.6); border: 2px solid rgba(255,255,255,0.08); border-radius: 12px; cursor: pointer; transition: all 0.2s; font-size: 14px; font-weight: 600; color: var(--text-light); line-height: 1.4; }
+        .dc-pill:hover { border-color: rgba(76,175,80,0.3); background: rgba(76,175,80,0.04); }
+        .dc-pill.selected { border-color: var(--green); background: rgba(76,175,80,0.1); color: var(--white); }
+        .dc-textarea { width: 100%; padding: 12px 16px; background: rgba(18,18,31,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; outline: none; resize: vertical; min-height: 100px; transition: border-color 0.3s; }
+        .dc-textarea:focus { border-color: var(--green); }
+        .dc-textarea::placeholder { color: var(--gray); }
+        .dc-calendar { text-align: center; padding: 40px 24px; background: rgba(18,18,31,0.4); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; margin-bottom: 20px; }
+        .dc-calendar p { color: var(--text-light); font-size: 15px; line-height: 1.7; }
     </style>
 </head>
 <body>
@@ -255,7 +271,7 @@
                         <span class="product-bonus-tag">&#9733; 3 months Community access ($147 value)</span>
                     </div>
                     <div class="product-spacer"></div>
-                    <a href="[TALLY_FORM_LINK]" class="btn-product-hero">Book Your Free Discovery Call</a>
+                    <a href="#" onclick="openDiscovery(); return false;" class="btn-product-hero">Book Your Free Discovery Call</a>
                     <p class="product-note">15-minute call - no commitment.</p>
                 </div>
 
@@ -271,7 +287,7 @@
         <div class="cta-banner-inner">
             <h2 class="cta-banner-h2 reveal">Not sure which is right for you?</h2>
             <p class="cta-banner-sub reveal">Book a free 15-minute discovery call and we'll figure it out together. No commitment, no pressure.</p>
-            <a href="[TALLY_FORM_LINK]" class="btn-hero reveal">Book Your Free Discovery Call</a>
+            <a href="#" onclick="openDiscovery(); return false;" class="btn-hero reveal">Book Your Free Discovery Call</a>
             <p class="cta-banner-note reveal">Only 10 spots per round &middot; No commitment</p>
         </div>
     </section>
@@ -286,6 +302,59 @@
         </div>
         <p style="font-size: 11px;">&#169; 2026 SkillSurge. All rights reserved.</p>
     </footer>
+
+    <!-- ===== DISCOVERY CALL MODAL ===== -->
+    <div class="modal-overlay" id="discoveryOverlay" onclick="if(event.target===this)closeDiscovery()">
+        <div class="modal">
+            <button class="modal-close" onclick="closeDiscovery()">&times;</button>
+
+            <!-- Step 1: What do you want to build? -->
+            <div class="modal-step active" id="dc-step1">
+                <div class="step-indicator">STEP 1 OF 3</div>
+                <h3>What do you want to build?</h3>
+                <p class="modal-sub">Pick the option that best describes your idea. We'll figure out the details together on the call.</p>
+                <div class="dc-pills">
+                    <div class="dc-pill" onclick="dcSelectProject(this, 'Website or portfolio')">Website or portfolio</div>
+                    <div class="dc-pill" onclick="dcSelectProject(this, 'Web app or SaaS')">Web app or SaaS</div>
+                    <div class="dc-pill" onclick="dcSelectProject(this, 'Online business or store')">Online business or store</div>
+                    <div class="dc-pill" onclick="dcSelectProject(this, 'Not sure yet')">Not sure yet</div>
+                </div>
+                <button class="btn-modal" id="dc-step1-btn" onclick="dcShowStep(2)" disabled>Next</button>
+            </div>
+
+            <!-- Step 2: Contact details -->
+            <div class="modal-step" id="dc-step2">
+                <div class="step-indicator">STEP 2 OF 3</div>
+                <h3>How do we reach you?</h3>
+                <p class="modal-sub">Drop your details below and we'll confirm your spot.</p>
+                <div class="form-group">
+                    <label for="dc-name">First name</label>
+                    <input type="text" id="dc-name" placeholder="Your first name">
+                </div>
+                <div class="form-group">
+                    <label for="dc-email">Email address</label>
+                    <input type="email" id="dc-email" placeholder="Email address">
+                </div>
+                <div class="form-group">
+                    <label for="dc-idea">Briefly describe your idea <span style="color:var(--gray);font-weight:400;">(optional)</span></label>
+                    <textarea id="dc-idea" class="dc-textarea" placeholder="A few sentences about what you want to build..."></textarea>
+                </div>
+                <div id="dc-error" style="color:#ff6b6b;font-size:13px;margin-bottom:10px;display:none;"></div>
+                <button class="btn-modal" id="dc-submit-btn" onclick="dcSubmit()">Book My Call</button>
+            </div>
+
+            <!-- Step 3: Book a timeslot -->
+            <div class="modal-step" id="dc-step3">
+                <div class="step-indicator">STEP 3 OF 3</div>
+                <h3>Pick a time that works for you</h3>
+                <p class="modal-sub">Choose a slot for your free 15-minute discovery call.</p>
+                <div class="dc-calendar">
+                    <p>&#128197; We'll email you within 24 hours with available timeslots to book your call.</p>
+                </div>
+                <button class="btn-modal" onclick="closeDiscovery()">Done</button>
+            </div>
+        </div>
+    </div>
 
     <!-- ===== CONTACT MODAL ===== -->
     <div class="modal-overlay" id="contactOverlay" onclick="if(event.target===this)closeContact()">
@@ -324,6 +393,72 @@
         window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        /* ---- Discovery Call modal ---- */
+        var _dcProjectType = '';
+
+        function openDiscovery() {
+            _dcProjectType = '';
+            document.querySelectorAll('.dc-pill').forEach(function(p) { p.classList.remove('selected'); });
+            document.getElementById('dc-step1-btn').disabled = true;
+            document.getElementById('dc-name').value = '';
+            document.getElementById('dc-email').value = '';
+            document.getElementById('dc-idea').value = '';
+            var err = document.getElementById('dc-error');
+            if (err) err.style.display = 'none';
+            var btn = document.getElementById('dc-submit-btn');
+            btn.disabled = false;
+            btn.textContent = 'Book My Call';
+            dcShowStep(1);
+            document.getElementById('discoveryOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDiscovery() {
+            document.getElementById('discoveryOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function dcShowStep(n) {
+            document.querySelectorAll('#discoveryOverlay .modal-step').forEach(function(s) { s.classList.remove('active'); });
+            document.getElementById('dc-step' + n).classList.add('active');
+        }
+
+        function dcSelectProject(el, type) {
+            document.querySelectorAll('.dc-pill').forEach(function(p) { p.classList.remove('selected'); });
+            el.classList.add('selected');
+            _dcProjectType = type;
+            document.getElementById('dc-step1-btn').disabled = false;
+        }
+
+        async function dcSubmit() {
+            var name = document.getElementById('dc-name').value.trim();
+            var email = document.getElementById('dc-email').value.trim();
+            var idea = document.getElementById('dc-idea').value.trim();
+            var err = document.getElementById('dc-error');
+            var btn = document.getElementById('dc-submit-btn');
+            if (!name) { err.textContent = 'Please enter your name.'; err.style.display = 'block'; return; }
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) { err.textContent = 'Please enter a valid email address.'; err.style.display = 'block'; return; }
+            err.style.display = 'none';
+            btn.disabled = true;
+            btn.textContent = 'Booking...';
+            try {
+                var res = await fetch('https://formspree.io/f/mnjbwzey', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ form_type: 'Discovery Call', name: name, email: email, project_type: _dcProjectType, idea: idea || '(not provided)' })
+                });
+                if (res.ok) {
+                    dcShowStep(3);
+                } else { throw new Error(); }
+            } catch {
+                err.textContent = 'Something went wrong. Please email aron@skillsurge.co directly.';
+                err.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Book My Call';
+            }
+        }
 
         function openContact() {
             document.getElementById('contactOverlay').classList.add('active');
