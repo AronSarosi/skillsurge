@@ -107,6 +107,14 @@ Tool tags: `.tool-tag` pills styled with subtle border, gray text, 12px font.
 - Minimum body text size: 11pt in PDFs, 16-17px on web
 - If text looks small, make it bigger. Always.
 
+### Alignment Rule for Repeated Cards/Boxes
+When a section contains multiple cards, dropdowns, or boxes with the same structure (e.g. product cards, feature boxes), every repeated element inside them must start at the same vertical position across all boxes. This means:
+- Titles aligned across all cards
+- Taglines/descriptions use `min-height` so the next element always starts at the same height
+- Prices (or price-equivalent rows) aligned across all cards
+- CTA buttons aligned across all cards (use `product-spacer` with `flex: 1` to push buttons to the bottom)
+- Apply this to any new repeating layout, not just product cards
+
 ### Strict Rules - ALWAYS Follow These
 1. **Green ticks for bullet points** - never use dots, dashes, or squares. Always green (#4CAF50) tick marks
 2. **No em-dashes** - never use long em-dashes (they look AI-generated). Use short hyphens (-) only
