@@ -49,6 +49,7 @@ skillsurge/
       index.html          -- First blog post
     _template.html        -- Reusable template for future blog posts
   Aron Sarosi.png         -- Founder headshot (used in Meet the Founder section)
+  solutions.html          -- Solutions page (skillsurge.co/solutions) - same block structure as homepage, no separate page-hero
   CLAUDE.md               -- This file
   robots.txt              -- Crawl directives
   sitemap.xml             -- All URLs listed
@@ -57,7 +58,7 @@ skillsurge/
 ### Homepage Section Order (index.html)
 1. **Hero** (bg-a #1A1A2E) - "Build Your Business with AI" headline, AI Starter Guide CTA
 2. **AI Capabilities** (bg-b #171728) - 4-item accordion (see below)
-3. **Solutions** (bg-a) - AI Launchpad card + SkillSurge Community card
+3. **Solutions** (bg-a) - 3 product cards: The AI Playbook ($19), SkillSurge Community ($49/mo), The AI LaunchPad (featured)
 4. **Reviews** (bg-a) - Ticker rows with student quotes
 5. **Learn Python** (bg-b) - Python Masterclass product card
 6. **About** (bg-deep #13132A) - SkillSurge mission, no founder profile
@@ -80,6 +81,13 @@ Boxes go top-left → top-right → bottom-left → bottom-right (progression: e
 
 CSS: `.offering-item.open .offering-desc { max-height: 280px; }` — increase if descriptions get longer.
 Tool tags: `.tool-tag` pills styled with subtle border, gray text, 12px font.
+
+### AI LaunchPad Card (product-card-featured)
+- "Recommended" badge: green background/border/text (`.product-badge-gold` overridden to green)
+- "10 spots per round · personal 1-on-1 guidance" (`.product-spots`): gold colour
+- Post-CTA note (`.product-note`): "15-minute call - no commitment." (nothing else)
+- Has `.product-spacer` before the CTA button so button aligns with the other two cards
+- Both index.html and solutions.html must stay in sync
 
 ## Design Preferences & Brand Rules
 
@@ -142,7 +150,7 @@ Tool tags: `.tool-tag` pills styled with subtle border, gray text, 12px font.
 - When I ask for changes, implement them fully even if it means rebuilding from scratch
 - I'd rather wait longer for quality work than get something quick and mediocre
 - Don't ask me lots of questions before starting - make smart decisions and I'll give feedback
-- When making website changes: edit the files, commit, and push. Minimise back-and-forth
+- When making website changes: edit the files and commit. Only push when Aron explicitly says "push"
 
 ### Content Tone
 - Conversational and direct, like a smart friend giving advice
